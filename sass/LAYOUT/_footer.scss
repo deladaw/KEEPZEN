@@ -1,0 +1,49 @@
+.footer {
+  &__container {
+    padding-top: 6.25rem;
+    padding-bottom: 6.25rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  &__identity {
+    max-width: 15rem;
+  }
+
+  &__contact {
+    max-width: 15rem;
+  }
+
+  &__icon {
+    max-width: 5.625rem;
+    margin-bottom: 0.9375rem;
+  }
+
+  &__slogan {
+    margin-bottom: 0.625rem;
+  }
+  .heading-quinary {
+    margin-bottom: 0.9375rem;
+  }
+
+  &__social {
+    width: 100%;
+    max-width: 15rem;
+
+    .heading-quinary {
+      text-align: center;
+    }
+  }
+}
+@include mv(507px) {
+  .footer__container {
+    justify-content: center;
+    gap: 3.2rem;
+  }
+  .heading-quinary {
+    text-align: start !important;
+  }
+}

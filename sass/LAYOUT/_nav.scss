@@ -16,6 +16,7 @@
   &__list {
     display: flex;
     gap: 3.75rem;
+    align-items: center;
 
     &-item {
       list-style: none;
@@ -25,13 +26,16 @@
       }
     }
   }
+  .fa-user-circle {
+    font-size: 30px;
+  }
 
   @include mv(585px) {
     .nav__container {
       flex-direction: column;
       justify-content: center;
       gap: 1.3rem;
-      padding-top: $paddingXS;
+      padding-top: $paddingMD;
     }
     .nav__list {
       //Hay veces que tengo que ponerle esto porque me sale padding automático.

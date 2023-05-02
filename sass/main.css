@@ -168,6 +168,26 @@ h6 {
     flex-direction: column;
   }
 }
+.social-icons {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  font-size: 2.625rem;
+}
+.social-icons li {
+  list-style: none;
+}
+.social-icons li:nth-child(odd) {
+  color: #ff8ba7;
+}
+.social-icons li:nth-child(even) {
+  color: #594a4e;
+}
+.social-icons li a {
+  text-decoration: none;
+  color: inherit;
+}
+
 .nav__container {
   max-width: 71.25rem;
   margin: 0 auto;
@@ -183,6 +203,7 @@ h6 {
 .nav__list {
   display: flex;
   gap: 3.75rem;
+  align-items: center;
 }
 .nav__list-item {
   list-style: none;
@@ -191,12 +212,15 @@ h6 {
   text-decoration: none;
   color: #33272a;
 }
+.nav .fa-user-circle {
+  font-size: 30px;
+}
 @media screen and (max-width: 585px) {
   .nav .nav__container {
     flex-direction: column;
     justify-content: center;
     gap: 1.3rem;
-    padding-top: 0.3rem;
+    padding-top: 1.5rem;
   }
   .nav .nav__list {
     padding-left: 0;
@@ -253,6 +277,48 @@ h6 {
   }
   100% {
     transform: translateY(0);
+  }
+}
+.footer__container {
+  padding-top: 6.25rem;
+  padding-bottom: 6.25rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.footer__identity {
+  max-width: 15rem;
+}
+.footer__contact {
+  max-width: 15rem;
+}
+.footer__icon {
+  max-width: 5.625rem;
+  margin-bottom: 0.9375rem;
+}
+.footer__slogan {
+  margin-bottom: 0.625rem;
+}
+.footer .heading-quinary {
+  margin-bottom: 0.9375rem;
+}
+.footer__social {
+  width: 100%;
+  max-width: 15rem;
+}
+.footer__social .heading-quinary {
+  text-align: center;
+}
+
+@media screen and (max-width: 507px) {
+  .footer__container {
+    justify-content: center;
+    gap: 3.2rem;
+  }
+  .heading-quinary {
+    text-align: start !important;
   }
 }
 .grid {
