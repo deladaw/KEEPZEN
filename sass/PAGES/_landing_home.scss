@@ -1,0 +1,14 @@
+.landing {
+  &__features {
+    max-width: $anchura;
+    margin: $center;
+    padding-top: $paddingXL;
+    padding-bottom: $paddingXL;
+
+    .heading-secondary {
+      text-align: center;
+      padding-top: $paddingXL;
+      padding-bottom: $paddingXL;
+    }
+  }
+}

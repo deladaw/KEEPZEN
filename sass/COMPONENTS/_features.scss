@@ -1,0 +1,33 @@
+.features {
+  width: 100%;
+  display: flex;
+  gap: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: $paddingXL;
+  padding-bottom: $paddingXL;
+
+  &__info {
+    max-width: 33rem;
+
+    &-title {
+      margin-bottom: 1.875rem;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    max-width: 18.75rem;
+    min-width: 12.5rem;
+  }
+
+  &-reverse {
+    flex-direction: row-reverse;
+  }
+}
+
+@include mv(620px) {
+  .features {
+    flex-direction: column;
+  }
+}
