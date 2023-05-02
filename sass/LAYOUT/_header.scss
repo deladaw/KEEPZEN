@@ -1,0 +1,44 @@
+.header {
+  &__container {
+    max-width: $anchura;
+    margin: $center;
+    display: flex;
+    gap: 1.875rem;
+    justify-content: space-between;
+    padding-top: $paddingMD;
+    padding-bottom: $paddingMD;
+  }
+  &__img {
+    width: 100%;
+    max-width: 21.875rem;
+    min-width: 15.625rem;
+  }
+  &__title {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    flex-direction: column;
+    //Para que el botón mida lo justo y no se expanda al 100%
+    align-items: baseline;
+
+    .heading-primary {
+      width: 100%;
+      max-width: 35.5rem;
+    }
+  }
+
+  @include mv(704px) {
+    .header__container {
+      flex-direction: column-reverse;
+    }
+    .header__img {
+      align-self: center;
+    }
+    .header__title {
+      align-items: center;
+      .heading-primary {
+        text-align: center;
+      }
+    }
+  }
+}

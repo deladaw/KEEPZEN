@@ -1,0 +1,30 @@
+// Botón base
+%boton {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  font-size: 1.1rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: $bordeEstandar;
+  color: $colorTipoCuerpo;
+  cursor: pointer;
+  background-color: $colorPrincipalSalmon;
+
+  &:hover {
+    background-color: $colorSecundarioRosa;
+  }
+}
+
+//boton principal
+.btn {
+  @extend %boton;
+  //Botón secundario
+  &--secondary {
+    @extend %boton;
+    background-color: $colorTerciarioVerde;
+
+    &:hover {
+      color: $colorBlancoRoto;
+    }
+  }
+}

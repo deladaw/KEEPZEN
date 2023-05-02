@@ -66,10 +66,32 @@ h6 {
   isolation: isolate;
 }
 
+.btn--secondary, .btn {
+  display: inline-block;
+  padding: 0.625rem 1.25rem;
+  font-size: 1.1rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.5rem;
+  color: #594a4e;
+  cursor: pointer;
+  background-color: #ff8ba7;
+}
+.btn--secondary:hover, .btn:hover {
+  background-color: #ffc6c7;
+}
+
+.btn--secondary {
+  background-color: #c3f0ca;
+}
+.btn--secondary:hover {
+  color: #fffffe;
+}
+
 .heading-primary {
   color: #33272a;
   font-family: "Abril Fatface", cursive;
-  font-size: 3rem;
+  font-size: 2.8rem;
   font-weight: 600;
   letter-spacing: 1.5%;
 }
@@ -115,19 +137,20 @@ h6 {
 }
 
 .nav__container {
-  width: 71.25rem;
+  max-width: 71.25rem;
   margin: 0 auto;
   align-items: center;
   display: flex;
   justify-content: space-between;
-  min-height: 100px;
+  min-height: 6.25rem;
+  width: 100%;
 }
 .nav__logo {
-  max-width: 120px;
+  max-width: 7.5rem;
 }
 .nav__list {
   display: flex;
-  gap: 60px;
+  gap: 3.75rem;
 }
 .nav__list-item {
   list-style: none;
@@ -135,6 +158,57 @@ h6 {
 .nav__list-item a {
   text-decoration: none;
   color: #33272a;
+}
+@media screen and (max-width: 585px) {
+  .nav .nav__container {
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.3rem;
+    padding-top: 0.5rem;
+  }
+  .nav .nav__list {
+    padding-left: 0;
+  }
+}
+
+.header__container {
+  max-width: 71.25rem;
+  margin: 0 auto;
+  display: flex;
+  gap: 1.875rem;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.header__img {
+  width: 100%;
+  max-width: 21.875rem;
+  min-width: 15.625rem;
+}
+.header__title {
+  display: flex;
+  gap: 4rem;
+  justify-content: center;
+  flex-direction: column;
+  align-items: baseline;
+}
+.header__title .heading-primary {
+  width: 100%;
+  max-width: 35.5rem;
+}
+@media screen and (max-width: 704px) {
+  .header .header__container {
+    flex-direction: column-reverse;
+  }
+  .header .header__img {
+    align-self: center;
+  }
+  .header .header__title {
+    align-items: center;
+  }
+  .header .header__title .heading-primary {
+    text-align: center;
+  }
 }
 
 .grid {
@@ -181,6 +255,13 @@ h6 {
   grid-auto-flow: dense;
 }
 
+@media screen and (max-width: 860px) {
+  html {
+    font-size: 14px !important;
+  }
+}
 body {
   background-color: #faeee7;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }/*# sourceMappingURL=main.css.map */
