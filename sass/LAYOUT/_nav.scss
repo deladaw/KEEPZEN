@@ -1,0 +1,26 @@
+.nav {
+  &__container {
+    width: $anchura;
+    margin: $center;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    min-height: 100px;
+  }
+
+  &__logo {
+    max-width: 120px;
+  }
+
+  &__list {
+    display: flex;
+    gap: 60px;
+    &-item {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $colorTipoHeadings;
+      }
+    }
+  }
+}

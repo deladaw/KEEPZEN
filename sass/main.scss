@@ -1,0 +1,17 @@
+@import "abstract/variables";
+@import "abstract/media-querys";
+@import "abstract/mixins";
+@import "base/typography";
+@import "base/reset";
+@import "components/borders";
+@import "components/buttons";
+@import "components/headings";
+@import "layout/nav";
+@import "layout/header";
+@import "layout/footer";
+@import "layout/grid";
+@import "pages/landing_home";
+
+body {
+  background-color: $colorBackground;
+}
