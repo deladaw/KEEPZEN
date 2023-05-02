@@ -9,8 +9,10 @@
   color: $colorTipoCuerpo;
   cursor: pointer;
   background-color: $colorPrincipalSalmon;
+  transition: background-color 0.3s ease;
 
   &:hover {
+    background-color: lighten($colorSecundarioRosa, 10%);
     background-color: $colorSecundarioRosa;
   }
 }
@@ -25,7 +27,7 @@
 
     &:hover {
       color: $colorBlancoRoto;
-      background-color: $colorTipoCuerpo;
+      background-color: lighten($colorTipoCuerpo, 10%);
     }
   }
 }

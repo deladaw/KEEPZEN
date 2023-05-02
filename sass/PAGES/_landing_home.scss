@@ -15,6 +15,11 @@
 .call {
   width: 100%;
 
+  .fa-spa {
+    font-size: 50px;
+    color: $colorPrincipalSalmon;
+  }
+
   &__fondo {
     background-color: $colorSecundarioRosa;
     padding-bottom: 8.75rem;

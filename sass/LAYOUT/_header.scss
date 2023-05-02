@@ -12,6 +12,7 @@
     width: 100%;
     max-width: 21.875rem;
     min-width: 15.625rem;
+    animation: relaxing 4s ease-in-out infinite;
   }
   &__title {
     display: flex;
@@ -40,5 +41,16 @@
         text-align: center;
       }
     }
+  }
+}
+@keyframes relaxing {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

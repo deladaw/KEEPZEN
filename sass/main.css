@@ -76,8 +76,10 @@ h6 {
   color: #594a4e;
   cursor: pointer;
   background-color: #ff8ba7;
+  transition: background-color 0.3s ease;
 }
 .btn--secondary:hover, .btn:hover {
+  background-color: #fff9f9;
   background-color: #ffc6c7;
 }
 
@@ -86,7 +88,7 @@ h6 {
 }
 .btn--secondary:hover {
   color: #fffffe;
-  background-color: #594a4e;
+  background-color: #756166;
 }
 
 .heading-primary {
@@ -214,6 +216,7 @@ h6 {
   width: 100%;
   max-width: 21.875rem;
   min-width: 15.625rem;
+  animation: relaxing 4s ease-in-out infinite;
 }
 .header__title {
   display: flex;
@@ -241,6 +244,17 @@ h6 {
   }
 }
 
+@keyframes relaxing {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
 .grid {
   display: grid;
   margin: 0 auto;
@@ -312,6 +326,10 @@ h6 {
 
 .call {
   width: 100%;
+}
+.call .fa-spa {
+  font-size: 50px;
+  color: #ff8ba7;
 }
 .call__fondo {
   background-color: #ffc6c7;
