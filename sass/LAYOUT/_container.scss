@@ -1,0 +1,13 @@
+.container {
+  max-width: $anchura;
+  margin: $center;
+  padding-left: $paddingXL;
+  padding-right: $paddingXL;
+}
+
+@include mv(585px) {
+  .container {
+    padding-left: $paddingMD;
+    padding-right: $paddingMD;
+  }
+}

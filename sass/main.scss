@@ -10,11 +10,10 @@
 @import "layout/header";
 @import "layout/footer";
 @import "layout/grid";
+@import "layout/container";
 @import "pages/landing_home";
 @import "abstract/media-querys";
 
 body {
   background-color: $colorBackground;
-  padding-left: $paddingMD;
-  padding-right: $paddingMD;
 }
