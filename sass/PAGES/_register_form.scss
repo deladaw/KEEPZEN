@@ -1,7 +1,7 @@
 .registro {
   display: flex;
   flex-direction: column;
-  gap: 50px;
+  gap: 3.125rem;
   &__title {
     text-align: center;
     padding-top: $paddingXL;
@@ -15,5 +15,5 @@
     margin: 0 auto;
   }
 
-  padding-bottom: 100px;
+  padding-bottom: 6.25rem;
 }

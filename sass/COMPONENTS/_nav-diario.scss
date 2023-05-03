@@ -1,0 +1,30 @@
+.diary__nav {
+  &-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0;
+  }
+
+  .diary__icon {
+    display: flex;
+    align-content: center;
+    gap: 12px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    font-family: $fuenteHeadings;
+    color: $colorTipoHeadings;
+    font-size: 18px;
+    text-decoration: none;
+  }
+
+  .fas {
+    font-size: 20px;
+    color: $colorTipoCuerpo;
+  }
+}

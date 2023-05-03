@@ -12,7 +12,7 @@
       crossorigin="anonymous"
     />
 
-    <title>KeepZen - ¡Cuenta creada!</title>
+    <title>KeepZen - Diario</title>
   </head>
   <body>
     <!-- NAV -->
@@ -36,45 +36,32 @@
         </ul>
       </div>
     </nav>
-    <!-- REGISTRO -->
+    <!-- DIARIO -->
+    <section class="diary container">
+      <nav class="diary__nav">
+        <ul class="diary__nav-list">
+          <div class="diary__icon">
+            <li>
+              <a href=""><i class="fas fa-chevron-left"></i></a>
+            </li>
+            <li><a href="">Ayer</a></li>
+          </div>
 
-    <section class="created container">
-      <i class="fas fa-check-circle"></i>
-      <h2 class="heading-secondary">¡Cuenta creada!</h2>
-      <p class="sub-heading">
-        Puedes empezar desde ya a escribir tus notas, tu diario de
-        agradecimiento o bien realizar algunos ejercicios de relajación. ¡No
-        tiene un orden establecido!<strong>
-          Pero si prefieres seguir un orden, te recomendamos probar con esta
-          rutina:</strong
-        >
-      </p>
-      <ol>
-        <li>
-          Antes de irte a dormir, o durante el día conforme te acuerdes, apunta
-          todas las cosas que tengas que hacer para el día siguiente.
-        </li>
-        <li>
-          Escribe al menos alguna cosa por la que te sientas agradecido/a
-          durante el día, puede ser cualquier cosa, lo importante es que lo
-          sientas de verdad.
-        </li>
-        <li>
-          Realiza 5 minutos de respiraciones y después estira todo el cuerpo.
-        </li>
-        <li>
-          Al día siguiente por la mañana, puedes ir consultando las cosas que
-          has apuntado y tachándolas de la lista. Es recomendable que al
-          levantarte realices las respiraciones y los estiramientos para empezar
-          el día con mejor ánimo.
-        </li>
-      </ol>
-      <div class="btn-container">
-        <button class="btn">DIARIO</button>
-        <button class="btn--secondary">RELÁJATE</button>
+          <li><a href="">Hoy</a></li>
+          <div class="diary__icon">
+            <li><a href="">Mañana</a></li>
+            <li>
+              <a href=""><i class="fas fa-chevron-right"></i></a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+
+      <div class="diary__title">
+        <h2 class="heading-secondary">Tareas para hoy</h2>
+        <h4 class="heading-quaternary">Lunes, 6 de Marzo</h4>
       </div>
     </section>
-
     <!-- FOOTER -->
     <footer class="footer">
       <div class="footer__container container">

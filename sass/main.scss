@@ -8,6 +8,8 @@
 @import "components/features";
 @import "components/social-icons";
 @import "components/form";
+@import "components/nav-diario";
+@import "components/todolist";
 @import "layout/nav";
 @import "layout/header";
 @import "layout/footer";
@@ -16,6 +18,7 @@
 @import "pages/landing_home";
 @import "pages/register_form";
 @import "pages/cuenta_creada";
+@import "pages/diary";
 @import "abstract/media-querys";
 
 body {
