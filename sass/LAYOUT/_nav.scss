@@ -20,14 +20,20 @@
 
     &-item {
       list-style: none;
+
       a {
         text-decoration: none;
         color: $colorTipoHeadings;
+        transition: all linear 0.1s;
+
+        &:hover {
+          color: $colorPrincipalSalmon;
+        }
       }
     }
   }
   .fa-user-circle {
-    font-size: 30px;
+    font-size: 1.875rem;
   }
 
   @include mv(585px) {

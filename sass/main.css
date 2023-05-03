@@ -211,9 +211,13 @@ h6 {
 .nav__list-item a {
   text-decoration: none;
   color: #33272a;
+  transition: all linear 0.1s;
+}
+.nav__list-item a:hover {
+  color: #ff8ba7;
 }
 .nav .fa-user-circle {
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 @media screen and (max-width: 585px) {
   .nav .nav__container {
