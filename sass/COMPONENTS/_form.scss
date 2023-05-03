@@ -3,8 +3,8 @@
   flex-direction: column;
   position: relative;
   width: 100%;
-  max-width: 650px;
-  min-width: 280px;
+  max-width: 40.625rem;
+  min-width: 17.5rem;
   padding: $paddingMD;
   //   gap: 10px;
   border: 2.5px solid $colorTipoHeadings;
@@ -23,11 +23,11 @@
   }
 
   .col1 {
-    margin-right: 20px;
+    margin-right: 1.25rem;
   }
   label {
-    margin-bottom: 10px;
-    margin-top: 25px;
+    margin-bottom: 0.625rem;
+    margin-top: 1.5625rem;
     // font-family: $fuenteHeadings;
     // display: block;
   }
@@ -51,9 +51,9 @@
   }
   .band {
     position: absolute;
-    max-width: 100px;
+    max-width: 6.25rem;
     top: -1px;
-    left: -30px;
+    left: -1.875rem;
     transform: rotate(-20deg);
   }
 }
@@ -64,8 +64,8 @@
     }
 
     .band {
-      width: 80px;
-      left: -18px;
+      width: 5rem;
+      left: -1.125rem;
     }
   }
 }
