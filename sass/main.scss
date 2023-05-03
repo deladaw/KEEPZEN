@@ -7,12 +7,14 @@
 @import "components/headings";
 @import "components/features";
 @import "components/social-icons";
+@import "components/form";
 @import "layout/nav";
 @import "layout/header";
 @import "layout/footer";
 @import "layout/grid";
 @import "layout/container";
 @import "pages/landing_home";
+@import "pages/register_form";
 @import "abstract/media-querys";
 
 body {

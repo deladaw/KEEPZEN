@@ -188,6 +188,66 @@ h6 {
   color: inherit;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+  max-width: 650px;
+  min-width: 280px;
+  padding: 1.5rem;
+  border: 2.5px solid #33272a;
+  border-radius: 8px;
+  background-color: #fffffe;
+}
+.form__join {
+  display: flex;
+  width: 100%;
+}
+.form__join-col {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.form .col1 {
+  margin-right: 20px;
+}
+.form label {
+  margin-bottom: 10px;
+  margin-top: 25px;
+}
+.form input {
+  border: none;
+  border-bottom: 2.5px solid #33272a;
+  outline: none;
+  padding: 0;
+  font-size: 1.1rem;
+  color: #33272a;
+  background-color: transparent;
+}
+.form input[type=checkbox] {
+  margin-right: 8px;
+}
+.form input[type=checkbox]:checked {
+  accent-color: #ff8ba7;
+}
+.form .band {
+  position: absolute;
+  max-width: 100px;
+  top: -1px;
+  left: -30px;
+  transform: rotate(-20deg);
+}
+
+@media screen and (max-width: 470px) {
+  .form__join {
+    flex-direction: column;
+  }
+  .form .band {
+    width: 80px;
+    left: -18px;
+  }
+}
 .nav__container {
   max-width: 71.25rem;
   margin: 0 auto;
@@ -199,6 +259,9 @@ h6 {
 }
 .nav__logo {
   max-width: 7.5rem;
+}
+.nav__link-logo {
+  width: 7.5rem;
 }
 .nav__list {
   display: flex;
@@ -420,6 +483,23 @@ h6 {
   gap: 3.125rem;
   padding-top: 1.875rem;
   padding-bottom: 1.875rem;
+}
+
+.registro {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-bottom: 100px;
+}
+.registro__title {
+  text-align: center;
+  padding-top: 2.625rem;
+}
+.registro .form {
+  margin: 0 auto;
+}
+.registro .btn {
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 860px) {
