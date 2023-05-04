@@ -1,0 +1,29 @@
+.diary {
+  max-width: 650px;
+  padding-top: 80px;
+
+  &__nav {
+    padding-bottom: 50px;
+  }
+
+  .to-do-list {
+    max-width: 100%;
+    background-color: $colorBlancoRoto;
+    border: $bordeLinea;
+    min-height: 300px;
+    padding: $paddingMD;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__entry {
+    max-width: 100%;
+    border: $bordeLinea;
+  }
+
+  &__entry-btns {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 40px;
+  }
+}
