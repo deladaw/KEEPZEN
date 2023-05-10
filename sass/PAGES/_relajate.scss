@@ -1,0 +1,151 @@
+.relax {
+  .heading-secondary {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 40px;
+  }
+
+  &__headline {
+    text-align: center;
+    max-width: 600px;
+    margin: $center;
+    margin-bottom: 40px;
+  }
+
+  .play-container {
+    //Le he tenido que poner un container al button porque no había forma de centrarlo.
+    display: flex;
+    justify-content: center;
+  }
+
+  .sphere {
+    margin: auto;
+    height: 320px;
+    width: 320px;
+    border-radius: 50%;
+    background: radial-gradient(#ffc6c743, $colorSecundarioRosa);
+    opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .sphere-inner {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background: radial-gradient($colorPrincipalSalmon, $colorSecundarioRosa);
+    position: absolute;
+  }
+
+  .inspira {
+    position: absolute;
+    color: $colorBlancoRoto;
+    opacity: 0;
+  }
+
+  .espira {
+    position: absolute;
+    color: $colorBlancoRoto;
+    opacity: 0;
+    font-size: 20px;
+  }
+
+  .play {
+    cursor: pointer;
+    color: $colorTipoCuerpo;
+    // border-radius: 50%;
+    // padding: 5px;
+    background-color: $colorTerciarioVerde;
+    margin-top: 40px;
+  }
+  .fa-solid {
+    font-size: 30px;
+  }
+
+  .animate {
+    animation: breath 6s ease-in-out infinite alternate;
+  }
+
+  .animate-inspira {
+    animation: breath-inspira 12s ease-in-out infinite;
+    animation-delay: 0.1s; /* la animación "breath-inspira" comienza después de que el círculo alcance su tamaño máximo */
+  }
+  .animate-espira {
+    animation: breath-espira 12s ease-in-out infinite;
+    animation-delay: 6s; /* la animación "breath-espira" comienza después de que el círculo alcance su tamaño mínimo */
+  }
+}
+
+.stretch {
+  .heading-secondary {
+    margin-top: 80px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &__headline {
+    text-align: center;
+    max-width: 600px;
+    margin: $center;
+    margin-bottom: 40px;
+  }
+
+  .video-container {
+    display: flex;
+    align-items: center;
+  }
+
+  &__video {
+    margin: $center;
+    margin-bottom: 80px;
+  }
+}
+@keyframes breath {
+  to {
+    transform: scale(3.2);
+  }
+}
+@keyframes breath-inspira {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1.3);
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes breath-espira {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(0.8);
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+}
