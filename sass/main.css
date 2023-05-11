@@ -527,6 +527,10 @@ h6 {
   text-align: center;
   padding-top: 2.625rem;
 }
+.registro h4 {
+  text-align: center;
+  margin-top: -30px;
+}
 .registro .form {
   margin: 0 auto;
 }
@@ -643,15 +647,15 @@ h6 {
   font-size: 30px;
 }
 .relax .animate {
-  animation: breath 6s ease-in-out infinite alternate;
+  animation: breath 5s ease-in-out infinite alternate;
 }
 .relax .animate-inspira {
-  animation: breath-inspira 12s ease-in-out infinite;
-  animation-delay: 0.1s; /* la animación "breath-inspira" comienza después de que el círculo alcance su tamaño máximo */
+  animation: breath-inspira 10s ease-in-out infinite;
+  animation-delay: 0.05s; /* la animación "breath-inspira" comienza después de que el círculo alcance su tamaño máximo */
 }
 .relax .animate-espira {
-  animation: breath-espira 12s ease-in-out infinite;
-  animation-delay: 6s; /* la animación "breath-espira" comienza después de que el círculo alcance su tamaño mínimo */
+  animation: breath-espira 10s ease-in-out infinite;
+  animation-delay: 5s; /* la animación "breath-espira" comienza después de que el círculo alcance su tamaño mínimo */
 }
 
 .stretch .heading-secondary {
@@ -719,6 +723,44 @@ h6 {
     transform: scale(0.8);
   }
 }
+.login {
+  display: flex;
+  flex-direction: column;
+  gap: 3.125rem;
+  padding-bottom: 6.25rem;
+}
+.login__title {
+  text-align: center;
+  padding-top: 2.625rem;
+}
+.login h4 {
+  text-align: center;
+  margin-top: -30px;
+}
+.login .form {
+  margin: 0 auto;
+  max-width: 380px;
+}
+.login .form .sun {
+  position: absolute;
+  max-width: 6.25rem;
+  bottom: 95%;
+  left: 37%;
+}
+.login .btn {
+  margin: 0 auto;
+}
+.login .forgot-pass {
+  text-align: center;
+  margin: 20px 0;
+}
+.login .forgot-pass a {
+  color: #594a4e;
+}
+.login .forgot-pass a:hover {
+  color: #ff8ba7;
+}
+
 @media screen and (max-width: 860px) {
   html {
     font-size: 14px !important;

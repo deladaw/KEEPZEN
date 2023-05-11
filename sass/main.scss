@@ -10,6 +10,7 @@
 @import "components/form";
 @import "components/nav-diario";
 @import "components/todolist";
+@import "components/login";
 @import "layout/nav";
 @import "layout/header";
 @import "layout/footer";
@@ -20,6 +21,7 @@
 @import "pages/cuenta_creada";
 @import "pages/diary";
 @import "pages/relajate";
+@import "pages/login";
 @import "abstract/media-querys";
 
 body {

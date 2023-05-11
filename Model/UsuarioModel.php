@@ -1,6 +1,4 @@
 <?
-
-
 require_once('conectar_db.php');
 
 class UsuarioModel {

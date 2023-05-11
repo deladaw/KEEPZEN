@@ -64,16 +64,16 @@
   }
 
   .animate {
-    animation: breath 6s ease-in-out infinite alternate;
+    animation: breath 5s ease-in-out infinite alternate;
   }
 
   .animate-inspira {
-    animation: breath-inspira 12s ease-in-out infinite;
-    animation-delay: 0.1s; /* la animación "breath-inspira" comienza después de que el círculo alcance su tamaño máximo */
+    animation: breath-inspira 10s ease-in-out infinite;
+    animation-delay: 0.05s; /* la animación "breath-inspira" comienza después de que el círculo alcance su tamaño máximo */
   }
   .animate-espira {
-    animation: breath-espira 12s ease-in-out infinite;
-    animation-delay: 6s; /* la animación "breath-espira" comienza después de que el círculo alcance su tamaño mínimo */
+    animation: breath-espira 10s ease-in-out infinite;
+    animation-delay: 5s; /* la animación "breath-espira" comienza después de que el círculo alcance su tamaño mínimo */
   }
 }
 
