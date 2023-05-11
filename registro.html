@@ -61,6 +61,9 @@
           ><input type="checkbox" id="policy" value="policy" /> Acepto la
           política de privacidad y términos de uso</label
         ><br />
+        <?php if(isset($error_pass)): ?>
+        <p><?php echo $error_pass; ?></p>
+        <?php endif; ?>
       </form>
       <a class="btn" href="cuenta_creada.html">CREAR CUENTA</a>
     </section>
