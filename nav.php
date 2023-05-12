@@ -1,3 +1,7 @@
+<?php
+include("./Controller/seguridad.php");
+?>
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -8,7 +12,6 @@
     <link rel="stylesheet" href="sass/main.css" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
-
     <title><?php echo $titulo; ?></title>
 </head>
 
@@ -23,7 +26,20 @@
                 <li class="nav__list-item"><a href="./diario.php">Diario</a></li>
                 <li class="nav__list-item"><a href="relajate.php">Relájate</a></li>
                 <li class="nav__list-item">
-                    <a href="registro.php"><i class="fas fa-user-circle"></i></a>
+                    <?php if(!isset($_SESSION['autentificado'])){
+                        ?>
+                    <a href="registro.php">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                    <?php
+                    }else{
+                        ?>
+                    <a href="perfil.php">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                    <?php
+                    }
+                    ?>
                 </li>
             </ul>
         </div>

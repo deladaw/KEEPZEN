@@ -1,12 +1,14 @@
-<?
+<?php
 require_once('conectar_db.php');
 
 class UsuarioModel {
     
-    public function comprobarCredenciales($usuario, $contrasena){
+    public function comprobarCredenciales($email, $contrasena){
+
+        
         global $conexion;
-        $stmt = $conexion->prepare("SELECT * FROM usuarios WHERE usuario = ? ");
-        $stmt->execute([$usuario]);
+        $stmt = $conexion->prepare("SELECT * FROM usuarios WHERE email = ? ");
+        $stmt->execute([$email]);
         $datos = $stmt->fetch(PDO::FETCH_OBJ);
         
         if(isset($datos->activo) && $datos->activo == 0){
@@ -20,10 +22,10 @@ class UsuarioModel {
         return false;
     }
     
-    public function obtenerRol($usuario){
+    public function obtenerRol($email){
         global $conexion;
-        $stmt = $conexion->prepare("SELECT id_rol FROM usuarios WHERE usuario = ?");
-        $stmt->execute([$usuario]);
+        $stmt = $conexion->prepare("SELECT id_rol FROM usuarios WHERE email = ?");
+        $stmt->execute([$email]);
         $datos = $stmt->fetch(PDO::FETCH_OBJ);
         
         return $datos->id_rol;

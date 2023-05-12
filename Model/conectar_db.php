@@ -1,30 +1,16 @@
 <?php
 //Conexión con la base de datos.
-class Database {
-    private $host = 'localhost';
-    private $database = 'keepzen';
-    protected $username = 'root';
-    protected $password = '';
+try{
 
-    protected $conn = null;
+    $conexion =  new PDO("mysql:host=localhost; dbname=keepzen", "root", "");
+    $conexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+}catch(PDOException $err){
 
-    public function __construct() {
-        try {
-            $this->connect();
-        } catch (PDOException $err) {
-            die("Error: " . $err->getMessage() . " No se ha podido conectar a la base de datos.");
-        }
-    }
+    die("Error: ". $err->getMessage() ."No se ha podido contectar a la base de datos.");
+    $conexion->exec("SET CHARACTER SET utf8");
 
-    protected function connect() {
-        $dsn = "mysql:host=$this->host;dbname=$this->database;charset=utf8mb4";
-
-        $this->conn = new PDO($dsn, $this->username, $this->password);
-
-        $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-        return $this->conn;
-    }
 }
+
+
 
 ?>

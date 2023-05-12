@@ -280,6 +280,12 @@ h6 {
   color: #594a4e;
 }
 
+.error-msg {
+  font-size: 0.8rem;
+  color: rgba(247, 61, 61, 0.631372549);
+  padding: 5px 0;
+}
+
 .nav__container {
   max-width: 71.25rem;
   margin: 0 auto;
@@ -535,7 +541,14 @@ h6 {
   margin: 0 auto;
 }
 .registro .btn {
-  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  border-style: none;
+  background-color: #ffc6c7;
+  padding: 5px 0;
+}
+.registro .btn:hover {
+  background-color: #ff8ba7;
 }
 
 .created {
@@ -748,7 +761,14 @@ h6 {
   left: 37%;
 }
 .login .btn {
-  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  border-style: none;
+  background-color: #ffc6c7;
+  padding: 5px 0;
+}
+.login .btn:hover {
+  background-color: #ff8ba7;
 }
 .login .forgot-pass {
   text-align: center;
