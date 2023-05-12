@@ -5,42 +5,12 @@ include("./Model/conectar_db.php");
 
 if (isset($_REQUEST['crear'])) {
     
-    $email = "";
-    $nombre = "";
-    $contrasena_nueva = "";
-    $contrasena_nueva2 = "";
+    $email = $_POST["email"];
+    $nombre = $_POST["nombre"];
+    $contrasena_nueva = $_POST["password"];
+    $contrasena_nueva2 = $_POST["password2"];
 
-    if (isset($_POST["email"])) {
-        $email = $_POST["email"];
-    } else {
-        $err_email = "* Email no introducido";
-        $errores = 1;
-    }
-    
-    if (isset($_POST["nombre"])) {
-        $nombre = $_POST["nombre"];
-    } else {
-        $err_usu = "* Nombre de usuario no introducido";
-        $errores = 1;
-    }
-    
-    if (isset($_POST["password"])) {
-        $contrasena_nueva = $_POST["password"];
-    } else {
-        $err_pass = "* Contraseña no introducida";
-        $errores = 1;
-    }
-    
-    if (isset($_POST["password2"])) {
-        $contrasena_nueva2 = $_POST["password2"];
-    } else {
-        $err_pass = "* Contraseña no introducida";
-        $errores = 1;
-    }
-
-
-   
-
+    $errores = 0;
 
         if(isset($_POST["rol"])){
             $rol = $_POST["rol"];
@@ -51,19 +21,12 @@ if (isset($_REQUEST['crear'])) {
         $resultado->execute();
         $datos = $resultado->fetchAll(PDO::FETCH_OBJ);
     
-        $errores = 0;
     
-    
-        //Validación del usuario, no puede estar vacío ni ser mayor de 33 caracteres
-        if (empty($usuario_nuevo)) {
-            $err_usu = "* Nombre de usuario no introducido";
-            $errores = 1;
-        }elseif(strlen($usuario_nuevo) > 33){
-            $err_usu2 = "* Nombre de usuario demasiado largo";
-            $errores = 1;
-            
-        }
-    
+        //Validación de la política de privacidad
+         if(!isset($_POST['policy']) && $_POST['policy']=""){  
+             $err_pol = "* Debes aceptar la política de privacidad";
+                  $errores = 1;
+                          }
         
     
         //Validación de la contraseña, no puede estar vacía ni ser mayor de 255 caracteres
@@ -137,6 +100,7 @@ if (isset($_REQUEST['crear'])) {
         $passHash = password_hash($contrasena_nueva, PASSWORD_DEFAULT);
         //Si no hay ningún error se insertan los datos y se redirige al login.
         if($errores != 1){
+
             //Si el usuario es admin (rol = 2), tendrá una variable más que será la de añadir y seleccionar el rol de el cliente.
             if(isset($_SESSION['rol']) && $_SESSION['rol']=2){
                 
@@ -151,9 +115,24 @@ if (isset($_REQUEST['crear'])) {
             }
             //No me funcionaba el header para redirigir, por problemas con los echos en el NAV, así que he usado JavaScript.
                 if ($res) {
-                    ?><script>
-location.replace("../cuenta_creada.php");
+
+                    $resultado= $conexion->prepare("SELECT * FROM usuarios WHERE email = ? ");
+                    $resultado->execute([$email]);
+                    $datos = $resultado->fetch(PDO::FETCH_OBJ);
+
+                    session_status() === PHP_SESSION_ACTIVE ?: session_start();
+                    $_SESSION['email'] = $datos->email;
+                    $_SESSION['nombre_usuario'] = $datos->nombre;
+                    $_SESSION['id_usuario'] = $datos->id;
+                    $_SESSION['autentificado'] = true;
+                    $_SESSION['rol'] = $datos->id_rol;
+
+                    if($datos){
+                        ?><script>
+location.replace("cuenta_creada.php");
 </script> <?php
+                    }
+
                 }
     }
 

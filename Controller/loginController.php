@@ -20,8 +20,7 @@ if(isset($datos->activo) && $datos->activo == 0){
 }else{
 
 //Si no existe el usuario registrado, sale un mensaje de error:
-//&& password_verify($pwd,$datos->clave)
-if ($datos == true ){
+if ($datos && password_verify($pwd,$datos->clave)){
     
     session_status() === PHP_SESSION_ACTIVE ?: session_start();
     $_SESSION['email'] = $datos->email;

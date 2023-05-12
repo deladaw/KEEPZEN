@@ -1,7 +1,8 @@
 <?php
-$titulo = "KeepZen - Diario";
-include("./Controller/seguridad.php");
+$titulo = "KeepZen - Relájate";
 include("nav.php");
+include("./Controller/seguridad.php");
+
 ?>
 
 <!-- EJERCICIO RESPIRACIÓN -->

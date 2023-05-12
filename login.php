@@ -1,8 +1,7 @@
 <?php
-$titulo = "KeepZen - Iniciar Sesión";
+$titulo = "KeepZen - Login";
 include("./Controller/seguridad.php"); // Verifica si el usuario está autenticado
-include("./Controller/loginController.php");
-
+include("./Controller/loginController.php"); // Verifica si el usuario está autenticado
 include("nav.php");
 ?>
 

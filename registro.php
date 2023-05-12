@@ -1,7 +1,7 @@
 <?php
 $titulo = "KeepZen - Diario";
-include("./Controller/seguridad.php");
 include("./Controller/registroController.php");
+include("./Controller/seguridad.php");
 include("nav.php");
 ?>
 
@@ -29,6 +29,7 @@ include("nav.php");
             <p class="error-msg"><?php if(isset($err_email)){echo $err_email; }?></p>
             <p class="error-msg"><?php if(isset($err_email2)){echo $err_email2; }?></p>
             <p class="error-msg"><?php if(isset($err_email3)){echo $err_email3; }?></p>
+            <p class="error-msg"><?php if(isset($err_email4)){echo $err_email4; }?></p>
             <p class="error-msg"><?php if(isset($err_nom)){echo $err_nom; }?></p>
         </div>
         </div>
@@ -44,8 +45,9 @@ include("nav.php");
             <p class="error-msg"><?php if(isset($err_pass3)){echo $err_pass3; }?></p>
             <p class="error-msg"><?php if(isset($err_pass4)){echo $err_pass4; }?></p>
         </div>
-        <label><input type="checkbox" id="policy" value="policy" /> Acepto la
+        <label><input type="checkbox" id="policy" value="policy" name="policy" /> Acepto la
             política de privacidad y términos de uso</label><br />
+        <p class="error-msg"><?php if(isset($err_pol)){echo $err_pol; }?></p>
         <input type="submit" name="crear" id="crear" value="Crear Cuenta" class="btn">
     </form>
 </section>

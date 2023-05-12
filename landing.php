@@ -1,7 +1,3 @@
-<?php
-include("./Controller/seguridad.php");
-?>
-
 <!-- HEADER -->
 <header class="header">
     <div class="header__container container">

@@ -1,7 +1,3 @@
-<?php
-include("./Controller/seguridad.php");
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 
@@ -14,6 +10,11 @@ include("./Controller/seguridad.php");
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous" />
     <title><?php echo $titulo; ?></title>
 </head>
+<?php
+
+include("./Controller/seguridad.php");
+
+?>
 
 <body>
     <!-- NAV -->
@@ -22,7 +23,7 @@ include("./Controller/seguridad.php");
             <a class="nav__link-logo" href="./index.php"><img src="./img/generales/Logotipo_keepzen.svg" alt=""
                     class="nav__logo" /></a>
             <ul class="nav__list">
-                <li class="nav__list-item"><a href="#funciona">Cómo funciona</a></li>
+                <li class="nav__list-item"><a href="./index.php#funciona">Cómo funciona</a></li>
                 <li class="nav__list-item"><a href="./diario.php">Diario</a></li>
                 <li class="nav__list-item"><a href="relajate.php">Relájate</a></li>
                 <li class="nav__list-item">

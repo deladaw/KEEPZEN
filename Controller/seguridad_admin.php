@@ -12,5 +12,17 @@ window.location.href = "index.php";
     exit();
   }
 }
+function verificar_permisos_sesion() {
+  // Verificar si el usuario actual tiene un rol de usuario
+  if (!isset($_SESSION['rol']) || $_SESSION['rol'] != 1) {
+
+           ?>
+<script type="text/javascript">
+window.location.href = "index.php";
+</script>
+<?php
+    exit();
+  }
+}
 
 ?>
