@@ -7,7 +7,7 @@ include("nav.php");
 
 <section class="login container">
     <h2 class="login__title heading-secondary">
-        Inicia sesión
+        Iniciar sesión
     </h2>
     <form action="" class="form" method="POST">
         <img class="sun" src="img/login/login_sun.svg" alt="">

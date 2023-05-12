@@ -605,6 +605,34 @@ h6 {
 .diary .greet__title {
   margin-top: 40px;
 }
+.diary .task-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+}
+.diary .task-checkbox {
+  margin-right: 8px;
+}
+.diary .task-completed .task-text {
+  text-decoration: line-through;
+}
+.diary input[type=checkbox] {
+  margin-right: 8px;
+}
+.diary input[type=checkbox]:checked {
+  accent-color: #ff8ba7;
+}
+.diary .delete-task {
+  margin-left: auto;
+  cursor: pointer;
+}
+.diary .delete-task:hover {
+  text-decoration: underline;
+  color: rgba(247, 61, 61, 0.631372549);
+}
+.diary .delete-task:hover + .task-text {
+  color: rgba(247, 61, 61, 0.631372549);
+}
 
 .relax .heading-secondary {
   text-align: center;
@@ -779,6 +807,14 @@ h6 {
 }
 .login .forgot-pass a:hover {
   color: #ff8ba7;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 100px;
 }
 
 @media screen and (max-width: 860px) {

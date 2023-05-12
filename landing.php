@@ -6,7 +6,7 @@
                 El objetivo perfecto entre la productividad y el bienestar
                 emocional.
             </h1>
-            <a href="registro.html" class="btn">ÚNETE AHORA</a>
+            <a href="registro.php" class="btn">ÚNETE AHORA</a>
         </div>
         <img class="header__img" src="img/landing_page/hero_girl_mindfullness.svg" alt="chica meditando relajada" />
     </div>
@@ -95,7 +95,7 @@
                 levantarte y antes de acostarte mediante una serie de estiramientos
                 integrales.
             </p>
-            <a href="registro.html" class="call-btn btn--secondary">EMPIEZA AHORA</a>
+            <a href="registro.php" class="call-btn btn--secondary">EMPIEZA AHORA</a>
         </div>
     </div>
 </section>

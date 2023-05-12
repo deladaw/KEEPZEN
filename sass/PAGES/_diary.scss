@@ -33,4 +33,38 @@
   .greet__title {
     margin-top: 40px;
   }
+
+  .task-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
+
+  .task-checkbox {
+    margin-right: 8px;
+  }
+
+  .task-completed .task-text {
+    text-decoration: line-through;
+  }
+
+  input[type="checkbox"] {
+    margin-right: 8px;
+    &:checked {
+      accent-color: $colorPrincipalSalmon;
+    }
+  }
+
+  .delete-task {
+    margin-left: auto;
+    cursor: pointer;
+    &:hover {
+      text-decoration: underline;
+      color: $colorError;
+    }
+  }
+
+  .delete-task:hover + .task-text {
+    color: $colorError;
+  }
 }

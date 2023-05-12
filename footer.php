@@ -38,6 +38,7 @@
         </div>
     </footer>
     <script src="./scriptsJS/relajate.js"></script>
+    <script src="./scriptsJS/agregarTarea.js"></script>
     </body>
 
     </html>

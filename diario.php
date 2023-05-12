@@ -32,10 +32,8 @@ include("nav.php");
         <h5 class="heading-quinary">Lunes, 6 de Marzo</h5>
     </div>
 
-    <div class="to-do-list">
-        <p>Pasear a pancho</p>
-        <p>Ir al gym</p>
-        <p>Recoger el encargo de Natura</p>
+    <div class="to-do-list" id="task-list">
+
     </div>
 
     <div class="diary__entry-btns">
@@ -54,8 +52,9 @@ include("nav.php");
     <div class="greet">
         <h2 class="heading-secondary greet__title">¿Por qué te sientes agradecido/a hoy?</h2>
         <form action="">
-            <textarea placeholder="Leer un capítulo a la semana" class="diary__entry" name="" id="" cols="70"
-                rows="3"></textarea>
+            <textarea
+                placeholder="Por ej: Tener una mascota que te quiere, tomar un café en un día soleado, tener la oportunidad de aprender cosas nuevas cada día..."
+                class="diary__entry" name="" id="" cols="70" rows="3"></textarea>
         </form>
         <button class="btn add-entry">ANOTAR</button>
     </div>
