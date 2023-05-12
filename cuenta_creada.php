@@ -1,7 +1,10 @@
 <?php
 $titulo = "KeepZen - Diario";
 include("./Controller/seguridad.php");
+include("./Controller/seguridad_admin.php");
 include("nav.php");
+
+verificar_permisos_sesion();
 ?>
 
 <!-- CUENTA CREADA -->

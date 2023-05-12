@@ -23,10 +23,10 @@ if (isset($_REQUEST['crear'])) {
     
     
         //Validación de la política de privacidad
-         if(!isset($_POST['policy']) && $_POST['policy']=""){  
-             $err_pol = "* Debes aceptar la política de privacidad";
-                  $errores = 1;
-                          }
+        if(!isset($_POST['policy']) || $_POST['policy'] == ""){  
+            $err_pol = "* Debes aceptar la política de privacidad";
+            $errores = 1;
+        }
         
     
         //Validación de la contraseña, no puede estar vacía ni ser mayor de 255 caracteres
