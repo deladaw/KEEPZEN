@@ -1,55 +1,74 @@
 .diary {
-  max-width: 700px;
-  padding-top: 80px;
+  max-width: 43.75rem;
+  padding-top: 5rem;
+
+  textarea:focus {
+    outline: none;
+  }
 
   &__nav {
-    padding-bottom: 50px;
+    padding-bottom: 3.125rem;
   }
 
   .to-do-list {
     max-width: 100%;
     background-color: $colorBlancoRoto;
     border: $bordeLinea;
-    min-height: 300px;
+    min-height: 18.75rem;
     padding: $paddingMD;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 2.5rem;
+    // margin-bottom: 40px;
+    position: relative;
+
+    .tape-diary {
+      position: absolute;
+      top: -8%;
+      left: 83%;
+      width: 8.125rem;
+      transform: rotate(10deg);
+    }
   }
 
   &__entry {
     max-width: 100%;
     border: $bordeLinea;
     padding: $paddingMD;
-    margin-bottom: 40px;
-    margin-top: 40px;
+    margin-bottom: 2.5rem;
+    margin-top: 2.5rem;
     resize: none;
   }
 
   &__entry-btns {
     display: flex;
-    gap: 30px;
+    gap: 1.875rem;
   }
 
   .greet__title {
-    margin-top: 40px;
+    margin-top: 2.5rem;
   }
 
   .task-item {
     display: flex;
-    align-items: center;
+    align-items: baseline;
     margin-bottom: 8px;
+    word-wrap: break-word;
   }
 
-  .task-checkbox {
-    margin-right: 8px;
-  }
-
-  .task-completed .task-text {
-    text-decoration: line-through;
+  .task-text {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 82%;
+    cursor: pointer;
   }
 
   input[type="checkbox"] {
+    cursor: pointer;
     margin-right: 8px;
+
+    &:checked + .task-text {
+      text-decoration: line-through;
+    }
+
     &:checked {
       accent-color: $colorPrincipalSalmon;
     }
@@ -58,13 +77,48 @@
   .delete-task {
     margin-left: auto;
     cursor: pointer;
+    text-decoration: none;
+    color: $colorTipoCuerpo;
     &:hover {
-      text-decoration: underline;
       color: $colorError;
     }
   }
 
   .delete-task:hover + .task-text {
     color: $colorError;
+  }
+
+  .favorite-task {
+    color: gray;
+  }
+  .favorite {
+    color: pink;
+  }
+
+  .ayer-completed {
+    text-decoration: line-through;
+    cursor: auto;
+  }
+
+  .ayer-no-completed {
+    cursor: auto;
+  }
+  .fa-arrow-alt-circle-right {
+    cursor: pointer !important;
+    margin-left: 8px;
+    color: gray;
+  }
+}
+
+@include mv(570px) {
+  //No me coge los estilos si no los pongo dentro de un html y con !important.
+  html {
+    .tape-diary {
+      position: absolute;
+      top: -8%;
+      left: 70% !important;
+      width: 100px !important;
+      transform: rotate(2deg) !important;
+    }
   }
 }

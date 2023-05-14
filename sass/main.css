@@ -286,6 +286,37 @@ h6 {
   padding: 5px 0;
 }
 
+.option-card {
+  max-width: 8.75rem;
+  background-color: #fffffe;
+  padding: 16px 10px;
+  position: relative;
+  text-align: center;
+  border: 3px solid black;
+  color: #594a4e;
+  text-decoration: none;
+  font-weight: 700;
+}
+.option-card:hover {
+  color: #ff8ba7;
+  border: 3px solid #ff8ba7;
+}
+.option-card i {
+  font-size: 2.5rem;
+  position: absolute;
+  top: -38%;
+  left: 37%;
+}
+
+.entry {
+  max-width: 100%;
+  border: 2.5px solid #33272a;
+  padding: 1.5rem;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
+  resize: none;
+}
+
 .nav__container {
   max-width: 71.25rem;
   margin: 0 auto;
@@ -575,49 +606,64 @@ h6 {
 }
 
 .diary {
-  max-width: 700px;
-  padding-top: 80px;
+  max-width: 43.75rem;
+  padding-top: 5rem;
+}
+.diary textarea:focus {
+  outline: none;
 }
 .diary__nav {
-  padding-bottom: 50px;
+  padding-bottom: 3.125rem;
 }
 .diary .to-do-list {
   max-width: 100%;
   background-color: #fffffe;
   border: 2.5px solid #33272a;
-  min-height: 300px;
+  min-height: 18.75rem;
   padding: 1.5rem;
-  margin-top: 40px;
-  margin-bottom: 40px;
+  margin-top: 2.5rem;
+  position: relative;
+}
+.diary .to-do-list .tape-diary {
+  position: absolute;
+  top: -8%;
+  left: 83%;
+  width: 8.125rem;
+  transform: rotate(10deg);
 }
 .diary__entry {
   max-width: 100%;
   border: 2.5px solid #33272a;
   padding: 1.5rem;
-  margin-bottom: 40px;
-  margin-top: 40px;
+  margin-bottom: 2.5rem;
+  margin-top: 2.5rem;
   resize: none;
 }
 .diary__entry-btns {
   display: flex;
-  gap: 30px;
+  gap: 1.875rem;
 }
 .diary .greet__title {
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 .diary .task-item {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   margin-bottom: 8px;
+  word-wrap: break-word;
 }
-.diary .task-checkbox {
-  margin-right: 8px;
-}
-.diary .task-completed .task-text {
-  text-decoration: line-through;
+.diary .task-text {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 82%;
+  cursor: pointer;
 }
 .diary input[type=checkbox] {
+  cursor: pointer;
   margin-right: 8px;
+}
+.diary input[type=checkbox]:checked + .task-text {
+  text-decoration: line-through;
 }
 .diary input[type=checkbox]:checked {
   accent-color: #ff8ba7;
@@ -625,15 +671,43 @@ h6 {
 .diary .delete-task {
   margin-left: auto;
   cursor: pointer;
+  text-decoration: none;
+  color: #594a4e;
 }
 .diary .delete-task:hover {
-  text-decoration: underline;
   color: rgba(247, 61, 61, 0.631372549);
 }
 .diary .delete-task:hover + .task-text {
   color: rgba(247, 61, 61, 0.631372549);
 }
+.diary .favorite-task {
+  color: gray;
+}
+.diary .favorite {
+  color: pink;
+}
+.diary .ayer-completed {
+  text-decoration: line-through;
+  cursor: auto;
+}
+.diary .ayer-no-completed {
+  cursor: auto;
+}
+.diary .fa-arrow-alt-circle-right {
+  cursor: pointer !important;
+  margin-left: 8px;
+  color: gray;
+}
 
+@media screen and (max-width: 570px) {
+  html .tape-diary {
+    position: absolute;
+    top: -8%;
+    left: 70% !important;
+    width: 100px !important;
+    transform: rotate(2deg) !important;
+  }
+}
 .relax .heading-secondary {
   text-align: center;
   margin-bottom: 20px;
@@ -810,11 +884,63 @@ h6 {
 }
 
 .profile {
+  padding-top: 50px;
+}
+.profile .cerrar-sesion {
+  margin: 0 auto;
+}
+.profile__header {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: space-around;
+}
+.profile .heading-secondary {
+  text-align: center;
+}
+.profile__options {
+  padding: 30px 0;
+  display: flex;
+  width: 100%;
+  gap: 42px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+.profile .sloth {
+  max-width: 140px;
+  width: 100%;
+  min-width: 100px;
+  margin: 0 auto;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+.profile .greet {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.profile .greet .heading-tertiary {
+  text-align: center;
+}
+.profile .greet form {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-content: center;
-  gap: 100px;
+  align-items: center;
+}
+.profile .greet form textarea {
+  max-width: 780px;
+  width: 100%;
+}
+.profile .greet form textarea:focus {
+  outline: none;
+}
+.profile .greet form .add-entry {
+  width: 100%;
+  max-width: 780px;
 }
 
 @media screen and (max-width: 860px) {

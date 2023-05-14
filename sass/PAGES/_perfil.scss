@@ -1,7 +1,69 @@
 .profile {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-content: center;
-  gap: 100px;
+  padding-top: 50px;
+  .cerrar-sesion {
+    margin: $center;
+  }
+
+  &__header {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: space-around;
+  }
+
+  .heading-secondary {
+    text-align: center;
+  }
+
+  &__options {
+    padding: 30px 0;
+    display: flex;
+    width: 100%;
+    gap: 42px;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .sloth {
+    max-width: 140px;
+    width: 100%;
+    min-width: 100px;
+    margin: $center;
+    margin-top: 40px;
+    margin-bottom: 30px;
+  }
+
+  .greet {
+    .heading-tertiary {
+      text-align: center;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      textarea {
+        max-width: 780px;
+        width: 100%;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .add-entry {
+        width: 100%;
+        max-width: 780px;
+      }
+    }
+
+    margin-top: 60px;
+    margin-bottom: 60px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
 }

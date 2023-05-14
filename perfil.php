@@ -12,12 +12,39 @@ if(isset($_SESSION['nombre_usuario'])){
 ?>
 
 <section class="profile container">
-    <h2 class="login__title heading-secondary">
+    <!-- <img src="img/generales/sloth_profile.svg" alt="animal perezoso durmiendo" class="sloth"> -->
+    <h2 class="profile__title heading-secondary">
         Bienvenido/a <?php echo $nombreusuario ?>, estás en tu perfil personal
     </h2>
+    <div class="profile__header">
+        <div class="profile__options">
+            <a href="./Controller/salir.php" class="option-card">
+                <i class="fas fa-book"></i>
+                <p>Ver entradas del diario</p>
+            </a>
+            <a href="./Controller/salir.php" class="option-card">
+                <i class="fas fa-user-edit"></i>
+                <p>Editar datos personales</p>
+            </a>
+            <a href="./Controller/salir.php" class="option-card">
+                <i class="fas fa-times-circle"></i>
+                <p>Cerrar sesión personal</p>
+            </a>
+        </div>
+    </div>
 
+    <!-- DIARIO AGRADECIMIENTO -->
+    <div class="greet">
+        <h3 class="heading-tertiary greet__title">¿Por qué te sientes agradecido/a hoy? <i
+                class="fas fa-pencil-alt"></i></h3>
+        <form action="" method="POST">
+            <textarea
+                placeholder="Por ej: Tener una mascota que te quiere, tomar un café en un día soleado, tener la oportunidad de aprender cosas nuevas cada día..."
+                class="entry" name="" id="" cols="85" rows="6"></textarea>
+            <button class="btn add-entry">ANOTAR</button>
+        </form>
+    </div>
 
-    <a class="btn" href="./Controller/salir.php">CERRAR SESIÓN ➡</a>
 </section>
 
 <!-- FOOTER -->

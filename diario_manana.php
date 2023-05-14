@@ -1,8 +1,8 @@
 <?php
-$titulo = "KeepZen - Diario";
-include("./Controller/seguridad.php");
-include("./Model/guardar_tarea.php");
+$titulo = "KeepZen - Diario - Mañana";
 include("./Model/conectar_db.php");
+include("./Controller/seguridad.php");
+include("./Controller/enviarmanana.php");
 include("nav.php");
 ?>
 
@@ -21,25 +21,24 @@ include("nav.php");
 
             <li><a href="diario.php">Hoy</a></li>
             <div class="diary__icon">
-                <li><a href="diario_manana.php">Mañana</a></li>
-                <li>
-                    <a href="diario_manana.php"><i class="fas fa-caret-right"></i></i></a>
-                </li>
+                <li><a href="tareas_manana.php">Mañana</a></li>
             </div>
         </ul>
     </nav>
     <?php
 setlocale(LC_ALL, 'es_ES.UTF-8');
 $fecha_actual = new DateTime();
+$fecha_actual->modify('+1 day'); // sumar un día a la fecha actual
 $formato_fecha = new IntlDateFormatter('es_ES', IntlDateFormatter::FULL, IntlDateFormatter::NONE);
 $fecha_formateada = $formato_fecha->format($fecha_actual);
-
 ?>
+
     <!-- DIARIO TITLE -->
     <div class="diary__title">
-        <h2 class="heading-secondary">Tareas para hoy</h2>
+        <h2 class="heading-secondary">Tareas para mañana</h2>
         <h5 class="heading-quinary"><?php echo ucfirst($fecha_formateada); ?></h5>
     </div>
+
     <div class="to-do-list" id="task-list">
         <img src="img/generales/tape_diary_green.svg" alt="" class="tape-diary">
         <!-- TASK ITEM -->
@@ -47,9 +46,9 @@ $fecha_formateada = $formato_fecha->format($fecha_actual);
         <?php
 $id_usuario = $_SESSION['id_usuario'];
 
-$sql = "SELECT * FROM tareas WHERE id_usuario = ? AND (DATE(fecha_creacion) = CURDATE() OR favorita = 1)";
+$sql = "SELECT * FROM tareas WHERE id_usuario = :id_usuario AND (favorita = 1 OR fecha_creacion = DATE_ADD(CURRENT_DATE(), INTERVAL 1 DAY))";
 $stmt = $conexion->prepare($sql);
-$stmt->execute([$id_usuario]);
+$stmt->execute(['id_usuario' => $id_usuario]);
 $res = $stmt->fetchAll(PDO::FETCH_OBJ);
 ?>
 
@@ -64,19 +63,29 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
                 <i class="fas fa-heart <?= isset($dato->favorita) && $dato->favorita ? 'favorite' : '' ?>"
                     style="cursor: pointer; margin-right: 5px;"></i>
             </a>
-            <input type="checkbox" class="task-checkbox" data-id="<?= $dato->id ?>"
-                <?php if ($completada) { echo "checked"; } ?>>
             <p class="task-text"><?= $dato->tarea ?></p>
             <a href="./Controller/eliminar_tarea.php?id=<?= $dato->id ?>" class="delete-task">X</a>
         </div>
         <?php endforeach; ?>
     </div>
     <!-- AÑADIR REGISTROS LIST -->
-    <form action="" method="POST" id="add-task-form">
+    <form action="" method="POST">
         <textarea placeholder="Escribe una tarea..." class="diary__entry" name="tarea" id="tarea" cols="70"
             rows="3"></textarea>
-        <input type="submit" value="AÑADIR TAREA" name="enviartarea" class="btn add-entry" id="add-task-button">
+        <input type="submit" value="AÑADIR TAREA" name="enviarmanana" class="btn add-entry">
     </form>
+
+
+    <!-- DIARIO AGRADECIMIENTO -->
+    <div class="greet">
+        <h2 class="heading-secondary greet__title">¿Por qué te sientes agradecido/a hoy?</h2>
+        <form action="">
+            <textarea
+                placeholder="Por ej: Tener una mascota que te quiere, tomar un café en un día soleado, tener la oportunidad de aprender cosas nuevas cada día..."
+                class="diary__entry" name="" id="" cols="70" rows="3"></textarea>
+        </form>
+        <button class="btn add-entry">ANOTAR</button>
+    </div>
 </section>
 
 <!-- FOOTER -->

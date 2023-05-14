@@ -38,7 +38,12 @@
         </div>
     </footer>
     <script src="./scriptsJS/relajate.js"></script>
+    <script src="./scriptsJS/tareafav.js"></script>
+    <script src="./scriptsJS/eliminarTarea.js"></script>
+    <script src="./scriptsJS/tareaCompletada.js"></script>
+    <script src="./scriptsJS/limitarCaracteres.js"></script>
     <script src="./scriptsJS/agregarTarea.js"></script>
+    <!-- <script src="./scriptsJS/cambiarTareaAyerAHoy.js"></script> -->
     </body>
 
     </html>
