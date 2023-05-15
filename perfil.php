@@ -28,7 +28,7 @@ if(isset($_SESSION['nombre_usuario'])){
             </a>
             <a href="./Controller/salir.php" class="option-card">
                 <i class="fas fa-times-circle"></i>
-                <p>Cerrar sesión personal</p>
+                <p>Cerrar mi sesión</p>
             </a>
         </div>
     </div>

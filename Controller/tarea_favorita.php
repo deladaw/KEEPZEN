@@ -12,9 +12,11 @@ $tarea = $stmt->fetch(PDO::FETCH_OBJ);
 
 // Cambiar el valor de la propiedad 'favorita'
 if ($tarea->favorita) {
-  $stmt = $conexion->prepare('UPDATE tareas SET favorita = 0 WHERE id = ?');
+  // Desmarcar como favorita y actualizar fecha_creacion
+  $stmt = $conexion->prepare('UPDATE tareas SET favorita = 0, fecha_creacion = CURRENT_TIMESTAMP WHERE id = ?');
 } else {
-  $stmt = $conexion->prepare('UPDATE tareas SET favorita = 1 WHERE id = ?');
+  // Marcar como favorita y actualizar fecha_creacion
+  $stmt = $conexion->prepare('UPDATE tareas SET favorita = 1, fecha_creacion = CURRENT_TIMESTAMP WHERE id = ?');
 }
 $stmt->execute([$id_tarea]);
 

@@ -74,18 +74,6 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
             rows="3"></textarea>
         <input type="submit" value="AÑADIR TAREA" name="enviarmanana" class="btn add-entry">
     </form>
-
-
-    <!-- DIARIO AGRADECIMIENTO -->
-    <div class="greet">
-        <h2 class="heading-secondary greet__title">¿Por qué te sientes agradecido/a hoy?</h2>
-        <form action="">
-            <textarea
-                placeholder="Por ej: Tener una mascota que te quiere, tomar un café en un día soleado, tener la oportunidad de aprender cosas nuevas cada día..."
-                class="diary__entry" name="" id="" cols="70" rows="3"></textarea>
-        </form>
-        <button class="btn add-entry">ANOTAR</button>
-    </div>
 </section>
 
 <!-- FOOTER -->
