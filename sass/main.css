@@ -317,6 +317,36 @@ h6 {
   resize: none;
 }
 
+.card-greet {
+  background-color: #fffffe;
+  padding: 1.5rem;
+  padding-bottom: 30px;
+  max-width: 650px;
+  border: 3px solid black;
+  position: relative;
+}
+.card-greet__title {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 3px solid black;
+}
+.card-greet__text {
+  padding-top: 15px;
+  position: relative;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Número máximo de líneas a mostrar */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.card-greet__text-expand {
+  position: absolute;
+  bottom: 8px;
+  right: 12px;
+  color: #ff8ba7;
+  cursor: pointer;
+}
+
 .nav__container {
   max-width: 71.25rem;
   margin: 0 auto;
@@ -709,6 +739,92 @@ h6 {
     transform: rotate(2deg) !important;
   }
 }
+.diary .muestra-tachada {
+  text-decoration: line-through;
+}
+.diary .task-muestra {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.diary .task-muestra i {
+  margin-right: 6px;
+  color: gray;
+}
+.diary .heart-marked {
+  color: pink !important;
+}
+.diary .muestra-container {
+  display: flex;
+  align-items: center;
+}
+.diary .muestra-form {
+  position: relative;
+}
+.diary .flecha1 {
+  position: absolute;
+  width: 3.5rem;
+  top: 62%;
+  left: 8%;
+}
+.diary .list-muestra {
+  position: relative;
+}
+.diary .list-muestra .flecha3 {
+  width: 80px;
+  position: absolute;
+  top: 45%;
+  left: 2%;
+}
+.diary .list-muestra .muestra-explicacion {
+  position: absolute;
+  max-width: 380px;
+  top: 60%;
+  left: 15%;
+  padding: 0.3rem;
+}
+.diary .instrucciones {
+  padding-top: 70px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.diary .instrucciones__fav, .diary .instrucciones__check, .diary .instrucciones__ayer, .diary .instrucciones__eliminar {
+  display: flex;
+  align-items: baseline;
+}
+.diary .instrucciones p {
+  margin-left: 6px;
+}
+.diary .instrucciones i,
+.diary .instrucciones .task-checkbox,
+.diary .instrucciones .equis {
+  margin-left: 5px;
+  margin-right: 5px;
+  padding-top: 10px;
+}
+
+.diario-agradecimiento {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 70vh;
+}
+.diario-agradecimiento .heading-secondary {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
+}
+.diario-agradecimiento .sub-heading {
+  text-align: center;
+}
+.diario-agradecimiento__cards {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin: 0 auto;
+}
+
 .relax .heading-secondary {
   text-align: center;
   margin-bottom: 20px;
@@ -843,6 +959,7 @@ h6 {
   display: flex;
   flex-direction: column;
   gap: 3.125rem;
+  min-height: 70vh;
   padding-bottom: 6.25rem;
 }
 .login__title {
@@ -942,6 +1059,17 @@ h6 {
 .profile .greet form .add-entry {
   width: 100%;
   max-width: 780px;
+}
+
+.working-on {
+  min-height: 75vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.working-on img {
+  width: 100%;
+  max-width: 550px;
 }
 
 @media screen and (max-width: 860px) {

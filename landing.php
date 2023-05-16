@@ -26,8 +26,8 @@
                 <p class="features__info-desc">
                     Seguro que alguna vez has estado más tiempo del que te gustaría
                     dándole vueltas a todas las cosas que tienes que hacer al día
-                    siguiente. La mejor forma de deshacerte de ellas es apuntándolas
-                    todas antes de irte a dormir. En tu diario personal podrás crear
+                    siguiente. La mejor forma de deshacerte de ellas es <b> apuntándolas
+                        antes de irte a dormir.</b> En tu diario personal podrás crear
                     tu propia lista de tareas personalizada para cada día,
                     asegurándote de que no se te olvide nada importante. ¡Apúntalas
                     por la noche y consúltalas al día siguiente!
@@ -43,14 +43,14 @@
                 </h3>
                 <p class="features__info-desc">
                     El diario de agradecimiento es como un entrenador personal para el
-                    bienestar emocional. En lugar de enfocarte en lo negativo que
-                    pueda haber sucedido en tu día, te alienta a buscar lo positivo y
-                    escribirlo. La práctica del agradecimiento ha sido estudiada y
+                    bienestar emocional.<b>En lugar de enfocarte en lo negativo que
+                        pueda haber sucedido en tu día, te alienta a buscar lo positivo y
+                        escribirlo.</b> La práctica del agradecimiento ha sido estudiada y
                     demostrado que tiene beneficios cognitivos y emocionales en el
                     cerebro, como mejorar el estado de ánimo, reducir el estrés y
-                    aumentar la resiliencia. Y lo mejor de todo, puedes agradecer por
-                    cosas pequeñas, como un hermoso paisaje o una buena comida, ¡no
-                    subestimes su poder!
+                    aumentar la resiliencia. En tu <b>perfil personal</b> tienes una sección para apuntar y consultar tu
+                    diario
+                    de agradecimiento.
                 </p>
             </div>
             <img class="features__img" src="img/landing_page/thanks_features.svg" alt="gracias escrito en grande" />

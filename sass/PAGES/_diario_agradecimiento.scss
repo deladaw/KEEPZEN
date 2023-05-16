@@ -1,0 +1,23 @@
+.diario-agradecimiento {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .heading-secondary {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+  }
+  min-height: 70vh;
+
+  .sub-heading {
+    text-align: center;
+  }
+
+  &__cards {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    margin: 0 auto;
+  }
+}

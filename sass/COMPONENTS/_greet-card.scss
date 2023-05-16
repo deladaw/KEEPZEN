@@ -1,0 +1,34 @@
+.card-greet {
+  background-color: $colorBlancoRoto;
+  padding: $paddingMD;
+  padding-bottom: 30px;
+  max-width: 650px;
+  border: 3px solid black;
+  //   height: 180px;
+  //   overflow: hidden;
+  position: relative;
+
+  &__title {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 3px solid black;
+  }
+
+  &__text {
+    padding-top: 15px;
+    position: relative;
+    display: -webkit-box;
+    -webkit-line-clamp: 4; /* Número máximo de líneas a mostrar */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__text-expand {
+    position: absolute;
+    bottom: 8px;
+    right: 12px;
+    color: $colorPrincipalSalmon;
+    cursor: pointer;
+  }
+}

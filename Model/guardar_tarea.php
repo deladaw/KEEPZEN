@@ -3,7 +3,7 @@ include("conectar_db.php");
 
 // Comprobamos que el usuario tenga una sesión iniciada
 if (!isset($_SESSION['id_usuario'])) {
-    die("Error: usuario no autenticado.");
+    header("Location: diario_muestra.php");
 }
 
 // Si se ha enviado el formulario

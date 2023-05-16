@@ -1,0 +1,82 @@
+.diary {
+  .muestra-tachada {
+    text-decoration: line-through;
+  }
+
+  .task-muestra {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+
+    i {
+      margin-right: 6px;
+      color: gray;
+    }
+  }
+
+  .heart-marked {
+    color: pink !important;
+  }
+
+  .muestra-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .muestra-form {
+    position: relative;
+  }
+
+  .flecha1 {
+    position: absolute;
+    width: 3.5rem;
+    top: 62%;
+    left: 8%;
+  }
+
+  .list-muestra {
+    position: relative;
+
+    .flecha3 {
+      width: 80px;
+      position: absolute;
+      top: 45%;
+      left: 2%;
+    }
+
+    .muestra-explicacion {
+      position: absolute;
+      max-width: 380px;
+      //   font-size: 12px;
+      top: 60%;
+      left: 15%;
+      padding: $paddingXS;
+    }
+  }
+  .instrucciones {
+    padding-top: 70px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    &__fav,
+    &__check,
+    &__ayer,
+    &__eliminar {
+      display: flex;
+      align-items: baseline;
+    }
+
+    p {
+      margin-left: 6px;
+    }
+
+    i,
+    .task-checkbox,
+    .equis {
+      margin-left: 5px;
+      margin-right: 5px;
+      padding-top: 10px;
+    }
+  }
+}

@@ -13,6 +13,7 @@
 @import "components/error-msg";
 @import "components/option-card";
 @import "components/entry";
+@import "components/greet-card";
 @import "layout/nav";
 @import "layout/header";
 @import "layout/footer";
@@ -22,9 +23,12 @@
 @import "pages/register_form";
 @import "pages/cuenta_creada";
 @import "pages/diary";
+@import "pages/diario_muestra";
+@import "pages/diario_agradecimiento";
 @import "pages/relajate";
 @import "pages/login";
 @import "pages/perfil";
+@import "pages/working_on";
 @import "abstract/media-querys";
 
 body {

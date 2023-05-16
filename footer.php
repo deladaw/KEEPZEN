@@ -43,6 +43,7 @@
     <script src="./scriptsJS/tareaCompletada.js"></script>
     <script src="./scriptsJS/limitarCaracteres.js"></script>
     <script src="./scriptsJS/agregarTarea.js"></script>
+    <script src="./scriptsJS/expanderTexto.js"></script>
     <!-- <script src="./scriptsJS/cambiarTareaAyerAHoy.js"></script> -->
     </body>
 
