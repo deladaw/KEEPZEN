@@ -27,7 +27,7 @@ if (isset($_POST['enviaragradecimiento'])) {
 
         if ($res) {
             // Redirigimos a la página del diario de agradecimiento
-            header("Location: perfil.php");
+            header("Location: entradas_diario_agradecimiento.php");
             exit();
         } else {
             die("Error al guardar el agradecimiento.");

@@ -1,0 +1,16 @@
+.eliminar {
+  padding-top: 80px;
+  padding-bottom: 60px;
+  min-height: 70vh;
+
+  &__title {
+    text-align: center;
+    padding-bottom: 40px;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+  }
+}

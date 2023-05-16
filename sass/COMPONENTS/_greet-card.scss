@@ -3,6 +3,7 @@
   padding: $paddingMD;
   padding-bottom: 30px;
   max-width: 650px;
+  min-width: 280px;
   border: 3px solid black;
   //   height: 180px;
   //   overflow: hidden;
@@ -22,6 +23,14 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
     text-overflow: ellipsis;
+  }
+
+  &__delete {
+    position: absolute;
+    top: -1%;
+    right: 1.8%;
+    color: $colorPrincipalSalmon;
+    text-decoration: none;
   }
 
   &__text-expand {

@@ -28,6 +28,10 @@ if(isset($_SESSION['nombre_usuario'])){
                 <i class="fas fa-user-edit"></i>
                 <p>Editar datos personales</p>
             </a>
+            <a href="confirmarDesactivar.php?id=<?=$id?>" class="option-card">
+                <i class="fas fa-user-times"></i>
+                <p>Desactivar cuenta</p>
+            </a>
 
             <a href="./Controller/salir.php" class="option-card">
                 <i class="fas fa-times-circle"></i>

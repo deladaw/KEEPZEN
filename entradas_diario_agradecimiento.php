@@ -44,14 +44,33 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
         <div class="card-greet">
             <div class="card-greet__title">
                 <h5 class="heading-quinary">Fecha:</h5>
+                <a class="card-greet__delete" href="confirmarEliminarEntrada.php?id=<?=$dato->id ?>" .php">&times;</a>
+                <!-- <a class="card-greet__delete" href="./Controller/eliminarEntrada.php?id=?=$dato->id?>">&times;</a> -->
                 <p><b><?= (new DateTime($dato->fecha_creacion))->format('d-m-Y') ?></b></p>
             </div>
             <p class="card-greet__text"><?= $dato->agradecimiento ?></p>
             <?php if (strlen($dato->agradecimiento) > 250): ?>
             <span class="card-greet__text-expand">Ver más</span>
             <?php endif; ?>
+            <!-- Agrega el botón de eliminar con un data-atributo que contenga el id de la entrada -->
         </div>
         <?php endforeach; ?>
+
+
+        <div id="demo-modal" class="modal">
+            <div class="modal__content">
+                <p class="sub-headline">
+                    ¿Quieres eliminar esta entrada?
+                </p>
+
+                <div class="modal__btns">
+                    <a href="#" class="btn eliminar-entrada" data-id="<?=$dato->id?>">Eliminar</a>
+                    <a href="#" class="btn--secondary">Cancelar</a>
+                </div>
+
+                <a href="#" class="modal__close">&times;</a>
+            </div>
+        </div>
 
         <!-- Mostrar la paginación -->
         <div class="pagination">

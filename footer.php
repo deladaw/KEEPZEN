@@ -37,6 +37,7 @@
             </div>
         </div>
     </footer>
+    <script src="./scriptsJS/eliminarEntrada.js"></script>
     <script src="./scriptsJS/relajate.js"></script>
     <script src="./scriptsJS/tareafav.js"></script>
     <script src="./scriptsJS/eliminarTarea.js"></script>
@@ -44,7 +45,6 @@
     <script src="./scriptsJS/limitarCaracteres.js"></script>
     <script src="./scriptsJS/agregarTarea.js"></script>
     <script src="./scriptsJS/expanderTexto.js"></script>
-    <!-- <script src="./scriptsJS/cambiarTareaAyerAHoy.js"></script> -->
     </body>
 
     </html>

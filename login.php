@@ -23,7 +23,10 @@ include("nav.php");
         <?php if(isset($error_pass)): ?>
         <p class="error-msg"><?php echo $error_pass; ?></p>
         <?php endif; ?>
-        <p class="forgot-pass"><a href="">¿Has olvidado la contraseña?</a></p>
+        <?php if(isset($error_login)): ?>
+        <p class="error-msg"><?php echo $error_login; ?></p>
+        <?php endif; ?>
+        <p class="forgot-pass"><a href="working_on.php">¿Has olvidado la contraseña?</a></p>
         <input type="submit" value="Iniciar Sesión" name="enviar" class="btn">
     </form>
 </section>
