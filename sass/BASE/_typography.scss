@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  color: $colorTipoCuerpo;
+  color: var(--colorTipoCuerpo);
   font-weight: normal;
   font-style: normal;
   font-family: $fuenteBase;

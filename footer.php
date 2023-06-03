@@ -2,7 +2,7 @@
     <footer class="footer">
         <div class="footer__container container">
             <div class="footer__identity">
-                <img src="img/generales/Logotipo_keepzen.svg" alt="logotipo de KeepZen" class="footer__icon" />
+                <span class="footer__icon">KEEPZEN</span>
                 <p class="footer__slogan">
                     Encuentra la armonía entre la productividad y el bienestar emocional
                 </p>
@@ -37,7 +37,9 @@
             </div>
         </div>
     </footer>
+    <script src="./scriptsJS/cambiarTema.js"></script>
     <script src="./scriptsJS/eliminarEntrada.js"></script>
+    <script src="./scriptsJS/agregarTarea.js"></script>
     <script src="./scriptsJS/relajate.js"></script>
     <script src="./scriptsJS/tareafav.js"></script>
     <script src="./scriptsJS/eliminarTarea.js"></script>
@@ -45,6 +47,7 @@
     <script src="./scriptsJS/limitarCaracteres.js"></script>
     <script src="./scriptsJS/agregarTarea.js"></script>
     <script src="./scriptsJS/expanderTexto.js"></script>
+
     </body>
 
     </html>

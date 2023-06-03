@@ -8,7 +8,13 @@
             </h1>
             <a href="registro.php" class="btn">ÚNETE AHORA</a>
         </div>
-        <img class="header__img" src="img/landing_page/hero_girl_mindfullness.svg" alt="chica meditando relajada" />
+        <img class="header__img" src="img/landing_page/hero_girl_mindfullness<?php
+  if ($bodyClass === 'theme--dark') {
+    echo '--dark';
+  } elseif ($bodyClass === 'theme--lemon') {
+    echo '--lemon';
+  }
+?>.svg" alt="chica meditando relajada" />
     </div>
 </header>
 <!-- INICIO FEATURES -->
@@ -33,7 +39,13 @@
                     por la noche y consúltalas al día siguiente!
                 </p>
             </div>
-            <img class="features__img" src="img/landing_page/boy_writing.svg" alt="chico escribiendo en un diario" />
+            <img class="features__img fade-in" src="img/landing_page/boy_writing<?php
+  if ($bodyClass === 'theme--dark') {
+    echo '--dark';
+  } elseif ($bodyClass === 'theme--lemon') {
+    echo '--lemon';
+  }
+?>.svg" alt="chico escribiendo en un diario" />
         </div>
         <!-- INFO 2 -->
         <div class="features features-reverse">
@@ -53,7 +65,13 @@
                     de agradecimiento.
                 </p>
             </div>
-            <img class="features__img" src="img/landing_page/thanks_features.svg" alt="gracias escrito en grande" />
+            <img class="features__img fade-in" src="img/landing_page/thanks_features<?php
+  if ($bodyClass === 'theme--dark') {
+    echo '--dark';
+  } elseif ($bodyClass === 'theme--lemon') {
+    echo '--lemon';
+  }
+?>.svg" alt="gracias escrito en grande" />
         </div>
         <!-- INFO 3 -->
         <div class="features">
@@ -71,17 +89,24 @@
                     mantener el control y la calma!
                 </p>
             </div>
-            <img class="features__img" src="img/landing_page/sun_features.svg" alt="ilustracion de un sol sonriente" />
+            <img class="features__img fade-in" src="img/landing_page/sun_features<?php
+  if ($bodyClass === 'theme--dark') {
+    echo '--dark';
+  } elseif ($bodyClass === 'theme--lemon') {
+    echo '--lemon';
+  }
+?>.svg" alt="ilustración de un sol sonriente" />
         </div>
     </div>
 </section>
 <!-- CALL TO ACTION -->
 <section class="landing__call call">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
-        <path fill="#ffc6c7" fill-opacity="1"
+        <path class="call_wave" fill="var(--colorSecundarioRosa)" fill-opacity="1"
             d="M0,288L80,266.7C160,245,320,203,480,170.7C640,139,800,117,960,90.7C1120,64,1280,32,1360,16L1440,0L1440,320L1360,320C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320L0,320Z">
         </path>
     </svg>
+
     <div class="call__fondo">
         <div class="call__container container">
             <i class="fas fa-spa"></i>

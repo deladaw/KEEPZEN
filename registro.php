@@ -1,5 +1,5 @@
 <?php
-$titulo = "KeepZen - Diario";
+$titulo = "KeepZen - Registro";
 include("./Controller/registroController.php");
 include("./Controller/seguridad.php");
 include("nav.php");
@@ -8,7 +8,7 @@ include("nav.php");
 <!-- REGISTRO -->
 <section class="registro container">
     <h2 class="registro__title heading-secondary">
-        ¡Crea una cuenta en pocos minutos!
+        ¡Crea una cuenta en pocos segundos!
     </h2>
     <h4>¿Ya tienes una cuenta? <a href="login.php">Inicia Sesión</a> </h4>
     <form action="" class="form" method="POST">

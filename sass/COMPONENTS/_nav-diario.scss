@@ -18,13 +18,13 @@
 
   a {
     font-family: $fuenteHeadings;
-    color: $colorTipoHeadings;
+    color: var(--colorTipoHeadings);
     font-size: 18px;
     text-decoration: none;
   }
 
   .fas {
     font-size: 20px;
-    color: $colorTipoCuerpo;
+    color: var(--colorTipoCuerpo);
   }
 }

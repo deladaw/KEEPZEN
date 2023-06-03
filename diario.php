@@ -19,7 +19,7 @@ include("nav.php");
                 <li><a href="diario_ayer.php">Ayer</a></li>
             </div>
 
-            <li><a href="diario.php">Hoy</a></li>
+            <li><a href="#">Hoy</a></li>
             <div class="diary__icon">
                 <li><a href="diario_manana.php">Mañana</a></li>
                 <li>
@@ -41,7 +41,15 @@ $fecha_formateada = $formato_fecha->format($fecha_actual);
         <h5 class="heading-quinary"><?php echo ucfirst($fecha_formateada); ?></h5>
     </div>
     <div class="to-do-list" id="task-list">
-        <img src="img/generales/tape_diary_green.svg" alt="" class="tape-diary">
+        <img src="img/generales/<?php
+  if ($bodyClass === 'theme--dark') {
+    echo 'tape_diary_flowers.svg';
+  } elseif ($bodyClass === 'theme--lemon') {
+    echo 'tape_diary_lemon.svg';
+  } else {
+    echo 'tape_diary.svg';
+  }
+?>" alt="washitape decorativa" class="tape-diary">
         <!-- TASK ITEM -->
 
         <?php
@@ -53,12 +61,15 @@ $stmt->execute([$id_usuario]);
 $res = $stmt->fetchAll(PDO::FETCH_OBJ);
 ?>
 
-        <?php foreach($res as $dato): ?>
+        <?php if (empty($res)): ?>
+        <p class="no-tasks">No tienes ninguna tarea pendiente.</p>
+        <?php else: ?>
+        <?php foreach ($res as $dato): ?>
         <?php
-    $completada = $dato->fecha_completada != NULL;
-    ?>
+        $completada = $dato->fecha_completada != NULL;
+        ?>
         <div class="task-item">
-            <img src="img/generales/tape_diary_green.svg" alt="" class="tape-diary">
+            <!-- <img src="img/generales/washi_tape_choco2.svg" alt="" class="tape-diary"> -->
 
             <a href="./Controller/tarea_favorita.php?id=<?= $dato->id ?>" class="favorite-task">
                 <i class="fas fa-heart <?= isset($dato->favorita) && $dato->favorita ? 'favorite' : '' ?>"
@@ -70,9 +81,10 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
             <a href="./Controller/eliminar_tarea.php?id=<?= $dato->id ?>" class="delete-task">X</a>
         </div>
         <?php endforeach; ?>
+        <?php endif; ?>
     </div>
     <!-- AÑADIR REGISTROS LIST -->
-    <form action="" method="POST" id="add-task-form">
+    <form action="./Model/guardar_tarea.php" method="POST" id="add-task-form">
         <textarea placeholder="Escribe una tarea..." class="diary__entry" name="tarea" id="tarea" cols="70"
             rows="3"></textarea>
         <input type="submit" value="AÑADIR TAREA" name="enviartarea" class="btn add-entry" id="add-task-button">

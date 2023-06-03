@@ -21,7 +21,7 @@ include("nav.php");
 
             <li><a href="diario.php">Hoy</a></li>
             <div class="diary__icon">
-                <li><a href="tareas_manana.php">Mañana</a></li>
+                <li><a href="#">Mañana</a></li>
             </div>
         </ul>
     </nav>
@@ -40,7 +40,15 @@ $fecha_formateada = $formato_fecha->format($fecha_actual);
     </div>
 
     <div class="to-do-list" id="task-list">
-        <img src="img/generales/tape_diary_green.svg" alt="" class="tape-diary">
+        <img src="img/generales/<?php
+  if ($bodyClass === 'theme--dark') {
+    echo 'tape_diary_flowers.svg';
+  } elseif ($bodyClass === 'theme--lemon') {
+    echo 'tape_diary_lemon.svg';
+  } else {
+    echo 'tape_diary.svg';
+  }
+?>" alt="washitape decorativa" class="tape-diary">
         <!-- TASK ITEM -->
 
         <?php
@@ -52,12 +60,15 @@ $stmt->execute(['id_usuario' => $id_usuario]);
 $res = $stmt->fetchAll(PDO::FETCH_OBJ);
 ?>
 
-        <?php foreach($res as $dato): ?>
-        <?php
-    $completada = $dato->fecha_completada != NULL;
-    ?>
+        <?php 
+if(empty($res)) {
+    echo '<p class="no-tasks">No tienes ninguna tarea para mañana.</p>';
+} else {
+    foreach($res as $dato): 
+        $completada = $dato->fecha_completada != NULL;
+?>
         <div class="task-item">
-            <img src="img/generales/tape_diary_green.svg" alt="" class="tape-diary">
+
 
             <a href="./Controller/tarea_favorita.php?id=<?= $dato->id ?>" class="favorite-task">
                 <i class="fas fa-heart <?= isset($dato->favorita) && $dato->favorita ? 'favorite' : '' ?>"
@@ -66,7 +77,10 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
             <p class="task-text"><?= $dato->tarea ?></p>
             <a href="./Controller/eliminar_tarea.php?id=<?= $dato->id ?>" class="delete-task">X</a>
         </div>
-        <?php endforeach; ?>
+        <?php 
+    endforeach; 
+}
+?>
     </div>
     <!-- AÑADIR REGISTROS LIST -->
     <form action="" method="POST">

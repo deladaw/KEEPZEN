@@ -1,3 +1,7 @@
+// @use "THEMES/default" as * with (
+//   $theme: "default"
+// );
+
 @import "abstract/variables";
 @import "abstract/mixins";
 @import "base/typography";
@@ -31,8 +35,31 @@
 @import "pages/perfil";
 @import "pages/working_on";
 @import "pages/confirmar_eliminar";
+@import "pages/cambiar_tema";
+@import "abstract/animations";
 @import "abstract/media-querys";
 
 body {
-  background-color: $colorBackground;
+  background-color: var(--colorBackground);
+}
+
+a,
+input,
+button {
+  border: none;
+}
+
+.task-text {
+  // Estilos por defecto
+  color: var(--colorTipoCuerpo);
+
+  // Estilos al hacer hover
+  &.hover-color {
+    color: var(--colorPrincipalSalmon);
+  }
+}
+
+.no-tasks {
+  font-style: italic;
+  color: gray;
 }

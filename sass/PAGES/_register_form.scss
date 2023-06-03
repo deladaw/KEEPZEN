@@ -10,6 +10,12 @@
   h4 {
     text-align: center;
     margin-top: -30px;
+    a {
+      color: var(--colorTipoCuerpo);
+      &:hover {
+        color: var(--colorPrincipalSalmon);
+      }
+    }
   }
   .form {
     margin: $center;
@@ -19,11 +25,11 @@
     width: 100%;
     display: flex;
     border-style: none;
-    background-color: $colorSecundarioRosa;
+    background-color: var(--colorSecundarioRosa);
     padding: 5px 0;
 
     &:hover {
-      background-color: $colorPrincipalSalmon;
+      background-color: var(--colorPrincipalSalmon);
     }
   }
 

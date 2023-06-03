@@ -1,0 +1,14 @@
+.theme-selection {
+  padding: $paddingXL;
+  min-height: 75vh;
+  h2 {
+    text-align: center;
+  }
+  &__btns {
+    margin-top: 40px;
+    padding: $paddingLG;
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+  }
+}

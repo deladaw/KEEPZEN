@@ -1,7 +1,8 @@
 <?php
 $titulo = "KeepZen - Relájate";
-include("nav.php");
 include("./Controller/seguridad.php");
+include("./Model/conectar_db.php");
+include("nav.php");
 
 ?>
 

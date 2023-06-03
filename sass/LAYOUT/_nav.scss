@@ -10,11 +10,14 @@
   }
 
   &__logo {
-    max-width: 7.5rem;
+    color: var(--colorTipoHeadings);
+    font-family: $fuenteHeadings;
+    font-size: 1.8rem;
   }
 
   &__link-logo {
     width: 7.5rem;
+    text-decoration: none;
   }
 
   &__list {
@@ -27,11 +30,11 @@
 
       a {
         text-decoration: none;
-        color: $colorTipoHeadings;
+        color: var(--colorTipoHeadings);
         transition: all linear 0.1s;
 
         &:hover {
-          color: $colorPrincipalSalmon;
+          color: var(--colorPrincipalSalmon);
         }
       }
     }

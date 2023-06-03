@@ -1,5 +1,5 @@
 <?php
-$titulo = "KeepZen - Diario";
+$titulo = "KeepZen - Diario agradecimiento";
 include("./Controller/seguridad.php");
 include("./Model/conectar_db.php");
 include("nav.php");

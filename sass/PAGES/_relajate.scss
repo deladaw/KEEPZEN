@@ -23,7 +23,7 @@
     height: 320px;
     width: 320px;
     border-radius: 50%;
-    background: radial-gradient(#ffc6c743, $colorSecundarioRosa);
+    background: radial-gradient(#ffc6c743, var(--colorSecundarioRosa));
     opacity: 1;
     display: flex;
     align-items: center;
@@ -34,30 +34,36 @@
     border-radius: 50%;
     height: 100px;
     width: 100px;
-    background: radial-gradient($colorPrincipalSalmon, $colorSecundarioRosa);
+    background: radial-gradient(
+      var(--colorPrincipalSalmon),
+      var(--colorSecundarioRosa)
+    );
     position: absolute;
   }
 
   .inspira {
     position: absolute;
-    color: $colorBlancoRoto;
+    color: var(--colorBlancoRoto);
     opacity: 0;
   }
 
   .espira {
     position: absolute;
-    color: $colorBlancoRoto;
+    color: var(--colorBlancoRoto);
     opacity: 0;
     font-size: 20px;
   }
 
   .play {
     cursor: pointer;
-    color: $colorTipoCuerpo;
+    color: var(--colorTipoCuerpo);
     // border-radius: 50%;
     // padding: 5px;
-    background-color: $colorTerciarioVerde;
+    background-color: var(--colorTerciarioVerde);
     margin-top: 40px;
+    &:hover {
+      background-color: var(--colorPrincipalSalmon);
+    }
   }
   .fa-solid {
     font-size: 30px;

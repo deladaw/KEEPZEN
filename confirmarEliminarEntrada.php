@@ -1,5 +1,5 @@
 <?php
-$titulo = "KeepZen - Diario";
+$titulo = "KeepZen - Confirmar eliminar";
 include("./Model/conectar_db.php");
 include("nav.php");
 ?>

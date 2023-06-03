@@ -22,20 +22,24 @@ if(isset($_SESSION['nombre_usuario'])){
         <div class="profile__options">
             <a href="entradas_diario_agradecimiento.php" class="option-card">
                 <i class="fas fa-book"></i>
-                <p>Ver entradas del diario</p>
+                <p>Tu diario de gratitud</p>
             </a>
-            <a href="working_on.php" class="option-card">
+            <!-- <a href="working_on.php" class="option-card">
                 <i class="fas fa-user-edit"></i>
                 <p>Editar datos personales</p>
-            </a>
+            </a> -->
             <a href="confirmarDesactivar.php?id=<?=$id?>" class="option-card">
                 <i class="fas fa-user-times"></i>
                 <p>Desactivar cuenta</p>
             </a>
 
+            <a href="activar_tema.php" class="option-card">
+                <i class="fas fa-palette"></i>
+                <p>Cambiar tema interfaz</p>
+            </a>
             <a href="./Controller/salir.php" class="option-card">
                 <i class="fas fa-times-circle"></i>
-                <p>Cerrar mi sesión</p>
+                <p>Cerrar sesión</p>
             </a>
         </div>
     </div>

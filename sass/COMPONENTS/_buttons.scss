@@ -6,14 +6,13 @@
   text-align: center;
   text-decoration: none;
   border-radius: $bordeEstandar;
-  color: $colorTipoCuerpo;
+  color: var(--colorTipoCuerpo);
   cursor: pointer;
-  background-color: $colorPrincipalSalmon;
+  background-color: var(--colorPrincipalSalmon);
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: lighten($colorSecundarioRosa, 10%);
-    background-color: $colorSecundarioRosa;
+    background-color: var(--colorSecundarioRosa);
   }
 }
 
@@ -23,11 +22,11 @@
   //Botón secundario
   &--secondary {
     @extend %boton;
-    background-color: $colorTerciarioVerde;
+    background-color: var(--colorTerciarioVerde);
 
     &:hover {
-      color: $colorBlancoRoto;
-      background-color: lighten($colorTipoCuerpo, 10%);
+      color: var(--colorBlancoRoto);
+      background-color: var(--colorPrincipalSalmon);
     }
   }
 }

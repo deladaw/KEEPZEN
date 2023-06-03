@@ -1,5 +1,5 @@
 <?php
-$titulo = "KeepZen - Diario";
+$titulo = "KeepZen - Cuenta creada";
 include("./Controller/seguridad.php");
 include("./Controller/seguridad_admin.php");
 include("nav.php");
@@ -20,8 +20,8 @@ verificar_permisos_sesion();
     </p>
     <ol>
         <li>
-            Antes de irte a dormir, o durante el día conforme te acuerdes, apunta
-            todas las <b>cosas que tengas que hacer para el día siguiente.</b>
+            Libérate de las preocupaciones nocturnas escribiendo todas las tareas en tu lista de "mañana" antes de
+            apagar la luz.
         </li>
         <li>
             Escribe al menos <b>alguna cosa por la que te sientas agradecido/a</b>

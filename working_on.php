@@ -1,5 +1,5 @@
 <?php
-$titulo = "KeepZen - Perfil";
+$titulo = "KeepZen - Working On";
 include("./Controller/seguridad.php");
 include("nav.php");
 

@@ -1,15 +1,40 @@
-var addTaskForm = document.getElementById("add-task-form");
-var addTaskButton = document.getElementById("add-task-button");
-var tareaInput = document.getElementById("tarea");
+// // Obtén el botón de enviar
+// const addTaskButton = document.getElementById("add-task-button");
 
-tareaInput.addEventListener("keydown", function (event) {
-  if (event.key === "Enter") {
-    event.preventDefault(); // evita que se ejecute el comportamiento predeterminado de la tecla Enter (que es saltar una línea)
-    addTaskButton.click(); // simula un clic en el botón de envío del formulario
-  }
-});
+// // Agrega el evento de escucha al botón de enviar
+// addTaskButton.addEventListener("click", function (event) {
+//   // Evita que se produzca la acción predeterminada del botón
+//   event.preventDefault();
 
-addTaskButton.addEventListener("click", function (event) {
-  event.preventDefault(); // evita que se envíe el formulario a través de una solicitud HTTP POST
-  addTaskForm.submit(); // envía los datos del formulario a través de una solicitud HTTP POST
-});
+//   // Obtén el contenido de la tarea
+//   const tarea = document.getElementById("tarea").value;
+
+//   // Crea un objeto FormData para enviar los datos del formulario
+//   const formData = new FormData();
+//   formData.append("tarea", tarea);
+
+//   // Crea una instancia de XMLHttpRequest
+//   const xhr = new XMLHttpRequest();
+
+//   // Configura la solicitud
+//   xhr.open("POST", "../Model/guardar_tarea.php", true);
+
+//   // Define la función de respuesta
+//   xhr.onload = function () {
+//     if (xhr.status === 200) {
+//       // La solicitud se completó correctamente
+//       console.log("Tarea agregada correctamente");
+//       // Puedes realizar alguna acción adicional si lo deseas, como mostrar un mensaje de éxito
+
+//       // Vacía el campo de tarea después de agregarla
+//       document.getElementById("tarea").value = "";
+//     } else {
+//       // Hubo un error en la solicitud
+//       console.error("Error al agregar la tarea");
+//       // Puedes mostrar un mensaje de error o realizar alguna otra acción en caso de error
+//     }
+//   };
+
+//   // Envía la solicitud
+//   xhr.send(formData);
+// });

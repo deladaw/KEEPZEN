@@ -1,6 +1,6 @@
 .diary {
   max-width: 43.75rem;
-  padding-top: 5rem;
+  padding-top: 2.7rem;
   padding-bottom: 6rem;
 
   textarea:focus {
@@ -8,12 +8,19 @@
   }
 
   &__nav {
-    padding-bottom: 3.125rem;
+    padding-bottom: 2rem;
+
+    a,
+    i {
+      &:hover {
+        color: var(--colorPrincipalSalmon);
+      }
+    }
   }
 
   .to-do-list {
     max-width: 100%;
-    background-color: $colorBlancoRoto;
+    background-color: var(--colorBlancoRoto);
     border: $bordeLinea;
     min-height: 18.75rem;
     padding: $paddingMD;
@@ -23,7 +30,7 @@
 
     .tape-diary {
       position: absolute;
-      top: -8%;
+      top: -18px;
       left: 83%;
       width: 8.125rem;
       transform: rotate(10deg);
@@ -37,6 +44,8 @@
     margin-bottom: 2.5rem;
     margin-top: 2.5rem;
     resize: none;
+    background-color: var(--colorBlancoRoto);
+    color: var(--colorTipoCuerpo);
   }
 
   &__entry-btns {
@@ -60,6 +69,11 @@
     overflow-wrap: break-word;
     max-width: 82%;
     cursor: pointer;
+    color: var(--colorTipoCuerpo);
+
+    &:hover {
+      color: var(--colorPrincipalSalmon);
+    }
   }
 
   input[type="checkbox"] {
@@ -68,10 +82,11 @@
 
     &:checked + .task-text {
       text-decoration: line-through;
+      color: var(--colorPrincipalSalmon);
     }
 
     &:checked {
-      accent-color: $colorPrincipalSalmon;
+      accent-color: var(--colorPrincipalSalmon);
     }
   }
 
@@ -79,14 +94,14 @@
     margin-left: auto;
     cursor: pointer;
     text-decoration: none;
-    color: $colorTipoCuerpo;
+    color: var(--colorTipoCuerpo);
     &:hover {
-      color: $colorError;
+      color: var(--colorPrincipalSalmon);
     }
   }
 
   .delete-task:hover + .task-text {
-    color: $colorError;
+    color: var(--colorError);
   }
 
   .favorite-task {

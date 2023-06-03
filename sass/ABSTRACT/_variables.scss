@@ -1,3 +1,7 @@
+//FUENTES:
+$fuenteHeadings: "Abril Fatface", cursive;
+$fuenteBase: "Alef", sans-serif;
+
 //MEDIDAS:
 $anchura: 71.25rem;
 $center: 0 auto;
@@ -8,7 +12,7 @@ $paddingMD: 1.5rem;
 $paddingLG: 1.875rem;
 $paddingXL: 2.625rem;
 
-//COLORES:
+// THEME DEFAULT COLORES:
 $colorPrincipalSalmon: #ff8ba7;
 $colorSecundarioRosa: #ffc6c7;
 $colorTerciarioVerde: #c3f0ca;
@@ -18,6 +22,88 @@ $colorTipoCuerpo: #594a4e;
 $colorBlancoRoto: #fffffe;
 $colorError: #f73d3da1;
 
-//FUENTES:
-$fuenteHeadings: "Abril Fatface", cursive;
-$fuenteBase: "Alef", sans-serif;
+// THEME DARK COLORES:
+$colorPrincipalSalmon--dark: #5989ac;
+$colorSecundarioRosa--dark: #414c53;
+$colorTerciarioVerde--dark: #4a7553;
+$colorBackground--dark: #3c3536;
+$colorTipoHeadings--dark: #d5cacb;
+$colorTipoCuerpo--dark: #d5d3d4;
+$colorBlancoRoto--dark: #2d2929;
+$colorError--dark: #ba7779;
+
+//THEME LEMONADE COLORES
+$colorPrincipalSalmon--lemon: #ffd19c;
+$colorSecundarioRosa--lemon: #f7ffb2;
+$colorTerciarioVerde--lemon: #c0e2e6;
+$colorBackground--lemon: #fefad3;
+$colorTipoHeadings--lemon: #504e27;
+$colorTipoCuerpo--lemon: #3c3131;
+$colorBlancoRoto--lemon: rgb(254, 247, 222);
+$colorError--lemon: #9d5e00;
+
+$colors: () !default;
+
+$colors: map-merge(
+  (
+    "colorPrincipalSalmon": $colorPrincipalSalmon,
+    "colorSecundarioRosa": $colorSecundarioRosa,
+    "colorTerciarioVerde": $colorTerciarioVerde,
+    "colorBackground": $colorBackground,
+    "colorTipoHeadings": $colorTipoHeadings,
+    "colorTipoCuerpo": $colorTipoCuerpo,
+    "colorBlancoRoto": $colorBlancoRoto,
+    "colorError": $colorError,
+  ),
+  $colors
+);
+$colorsDark: () !default;
+
+$colorsDark: map-merge(
+  (
+    "colorPrincipalSalmon": $colorPrincipalSalmon--dark,
+    "colorSecundarioRosa": $colorSecundarioRosa--dark,
+    "colorTerciarioVerde": $colorTerciarioVerde--dark,
+    "colorBackground": $colorBackground--dark,
+    "colorTipoHeadings": $colorTipoHeadings--dark,
+    "colorTipoCuerpo": $colorTipoCuerpo--dark,
+    "colorBlancoRoto": $colorBlancoRoto--dark,
+    "colorError": $colorError--dark,
+  ),
+  $colorsDark
+);
+
+$colorsLemon: () !default;
+
+$colorsLemon: map-merge(
+  (
+    "colorPrincipalSalmon": $colorPrincipalSalmon--lemon,
+    "colorSecundarioRosa": $colorSecundarioRosa--lemon,
+    "colorTerciarioVerde": $colorTerciarioVerde--lemon,
+    "colorBackground": $colorBackground--lemon,
+    "colorTipoHeadings": $colorTipoHeadings--lemon,
+    "colorTipoCuerpo": $colorTipoCuerpo--lemon,
+    "colorBlancoRoto": $colorBlancoRoto--lemon,
+    "colorError": $colorError--lemon,
+  ),
+  $colorsLemon
+);
+
+.theme {
+  @each $color, $value in $colors {
+    --#{$color}: #{$value};
+  }
+
+  // Tema oscuro
+  &--dark {
+    @each $colorD, $value in $colorsDark {
+      --#{$colorD}: #{$value};
+    }
+  }
+
+  &--lemon {
+    @each $colorL, $value in $colorsLemon {
+      --#{$colorL}: #{$value};
+    }
+  }
+}

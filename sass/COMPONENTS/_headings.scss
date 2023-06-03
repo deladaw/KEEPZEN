@@ -1,40 +1,40 @@
 .heading-primary {
-  color: $colorTipoHeadings;
+  color: var(--colorTipoHeadings);
   font-family: $fuenteHeadings;
   font-size: 2.8rem;
   font-weight: 600;
   letter-spacing: 1.5%;
 }
 .heading-secondary {
-  color: $colorTipoHeadings;
+  color: var(--colorTipoHeadings);
   font-family: $fuenteHeadings;
   font-size: 2.1rem;
   font-weight: 600;
   letter-spacing: 0.5%;
 }
 .heading-tertiary {
-  color: $colorTipoHeadings;
+  color: var(--colorTipoHeadings);
   font-family: $fuenteHeadings;
   font-size: 1.8rem;
   font-weight: 500;
   letter-spacing: 0.25%;
 }
 .heading-quaternary {
-  color: $colorTipoHeadings;
+  color: var(--colorTipoHeadings);
   font-family: $fuenteHeadings;
   font-size: 1.5rem;
   font-weight: 500;
   letter-spacing: 0.25%;
 }
 .heading-quinary {
-  color: $colorTipoHeadings;
+  color: var(--colorTipoHeadings);
   font-family: $fuenteHeadings;
   font-size: 1.25rem;
   font-weight: 500;
   letter-spacing: 0.5%;
 }
 .heading-sextiary {
-  color: $colorTipoHeadings;
+  color: var(--colorTipoHeadings);
   font-family: $fuenteHeadings;
   font-size: 1.125rem;
   font-weight: 500;
@@ -43,6 +43,6 @@
 
 .sub-heading {
   font-family: $fuenteBase;
-  color: $colorTipoCuerpo;
+  color: var(--colorTipoCuerpo);
   font-size: 1.2rem;
 }

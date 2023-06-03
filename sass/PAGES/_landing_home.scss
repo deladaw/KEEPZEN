@@ -17,11 +17,11 @@
 
   .fa-spa {
     font-size: 3.125rem;
-    color: $colorPrincipalSalmon;
+    color: var(--colorPrincipalSalmon);
   }
 
   &__fondo {
-    background-color: $colorSecundarioRosa;
+    background-color: var(--colorSecundarioRosa);
     padding-bottom: 8.75rem;
   }
 

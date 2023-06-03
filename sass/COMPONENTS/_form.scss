@@ -9,7 +9,7 @@
   //   gap: 10px;
   border: $bordeLinea;
   border-radius: 8px;
-  background-color: $colorBlancoRoto;
+  background-color: var(--colorBlancoRoto);
 
   &__join {
     display: flex;
@@ -39,14 +39,14 @@
     outline: none;
     padding: 0;
     font-size: 1.1rem;
-    color: $colorTipoHeadings;
+    color: var(--colorTipoHeadings);
     background-color: transparent;
   }
 
   input[type="checkbox"] {
     margin-right: 8px;
     &:checked {
-      accent-color: $colorPrincipalSalmon;
+      accent-color: var(--colorPrincipalSalmon);
     }
   }
   .band {
