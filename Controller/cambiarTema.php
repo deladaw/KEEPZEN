@@ -1,6 +1,6 @@
 <?php
 include 'seguridad.php';
-include("../Model/conectar_db.php");
+include("conectar_db.php");
 
 $usuarioId = $_SESSION['id_usuario'];
 

@@ -1,5 +1,5 @@
 <?php
-include("../Model/conectar_db.php");
+include("conectar_db.php");
 include("seguridad.php");
 // Conexión a la base de datos
 $conexion;

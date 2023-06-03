@@ -1,6 +1,6 @@
 <?php
 $titulo = "KeepZen - Diario - Mañana";
-include("./Model/conectar_db.php");
+include("./Controller/conectar_db.php");
 include("./Controller/seguridad.php");
 include("./Controller/enviarmanana.php");
 include("nav.php");

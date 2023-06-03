@@ -1,6 +1,6 @@
 <?php
 $titulo = "KeepZen - Confirmar desactivar";
-include("./Model/conectar_db.php");
+include("conectar_db.php");
 include("nav.php");
 ?>
 

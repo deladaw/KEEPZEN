@@ -2,7 +2,7 @@
 $titulo = "KeepZen - Perfil";
 include("./Controller/seguridad.php");
 include("./Controller/seguridad_admin.php");
-include("./Model/guardar_agradecimiento.php");
+include("./Controller/guardar_agradecimiento.php");
 include("nav.php");
 
 verificar_permisos_sesion();

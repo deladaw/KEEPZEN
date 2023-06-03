@@ -1,5 +1,5 @@
 <?php
-include("../Model/conectar_db.php");
+include("conectar_db.php");
 
 $conexion;
 // Obtener el id de la tarea a marcar como completada

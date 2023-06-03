@@ -1,6 +1,6 @@
 <?php
 
-include './Controller/seguridad.php';
+include 'seguridad.php';
 include("conectar_db.php");
 
 // Comprobamos que el usuario tenga una sesión iniciada

@@ -1,7 +1,7 @@
 <?php
 //Código para DESACTIVAR un usuario.
 include 'seguridad.php';
-include("../Model/conectar_db.php");
+include("conectar_db.php");
 
 if (isset($_GET["id"])) {
 

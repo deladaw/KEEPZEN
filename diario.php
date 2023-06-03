@@ -1,8 +1,8 @@
 <?php
 $titulo = "KeepZen - Diario";
 include("./Controller/seguridad.php");
-include("./Model/guardar_tarea.php");
-include("./Model/conectar_db.php");
+include("./Controller/guardar_tarea.php");
+include("./Controller/conectar_db.php");
 include("nav.php");
 ?>
 
@@ -84,7 +84,7 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
         <?php endif; ?>
     </div>
     <!-- AÑADIR REGISTROS LIST -->
-    <form action="./Model/guardar_tarea.php" method="POST" id="add-task-form">
+    <form action="./Controller/guardar_tarea.php" method="POST" id="add-task-form">
         <textarea placeholder="Escribe una tarea..." class="diary__entry" name="tarea" id="tarea" cols="70"
             rows="3"></textarea>
         <input type="submit" value="AÑADIR TAREA" name="enviartarea" class="btn add-entry" id="add-task-button">

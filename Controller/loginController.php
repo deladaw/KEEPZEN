@@ -1,6 +1,6 @@
 <?php
 //Código del Login de los usuarios
-include("./Model/conectar_db.php");
+include("conectar_db.php");
 
 if(isset($_POST["enviar"])){
 

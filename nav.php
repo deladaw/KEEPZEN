@@ -18,7 +18,7 @@
 <?php
 include("./Controller/seguridad.php");
 include("./Controller/getUsuario.php");
-include("./Model/conectar_db.php");
+include("./Controller/conectar_db.php");
 
 $bodyClass = 'theme';
 

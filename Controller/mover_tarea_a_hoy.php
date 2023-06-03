@@ -1,5 +1,5 @@
 <?php
-include("../Model/conectar_db.php");
+include("conectar_db.php");
 include("seguridad.php");
 
 // Comprobamos que el usuario tenga una sesión iniciada

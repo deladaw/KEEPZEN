@@ -1,7 +1,7 @@
 <?php
 $titulo = "KeepZen - Activar Tema";
 include("./Controller/seguridad.php");
-include("./Model/conectar_db.php");
+include("./Controller/conectar_db.php");
 include("nav.php");
 ?>
 

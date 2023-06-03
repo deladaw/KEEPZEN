@@ -1,5 +1,5 @@
 <?php
-include("../Model/conectar_db.php");
+include("conectar_db.php");
 include("seguridad.php");
 
 $id_entrada = $_GET['id'];

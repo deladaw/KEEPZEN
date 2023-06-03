@@ -1,8 +1,8 @@
 <?php
 $titulo = "KeepZen - Diario - Ayer";
 include("./Controller/seguridad.php");
-include("./Model/guardar_tarea.php");
-include("./Model/conectar_db.php");
+include("./Controller/guardar_tarea.php");
+include("./Controller/conectar_db.php");
 include("nav.php");
 ?>
 

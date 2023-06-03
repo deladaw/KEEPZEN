@@ -1,6 +1,6 @@
 <?php
 //Con este código validamos el formulario e insertamos el nuevo usuario en la base de datos.
-include("./Model/conectar_db.php");
+include("conectar_db.php");
 
 
 if (isset($_REQUEST['editar'])) {

@@ -1,6 +1,6 @@
 <?php
 include 'seguridad.php';
-include("./Model/conectar_db.php");
+include("conectar_db.php");
 
 function getUsuario($conexion, $usuarioId) {
     $sql = "SELECT * FROM usuarios WHERE id = ?";
