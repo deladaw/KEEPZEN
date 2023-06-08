@@ -18,9 +18,9 @@ if (isset($_POST['tarea'])) {
     $tarea = htmlspecialchars($_POST["tarea"], ENT_QUOTES, 'UTF-8');
     $id_usuario = $_SESSION['id_usuario'];
 
+    $tarea = trim($tarea);
     // Validamos los datos
     $errores = 0;
-
 
     if (empty($tarea)) {
         $errores = 1;
@@ -35,21 +35,11 @@ if (isset($_POST['tarea'])) {
             // La tarea se agregó correctamente
             http_response_code(200);
             header("Location: ../diario.php");
-            
-            
-        } else {
-            // Hubo un error al agregar la tarea
-            http_response_code(500);
-            
-        }
-    } else {
-        // La tarea enviada estaba vacía
-        http_response_code(400);
-        
+              
+        }   
+    }else{
+        header("Location: ../diario.php");
     }
-} else {
-    // No se envió ninguna tarea
-    http_response_code(400);
-    
 }
+
 ?>

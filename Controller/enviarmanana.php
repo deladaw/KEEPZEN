@@ -1,5 +1,6 @@
 <?php
 include("conectar_db.php");
+include("seguridad.php");
 
 // Comprobamos que el usuario tenga una sesión iniciada
 if (!isset($_SESSION['id_usuario'])) {
@@ -12,14 +13,17 @@ window.location.href = "index.php";
 }
 
 // Si se ha enviado el formulario
-if (isset($_POST['enviarmanana'])) {
+if (isset($_POST['tarea_manana'])) {
 
     // Recuperamos los datos enviados
-    $tarea = htmlspecialchars($_POST["tarea"], ENT_QUOTES, 'UTF-8');
+    $tarea = htmlspecialchars($_POST["tarea_manana"], ENT_QUOTES, 'UTF-8');
     $id_usuario = $_SESSION['id_usuario'];
 
     // Validamos los datos
     $errores = 0;
+    
+
+    echo $errores;
 
     if (empty($tarea)) {
         $errores = "1";
@@ -37,7 +41,7 @@ if (isset($_POST['enviarmanana'])) {
 
         if ($res) {
             // Redirigimos a la página de diario de mañana
-            header("Location: diario_manana.php");
+            header("Location: ../diario_manana.php");
             exit();
         } else {
             die("Error al guardar la tarea.");

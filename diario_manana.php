@@ -2,7 +2,6 @@
 $titulo = "KeepZen - Diario - Mañana";
 include("./Controller/conectar_db.php");
 include("./Controller/seguridad.php");
-include("./Controller/enviarmanana.php");
 include("nav.php");
 ?>
 
@@ -85,9 +84,9 @@ if(empty($res)) {
 ?>
     </div>
     <!-- AÑADIR REGISTROS LIST -->
-    <form action="" method="POST">
-        <textarea placeholder="Escribe una tarea..." class="diary__entry" name="tarea" id="tarea" cols="70"
-            rows="3"></textarea>
+    <form action="./Controller/enviarmanana.php" method="POST" id="add-task-form-manana">
+        <textarea placeholder="Escribe una tarea..." class="diary__entry" name="tarea_manana" id="tarea_manana"
+            cols="70" rows="3"></textarea>
         <input type="submit" value="AÑADIR TAREA" name="enviarmanana" class="btn add-entry">
     </form>
 </section>
