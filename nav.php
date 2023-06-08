@@ -35,6 +35,9 @@ if(isset($_SESSION['id_usuario'])){
             $bodyClass = "theme--dark";
         } elseif ($tema === 3) {
             $bodyClass = "theme--lemon";
+        
+        } elseif ($tema === 4) {
+            $bodyClass = "theme--dracula";
         }
     } else {
         $bodyClass = "theme"; // Valor por defecto si no se encuentra un usuario o tema específico
@@ -51,23 +54,24 @@ if(isset($_SESSION['id_usuario'])){
             <a class="nav__link-logo" href="./index.php"><span class="nav__logo" />KEEPZEN</span></a>
             <ul class="nav__list">
                 <li class="nav__list-item"><a href="./index.php#funciona">Cómo funciona</a></li>
-                <li class="nav__list-item"><a href="./diario.php">Diario</a></li>
+                <li class="nav__list-item">
+                    <?php if(!isset($_SESSION['autentificado'])){ ?>
+                    <a href="./diario_muestra.php">Diario</a>
+                    <?php } else { ?>
+                    <a href="./diario.php">Diario</a>
+                    <?php } ?>
+                </li>
                 <li class="nav__list-item"><a href="relajate.php">Relájate</a></li>
                 <li class="nav__list-item">
-                    <?php if(!isset($_SESSION['autentificado'])){
-                        ?>
-                    <a href="registro.php">
+                    <?php if(!isset($_SESSION['autentificado'])){ ?>
+                    <a href="login.php">
                         <i class="fas fa-user-circle"></i>
                     </a>
-                    <?php
-                    }else{
-                        ?>
+                    <?php } else { ?>
                     <a href="perfil.php">
                         <i class="fas fa-user-circle"></i>
                     </a>
-                    <?php
-                    }
-                    ?>
+                    <?php } ?>
                 </li>
             </ul>
         </div>

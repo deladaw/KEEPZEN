@@ -15,7 +15,7 @@ $paddingXL: 2.625rem;
 // THEME DEFAULT COLORES:
 $colorPrincipalSalmon: #ff8ba7;
 $colorSecundarioRosa: #ffc6c7;
-$colorTerciarioVerde: #c3f0ca;
+$colorTerciarioVerde: #b2efbb;
 $colorBackground: #faeee7;
 $colorTipoHeadings: #33272a;
 $colorTipoCuerpo: #594a4e;
@@ -25,12 +25,12 @@ $colorError: #f73d3da1;
 // THEME DARK COLORES:
 $colorPrincipalSalmon--dark: #5989ac;
 $colorSecundarioRosa--dark: #414c53;
-$colorTerciarioVerde--dark: #4a7553;
+$colorTerciarioVerde--dark: #ba7779;
 $colorBackground--dark: #3c3536;
 $colorTipoHeadings--dark: #d5cacb;
 $colorTipoCuerpo--dark: #d5d3d4;
 $colorBlancoRoto--dark: #2d2929;
-$colorError--dark: #ba7779;
+$colorError--dark: #bd8587;
 
 //THEME LEMONADE COLORES
 $colorPrincipalSalmon--lemon: #ffd19c;
@@ -41,6 +41,16 @@ $colorTipoHeadings--lemon: #504e27;
 $colorTipoCuerpo--lemon: #3c3131;
 $colorBlancoRoto--lemon: rgb(254, 247, 222);
 $colorError--lemon: #9d5e00;
+
+//THEME DRACULA COLORS
+$colorPrincipalSalmon--dracula: #ff79c6;
+$colorSecundarioRosa--dracula: #6272a4;
+$colorTerciarioVerde--dracula: #50fa7b;
+$colorBackground--dracula: #282a36;
+$colorTipoHeadings--dracula: #bd93f9;
+$colorTipoCuerpo--dracula: #f8f8f2;
+$colorBlancoRoto--dracula: #44475a;
+$colorError--dracula: #ff5555;
 
 $colors: () !default;
 
@@ -89,6 +99,22 @@ $colorsLemon: map-merge(
   $colorsLemon
 );
 
+$colorsDracula: () !default;
+
+$colorsDracula: map-merge(
+  (
+    "colorPrincipalSalmon": $colorPrincipalSalmon--dracula,
+    "colorSecundarioRosa": $colorSecundarioRosa--dracula,
+    "colorTerciarioVerde": $colorTerciarioVerde--dracula,
+    "colorBackground": $colorBackground--dracula,
+    "colorTipoHeadings": $colorTipoHeadings--dracula,
+    "colorTipoCuerpo": $colorTipoCuerpo--dracula,
+    "colorBlancoRoto": $colorBlancoRoto--dracula,
+    "colorError": $colorError--dracula,
+  ),
+  $colorsDracula
+);
+
 .theme {
   @each $color, $value in $colors {
     --#{$color}: #{$value};
@@ -104,6 +130,11 @@ $colorsLemon: map-merge(
   &--lemon {
     @each $colorL, $value in $colorsLemon {
       --#{$colorL}: #{$value};
+    }
+  }
+  &--dracula {
+    @each $colorDc, $value in $colorsDracula {
+      --#{$colorDc}: #{$value};
     }
   }
 }

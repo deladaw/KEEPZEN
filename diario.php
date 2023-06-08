@@ -1,9 +1,12 @@
 <?php
 $titulo = "KeepZen - Diario";
 include("./Controller/seguridad.php");
+include("./Controller/seguridad_admin.php");
 include("./Controller/guardar_tarea.php");
 include("./Controller/conectar_db.php");
 include("nav.php");
+
+verificar_permisos_sesion();
 ?>
 
 
@@ -46,6 +49,8 @@ $fecha_formateada = $formato_fecha->format($fecha_actual);
     echo 'tape_diary_flowers.svg';
   } elseif ($bodyClass === 'theme--lemon') {
     echo 'tape_diary_lemon.svg';
+  } elseif ($bodyClass === 'theme--dracula') {
+    echo 'tape_diary_dracula.svg';
   } else {
     echo 'tape_diary.svg';
   }

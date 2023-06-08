@@ -1,6 +1,6 @@
 <?php
 $titulo = "KeepZen - Confirmar eliminar";
-include("conectar_db.php");
+include("./Controller/conectar_db.php");
 include("nav.php");
 ?>
 <section class="confrimar-eliminar">

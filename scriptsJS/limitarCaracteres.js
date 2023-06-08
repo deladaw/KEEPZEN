@@ -7,3 +7,13 @@ tareaInput.addEventListener("input", () => {
     tareaInput.value = tareaValue.slice(0, maxCaracteres);
   }
 });
+
+const agradecimientoInput = document.getElementById("agradecimiento");
+const maxCarac = 850;
+
+agradecimientoInput.addEventListener("input", () => {
+  const agradecimientoValue = agradecimientoInput.value;
+  if (agradecimientoValue.length > maxCarac) {
+    agradecimientoInput.value = agradecimientoValue.slice(0, maxCarac);
+  }
+});

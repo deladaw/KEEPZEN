@@ -41,11 +41,13 @@ $fecha_formateada = $formato_fecha->format($fecha_ayer);
     </div>
 
     <div class="to-do-list" id="task-list">
-        <img src="img/generales/<?php
+    <img src="img/generales/<?php
   if ($bodyClass === 'theme--dark') {
     echo 'tape_diary_flowers.svg';
   } elseif ($bodyClass === 'theme--lemon') {
     echo 'tape_diary_lemon.svg';
+  } elseif ($bodyClass === 'theme--dracula') {
+    echo 'tape_diary_dracula.svg';
   } else {
     echo 'tape_diary.svg';
   }
@@ -67,7 +69,6 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
 
         foreach($res as $dato): ?>
         <div class="task-item">
-            <img src="img/generales/tape_diary_green.svg" alt="" class="tape-diary">
             <?php if ($dato->fecha_completada != NULL): ?>
             <p class="task-text completed ayer-completed"><?= $dato->tarea ?></p>
             <?php else: ?>

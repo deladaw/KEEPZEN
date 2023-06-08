@@ -49,9 +49,13 @@ if(isset($_SESSION['nombre_usuario'])){
         <h3 class="heading-tertiary greet__title">¿Por qué te sientes agradecido/a hoy? <i
                 class="fas fa-pencil-alt"></i></h3>
         <form action="" method="POST">
-            <textarea
+            <textarea maxlength="2990"
                 placeholder="Por ej: Tener una mascota que te quiere, tomar un café en un día soleado, tener la oportunidad de aprender cosas nuevas cada día..."
                 class="entry" name="agradecimiento" id="" cols="85" rows="6"></textarea>
+            <div>
+                <p class="error-msg"><?php if(isset($err_vacio)){echo $err_vacio; }?></p>
+                <p class="error-msg"><?php if(isset($err_textLG)){echo $err_textLG; }?></p>
+            </div>
             <input type="submit" value="ANOTAR" name="enviaragradecimiento" class="btn add-entry">
         </form>
     </div>

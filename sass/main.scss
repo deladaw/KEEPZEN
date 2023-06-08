@@ -41,6 +41,13 @@
 
 body {
   background-color: var(--colorBackground);
+
+  a {
+    color: var(--colorTipoCuerpo);
+    &:hover {
+      color: var(--colorPrincipalSalmon);
+    }
+  }
 }
 
 a,

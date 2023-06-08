@@ -1,8 +1,11 @@
 <?php
 $titulo = "KeepZen - Diario agradecimiento";
 include("./Controller/seguridad.php");
+include("./Controller/seguridad_admin.php");
 include("./Controller/conectar_db.php");
 include("nav.php");
+
+verificar_permisos_sesion();
 ?>
 <?php
 $id_usuario = $_SESSION['id_usuario'];

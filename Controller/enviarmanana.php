@@ -5,7 +5,7 @@ include("conectar_db.php");
 if (!isset($_SESSION['id_usuario'])) {
     ?>
 <script>
-window.location.href = "../index.php";
+window.location.href = "index.php";
 </script>
 
 <?php

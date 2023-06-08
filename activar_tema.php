@@ -1,6 +1,7 @@
 <?php
 $titulo = "KeepZen - Activar Tema";
 include("./Controller/seguridad.php");
+include("./Controller/seguridad_admin.php");
 include("./Controller/conectar_db.php");
 include("nav.php");
 ?>
@@ -12,6 +13,7 @@ include("nav.php");
         <a class="btn" href="./Controller/cambiarTema.php?tema=1" id="coral-blush">Coral Blush</a>
         <a class="btn" href="./Controller/cambiarTema.php?tema=2" id="dark-chocolate">Dark Choco</a>
         <a class="btn" href="./Controller/cambiarTema.php?tema=3" id="lemon-pie">Lemon Pie</a>
+        <a class="btn" href="./Controller/cambiarTema.php?tema=4" id="lemon-pie">Dracula</a>
     </div>
 </div>
 

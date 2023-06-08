@@ -4,7 +4,7 @@
 .theme {
   --colorPrincipalSalmon: #ff8ba7;
   --colorSecundarioRosa: #ffc6c7;
-  --colorTerciarioVerde: #c3f0ca;
+  --colorTerciarioVerde: #b2efbb;
   --colorBackground: #faeee7;
   --colorTipoHeadings: #33272a;
   --colorTipoCuerpo: #594a4e;
@@ -14,12 +14,12 @@
 .theme--dark {
   --colorPrincipalSalmon: #5989ac;
   --colorSecundarioRosa: #414c53;
-  --colorTerciarioVerde: #4a7553;
+  --colorTerciarioVerde: #ba7779;
   --colorBackground: #3c3536;
   --colorTipoHeadings: #d5cacb;
   --colorTipoCuerpo: #d5d3d4;
   --colorBlancoRoto: #2d2929;
-  --colorError: #ba7779;
+  --colorError: #bd8587;
 }
 .theme--lemon {
   --colorPrincipalSalmon: #ffd19c;
@@ -30,6 +30,16 @@
   --colorTipoCuerpo: #3c3131;
   --colorBlancoRoto: rgb(254, 247, 222);
   --colorError: #9d5e00;
+}
+.theme--dracula {
+  --colorPrincipalSalmon: #ff79c6;
+  --colorSecundarioRosa: #6272a4;
+  --colorTerciarioVerde: #50fa7b;
+  --colorBackground: #282a36;
+  --colorTipoHeadings: #bd93f9;
+  --colorTipoCuerpo: #f8f8f2;
+  --colorBlancoRoto: #44475a;
+  --colorError: #ff5555;
 }
 
 html {
@@ -378,7 +388,7 @@ h6 {
 }
 .card-greet__delete {
   position: absolute;
-  top: -1%;
+  top: -1px;
   right: 1.8%;
   color: var(--colorPrincipalSalmon);
   text-decoration: none;
@@ -830,10 +840,10 @@ h6 {
   color: var(--colorError);
 }
 .diary .favorite-task {
-  color: gray;
+  color: rgba(158, 158, 158, 0.389);
 }
 .diary .favorite {
-  color: pink;
+  color: var(--colorTerciarioVerde);
 }
 .diary .ayer-completed {
   text-decoration: line-through;
@@ -941,6 +951,9 @@ h6 {
   flex-direction: column;
   gap: 25px;
   margin: 0 auto;
+}
+.diario-agradecimiento .pagination {
+  text-align: center;
 }
 
 .relax .heading-secondary {
@@ -1098,7 +1111,7 @@ h6 {
 .login .form .sun {
   position: absolute;
   max-width: 6.25rem;
-  bottom: 95%;
+  top: -40px;
   left: 37%;
 }
 .login .btn {
@@ -1249,6 +1262,12 @@ h6 {
 }
 body {
   background-color: var(--colorBackground);
+}
+body a {
+  color: var(--colorTipoCuerpo);
+}
+body a:hover {
+  color: var(--colorPrincipalSalmon);
 }
 
 a,

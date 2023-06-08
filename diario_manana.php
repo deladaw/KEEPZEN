@@ -45,6 +45,8 @@ $fecha_formateada = $formato_fecha->format($fecha_actual);
     echo 'tape_diary_flowers.svg';
   } elseif ($bodyClass === 'theme--lemon') {
     echo 'tape_diary_lemon.svg';
+  } elseif ($bodyClass === 'theme--dracula') {
+    echo 'tape_diary_dracula.svg';
   } else {
     echo 'tape_diary.svg';
   }

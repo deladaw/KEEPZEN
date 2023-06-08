@@ -13,6 +13,8 @@
     echo '--dark';
   } elseif ($bodyClass === 'theme--lemon') {
     echo '--lemon';
+  } elseif ($bodyClass === 'theme--dracula') {
+    echo '--dracula';
   }
 ?>.svg" alt="chica meditando relajada" />
     </div>
@@ -44,6 +46,8 @@
     echo '--dark';
   } elseif ($bodyClass === 'theme--lemon') {
     echo '--lemon';
+  } elseif ($bodyClass === 'theme--dracula') {
+    echo '--dracula';
   }
 ?>.svg" alt="chico escribiendo en un diario" />
         </div>
@@ -70,6 +74,8 @@
     echo '--dark';
   } elseif ($bodyClass === 'theme--lemon') {
     echo '--lemon';
+  } elseif ($bodyClass === 'theme--dracula') {
+    echo '--dracula';
   }
 ?>.svg" alt="gracias escrito en grande" />
         </div>
@@ -94,6 +100,8 @@
     echo '--dark';
   } elseif ($bodyClass === 'theme--lemon') {
     echo '--lemon';
+  } elseif ($bodyClass === 'theme--dracula') {
+    echo '--dracula';
   }
 ?>.svg" alt="ilustración de un sol sonriente" />
         </div>

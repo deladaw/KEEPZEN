@@ -105,10 +105,10 @@
   }
 
   .favorite-task {
-    color: gray;
+    color: rgba(158, 158, 158, 0.389);
   }
   .favorite {
-    color: pink;
+    color: var(--colorTerciarioVerde);
   }
 
   .ayer-completed {

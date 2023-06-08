@@ -6,7 +6,7 @@ include("conectar_db.php");
 if (!isset($_SESSION['id_usuario'])) {
     ?>
 <script>
-window.location.href = "../index.php";
+window.location.href = "index.php";
 </script>
 
 <?php
@@ -15,7 +15,7 @@ window.location.href = "../index.php";
 // Si se ha enviado la tarea
 if (isset($_POST['tarea'])) {
     // Recuperamos la tarea enviada
-    $tarea = $_POST["tarea"];
+    $tarea = htmlspecialchars($_POST["tarea"], ENT_QUOTES, 'UTF-8');
     $id_usuario = $_SESSION['id_usuario'];
 
     // Validamos los datos

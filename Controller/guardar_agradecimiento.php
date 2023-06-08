@@ -7,7 +7,7 @@ include("conectar_db.php");
 if (!isset($_SESSION['id_usuario'])) {
     ?>
 <script>
-window.location.href = "../index.php";
+window.location.href = "index.php";
 </script>
 
 <?php
@@ -24,6 +24,13 @@ if (isset($_POST['enviaragradecimiento'])) {
     $errores = 0;
 
     if (empty($agradecimiento)) {
+        $err_vacio = "* No has escrito ningún agradecimiento";
+        $errores = "1";
+    }
+
+    if (strlen($agradecimiento) > 3000) {
+        $agradecimiento = substr($agradecimiento, 0, 3000);
+        $err_textLG= "* Texto demasiado largo. El máximo permitido es de 2000 caracteres.";
         $errores = "1";
     }
 
