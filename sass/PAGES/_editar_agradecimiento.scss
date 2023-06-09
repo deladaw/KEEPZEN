@@ -1,0 +1,42 @@
+.editar-agradecimiento {
+  padding: 40px;
+  min-height: 75vh;
+
+  h2 {
+    text-align: center;
+    margin-bottom: $paddingMD;
+  }
+
+  .card-greet {
+    margin: $center;
+  }
+
+  .card-greet__text {
+    padding-top: 15px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: none; /* Eliminar la restricción de altura */
+  }
+
+  textarea {
+    background-color: var(--colorBlancoRoto);
+    width: 100%;
+    height: inherit;
+    color: var(--colorTipoCuerpo);
+    border: none; /* Opcional: eliminar el borde si no es necesario */
+    resize: none;
+    &:focus {
+      outline: 3px solid var(--colorPrincipalSalmon);
+    } /* Opcional: desactivar la capacidad de redimensionar el textarea */
+  }
+
+  .error-msg {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .btn {
+    margin-top: 20px;
+    width: 100%;
+  }
+}

@@ -40,4 +40,13 @@
     color: var(--colorPrincipalSalmon);
     cursor: pointer;
   }
+
+  .edit-container {
+    display: flex;
+
+    i {
+      font-size: 0.7rem;
+      margin-left: 5px;
+    }
+  }
 }

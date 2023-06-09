@@ -400,6 +400,13 @@ h6 {
   color: var(--colorPrincipalSalmon);
   cursor: pointer;
 }
+.card-greet .edit-container {
+  display: flex;
+}
+.card-greet .edit-container i {
+  font-size: 0.7rem;
+  margin-left: 5px;
+}
 
 .modal {
   visibility: hidden;
@@ -1288,6 +1295,45 @@ h6 {
   display: flex;
   justify-content: center;
   gap: 3.5rem;
+}
+
+.editar-agradecimiento {
+  padding: 40px;
+  min-height: 75vh;
+}
+.editar-agradecimiento h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.editar-agradecimiento .card-greet {
+  margin: 0 auto;
+}
+.editar-agradecimiento .card-greet__text {
+  padding-top: 15px;
+  position: relative;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-height: none; /* Eliminar la restricción de altura */
+}
+.editar-agradecimiento textarea {
+  background-color: var(--colorBlancoRoto);
+  width: 100%;
+  height: inherit;
+  color: var(--colorTipoCuerpo);
+  border: none; /* Opcional: eliminar el borde si no es necesario */
+  resize: none;
+  /* Opcional: desactivar la capacidad de redimensionar el textarea */
+}
+.editar-agradecimiento textarea:focus {
+  outline: 3px solid var(--colorPrincipalSalmon);
+}
+.editar-agradecimiento .error-msg {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.editar-agradecimiento .btn {
+  margin-top: 20px;
+  width: 100%;
 }
 
 .fade-in {
