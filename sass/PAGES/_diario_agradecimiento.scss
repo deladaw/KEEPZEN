@@ -3,6 +3,12 @@
   flex-direction: column;
   justify-content: center;
 
+  a {
+    text-decoration: none;
+    &:hover {
+      color: var(--colorPrincipalSalmon);
+    }
+  }
   .heading-secondary {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -23,5 +29,57 @@
 
   .pagination {
     text-align: center;
+  }
+
+  .current-page {
+    color: var(--colorPrincipalSalmon);
+  }
+
+  .search {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 650px;
+    margin: $center;
+    padding-bottom: 60px;
+
+    .order {
+      i {
+        color: var(--colorTipoHeadings);
+        font-size: 1.3rem;
+        margin-right: 10px;
+        &:hover {
+          color: var(--colorPrincipalSalmon);
+        }
+      }
+    }
+
+    &-form {
+      display: flex;
+      justify-content: end;
+
+      &__input {
+        padding: 8px;
+        background-color: var(--colorBlancoRoto);
+        color: var(--colorTipoCuerpo);
+        outline: none;
+        border: $bordeLinea;
+      }
+
+      &__btn {
+        padding: 15px;
+        background-color: var(--colorTipoHeadings);
+        cursor: pointer;
+
+        i {
+          color: white;
+        }
+
+        &:hover i {
+          color: var(--colorPrincipalSalmon);
+        }
+      }
+    }
   }
 }

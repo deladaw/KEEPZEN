@@ -124,6 +124,12 @@
     margin-left: 8px;
     color: gray;
   }
+
+  .fa-arrow-alt-circle-right {
+    &:hover {
+      color: var(--colorTerciarioVerde);
+    }
+  }
 }
 
 @include mv(570px) {

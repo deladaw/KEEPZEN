@@ -28,7 +28,7 @@
   --colorBackground: #fefad3;
   --colorTipoHeadings: #504e27;
   --colorTipoCuerpo: #3c3131;
-  --colorBlancoRoto: rgb(254, 247, 222);
+  --colorBlancoRoto: #fffbe6;
   --colorError: #9d5e00;
 }
 .theme--dracula {
@@ -857,6 +857,9 @@ h6 {
   margin-left: 8px;
   color: gray;
 }
+.diary .fa-arrow-alt-circle-right:hover {
+  color: var(--colorTerciarioVerde);
+}
 
 @media screen and (max-width: 570px) {
   html .tape-diary {
@@ -938,6 +941,12 @@ h6 {
   justify-content: center;
   min-height: 70vh;
 }
+.diario-agradecimiento a {
+  text-decoration: none;
+}
+.diario-agradecimiento a:hover {
+  color: var(--colorPrincipalSalmon);
+}
 .diario-agradecimiento .heading-secondary {
   padding-top: 60px;
   padding-bottom: 60px;
@@ -954,6 +963,48 @@ h6 {
 }
 .diario-agradecimiento .pagination {
   text-align: center;
+}
+.diario-agradecimiento .current-page {
+  color: var(--colorPrincipalSalmon);
+}
+.diario-agradecimiento .search {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 650px;
+  margin: 0 auto;
+  padding-bottom: 60px;
+}
+.diario-agradecimiento .search .order i {
+  color: var(--colorTipoHeadings);
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+.diario-agradecimiento .search .order i:hover {
+  color: var(--colorPrincipalSalmon);
+}
+.diario-agradecimiento .search-form {
+  display: flex;
+  justify-content: end;
+}
+.diario-agradecimiento .search-form__input {
+  padding: 8px;
+  background-color: var(--colorBlancoRoto);
+  color: var(--colorTipoCuerpo);
+  outline: none;
+  border: 2.5px solid var(--colorTipoHeadings);
+}
+.diario-agradecimiento .search-form__btn {
+  padding: 15px;
+  background-color: var(--colorTipoHeadings);
+  cursor: pointer;
+}
+.diario-agradecimiento .search-form__btn i {
+  color: white;
+}
+.diario-agradecimiento .search-form__btn:hover i {
+  color: var(--colorPrincipalSalmon);
 }
 
 .relax .heading-secondary {
