@@ -34,11 +34,16 @@
                 <p class="features__info-desc">
                     Seguro que alguna vez has estado más tiempo del que te gustaría
                     dándole vueltas a todas las cosas que tienes que hacer al día
-                    siguiente. La mejor forma de deshacerte de ellas es <b> apuntándolas
-                        antes de irte a dormir.</b> En tu diario personal podrás crear
-                    tu propia lista de tareas personalizada para cada día,
-                    asegurándote de que no se te olvide nada importante. ¡Apúntalas
-                    por la noche y consúltalas al día siguiente!
+                    siguiente. La mejor forma de deshacerte de ellas es <b>apuntándolas
+                        antes de irte a dormir.</b> En tu
+                    <?php if (isset($_SESSION['autentificado']) && $_SESSION['autentificado'] == true) : ?>
+                    <a href="diario.php">agenda</a>
+                    <?php else : ?>
+                    <a href="diario_muestra.php">agenda</a>
+                    <?php endif; ?>
+                    personal podrás crear tu propia lista de tareas personalizada para cada día,
+                    asegurándote de que no se te olvide nada importante. ¡Apúntalas por la noche
+                    y consúltalas al día siguiente!
                 </p>
             </div>
             <img class="features__img fade-in" src="img/landing_page/boy_writing<?php
@@ -87,12 +92,22 @@
                 </h3>
                 <p class="features__info-desc">
                     Empieza tu día con el pie derecho y sin estrés, consultando tu
-                    lista de tareas personalizada en tu diario. En vez de levantarte y
-                    empezar a pensar en todo lo que tienes que hacer, toma unos
+                    lista de tareas personalizada en tu
+                    <?php if (isset($_SESSION['autentificado']) && $_SESSION['autentificado'] == true) : ?>
+                    <a href="diario.php">agenda</a>
+                    <?php else : ?>
+                    <a href="diario_muestra.php">agenda</a>
+                    <?php endif; ?>
+                    . En vez de levantarte y empezar a pensar en todo lo que tienes que hacer, toma unos
                     minutos para revisar lo que ya apuntaste. Esto te ayudará a
                     priorizar y planificar mejor tu día, y a asegurarte de que no se
-                    te olvide nada importante. ¡Tu diario personal te ayudará a
-                    mantener el control y la calma!
+                    te olvide nada importante. ¡Tu
+                    <?php if (isset($_SESSION['autentificado']) && $_SESSION['autentificado'] == true) : ?>
+                    <a href="diario.php">agenda</a>
+                    <?php else : ?>
+                    <a href="diario_muestra.php">agenda</a>
+                    <?php endif; ?>
+                    personal te ayudará a mantener el control y la calma!
                 </p>
             </div>
             <img class="features__img fade-in" src="img/landing_page/sun_features<?php
@@ -128,7 +143,11 @@
                 levantarte y antes de acostarte mediante una serie de estiramientos
                 integrales.
             </p>
+            <?php if (isset($_SESSION['autentificado']) && $_SESSION['autentificado'] == true) : ?>
+            <a href="relajate.php" class="call-btn btn--secondary">EMPIEZA AHORA</a>
+            <?php else : ?>
             <a href="registro.php" class="call-btn btn--secondary">EMPIEZA AHORA</a>
+            <?php endif; ?>
         </div>
     </div>
 </section>

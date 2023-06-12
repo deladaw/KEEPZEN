@@ -24,11 +24,11 @@
     width: 100%;
     height: inherit;
     color: var(--colorTipoCuerpo);
-    border: none; /* Opcional: eliminar el borde si no es necesario */
+    border: none;
     resize: none;
     &:focus {
       outline: 3px solid var(--colorPrincipalSalmon);
-    } /* Opcional: desactivar la capacidad de redimensionar el textarea */
+    }
   }
 
   .error-msg {

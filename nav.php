@@ -56,9 +56,9 @@ if(isset($_SESSION['id_usuario'])){
                 <li class="nav__list-item"><a href="./index.php#funciona">Cómo funciona</a></li>
                 <li class="nav__list-item">
                     <?php if(!isset($_SESSION['autentificado'])){ ?>
-                    <a href="./diario_muestra.php">Diario</a>
+                    <a href="./diario_muestra.php">Agenda</a>
                     <?php } else { ?>
-                    <a href="./diario.php">Diario</a>
+                    <a href="./diario.php">Agenda</a>
                     <?php } ?>
                 </li>
                 <li class="nav__list-item"><a href="relajate.php">Relájate</a></li>

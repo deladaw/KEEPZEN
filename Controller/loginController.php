@@ -28,6 +28,7 @@ if ($datos && password_verify($pwd,$datos->clave)){
     $_SESSION['id_usuario'] = $datos->id;
     $_SESSION['autentificado'] = true;
     $_SESSION['rol'] = $datos->id_rol;
+    $_SESSION['tema_comprado'] = $datos->tema_comprado;
     if($datos){
         //He usado JS para redirigir porque el header me daba error.
         ?>

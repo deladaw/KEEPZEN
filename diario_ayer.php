@@ -8,7 +8,7 @@ include("nav.php");
 
 
 <!-- DIARIO -->
-<section class="diary container">
+<section class="diary container" id="diario_ayer">
     <!-- DIARIO NAV -->
     <nav class="diary__nav">
         <ul class="diary__nav-list">
@@ -41,7 +41,7 @@ $fecha_formateada = $formato_fecha->format($fecha_ayer);
     </div>
 
     <div class="to-do-list" id="task-list">
-    <img src="img/generales/<?php
+        <img src="img/generales/<?php
   if ($bodyClass === 'theme--dark') {
     echo 'tape_diary_flowers.svg';
   } elseif ($bodyClass === 'theme--lemon') {
@@ -73,11 +73,8 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
             <p class="task-text completed ayer-completed"><?= $dato->tarea ?></p>
             <?php else: ?>
             <p class="task-text ayer-no-completed"><?= $dato->tarea ?></p>
-            <a href="./Controller/mover_tarea_a_hoy.php?id=<?= $dato->id ?>" class="move-to-today"><i
-                    class="fas fa-arrow-alt-circle-right"></i></a>
-            <form action="./Controller/mover_tarea_a_hoy.php" method="POST" style="display: none;">
-                <input type="hidden" name="id" value="<?= $dato->id ?>">
-            </form>
+            <a href="./Controller/mover_tarea_a_hoy.php?id=<?= $dato->id ?>" class="move-to-today"
+                data-task-id="<?= $dato->id ?>"><i class="fas fa-arrow-alt-circle-right"></i></a>
             <?php endif; ?>
         </div>
         <?php endforeach; ?>
@@ -86,7 +83,6 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
         }
         ?>
 </section>
-
 
 <?php
 include("footer.php");

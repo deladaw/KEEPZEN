@@ -16,7 +16,7 @@ if (isset($_GET['tema'])) {
         $stmt->execute();
 
         // Redirigir al usuario de regreso a la página principal u otra página según tu lógica
-        header("Location: ../activar_tema.php");
+        header("Location: ../temas.php");
         exit();
     } catch (PDOException $e) {
         // Manejar el error, mostrar un mensaje de error al usuario o redirigir a una página de error

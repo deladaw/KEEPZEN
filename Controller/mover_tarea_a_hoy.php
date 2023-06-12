@@ -4,20 +4,15 @@ include("seguridad.php");
 
 // Comprobamos que el usuario tenga una sesión iniciada
 if (!isset($_SESSION['autentificado'])) {
-    ?>
-<script>
-window.location.href = "index.php";
-</script>
-
-<?php
+    // Devolver una respuesta de error
+    echo 'error';
+    exit;
 }
 
-// Si se ha enviado el formulario
-if (isset($_REQUEST['id'])) {
+if (isset($_GET['id'])) {
     // Recuperamos el ID de la tarea
-    $id = $_REQUEST['id'];
+    $id = $_GET['id'];
     $id_usuario = $_SESSION['id_usuario'];
-
 
     /// Crear una nueva fecha para el día de hoy a las 00:00:00
     $fecha_nueva = new DateTime();
@@ -31,13 +26,17 @@ if (isset($_REQUEST['id'])) {
     $res = $sql->execute([$fecha_nueva_str, $id, $id_usuario]);
 
     if ($res) {
-        ?>
-<script>
-window.location.href = "../diario_ayer.php";
-</script>
-
-<?php
+        // Devolver una respuesta exitosa
+        header('Location: ../diario_ayer.php');
+        exit;
     } else {
-        echo "Error al actualizar la tarea";
+        // Devolver una respuesta de error
+        header('Location: ../diario_ayer.php');
+        exit;
     }
 }
+
+// Devolver una respuesta de error si no se proporciona un ID de tarea
+echo 'error';
+exit;
+?>

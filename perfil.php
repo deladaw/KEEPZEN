@@ -33,7 +33,7 @@ if(isset($_SESSION['nombre_usuario'])){
                 <p>Desactivar cuenta</p>
             </a>
 
-            <a href="activar_tema.php" class="option-card">
+            <a href="comprar_tema.php" class="option-card">
                 <i class="fas fa-palette"></i>
                 <p>Cambiar tema interfaz</p>
             </a>

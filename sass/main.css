@@ -326,6 +326,12 @@ h6 {
   padding: 5px 0;
 }
 
+.success-msg {
+  font-size: 1.1rem;
+  color: rgb(56, 164, 56);
+  padding: 8px 0;
+}
+
 .option-card {
   max-width: 8.75rem;
   background-color: var(--colorBlancoRoto);
@@ -763,6 +769,7 @@ h6 {
   max-width: 43.75rem;
   padding-top: 2.7rem;
   padding-bottom: 6rem;
+  min-height: 75vh;
 }
 .diary textarea:focus {
   outline: none;
@@ -946,7 +953,7 @@ h6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 70vh;
+  min-height: 75vh;
 }
 .diario-agradecimiento a {
   text-decoration: none;
@@ -1151,7 +1158,7 @@ h6 {
   display: flex;
   flex-direction: column;
   gap: 3.125rem;
-  min-height: 70vh;
+  min-height: 75vh;
   padding-bottom: 6.25rem;
 }
 .login__title {
@@ -1178,6 +1185,7 @@ h6 {
   border-style: none;
   background-color: var(--colorSecundarioRosa);
   padding: 5px 0;
+  margin-top: 15px;
 }
 .login .btn:hover {
   background-color: var(--colorPrincipalSalmon);
@@ -1270,7 +1278,7 @@ h6 {
 .eliminar {
   padding-top: 80px;
   padding-bottom: 60px;
-  min-height: 70vh;
+  min-height: 75vh;
 }
 .eliminar__title {
   text-align: center;
@@ -1297,6 +1305,103 @@ h6 {
   gap: 3.5rem;
 }
 
+.theme-purchase {
+  min-height: 75vh;
+}
+.theme-purchase .error-msg {
+  padding: 0;
+}
+.theme-purchase h1 {
+  margin: 20px;
+  text-align: center;
+}
+.theme-purchase .subtitulo {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.theme-purchase .theme__images {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.theme-purchase .theme__images h4 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.theme-purchase .theme__images__img {
+  width: 100%;
+  max-width: 270px;
+  border: 2.5px solid var(--colorTipoHeadings);
+  transition: all 0.1s ease-in-out;
+}
+.theme-purchase .theme__images__img:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transform: scale(1.7);
+}
+.theme-purchase .payment-container {
+  margin: 0 auto;
+  display: flex;
+  margin-top: 60px;
+  border: 2.5px solid var(--colorTipoHeadings);
+  width: 100%;
+  max-width: 800px;
+}
+.theme-purchase .payment-container .sub-heading {
+  text-align: center;
+}
+.theme-purchase .payment-container .payment-discount {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: var(--colorBlancoRoto);
+  padding: 1.5rem;
+  width: 100%;
+}
+.theme-purchase .payment-container .payment-discount form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+.theme-purchase .payment-container .stripe {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--colorBlancoRoto);
+  padding: 1.5rem;
+  width: 100%;
+}
+.theme-purchase .payment-container .stripe img {
+  max-width: 140px;
+  align-self: center;
+}
+.theme-purchase .payment-container .stripe form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+}
+.theme-purchase .payment-container .stripe .sub-heading {
+  margin-right: 10px;
+}
+.theme-purchase input {
+  padding: 8px;
+  background-color: var(--colorBlancoRoto);
+  color: var(--colorTipoCuerpo);
+  outline: none;
+  border: 2.5px solid var(--colorTipoHeadings);
+}
+.theme-purchase .stripe-button-el {
+  padding: 0.4rem 1.3rem;
+  font-family: "Alef", sans-serif !important;
+}
+.theme-purchase .stripe-button-el span {
+  font-family: "Alef", sans-serif !important;
+  background-image: none !important;
+  background: none !important;
+  box-shadow: none !important;
+}
+
 .editar-agradecimiento {
   padding: 40px;
   min-height: 75vh;
@@ -1320,9 +1425,8 @@ h6 {
   width: 100%;
   height: inherit;
   color: var(--colorTipoCuerpo);
-  border: none; /* Opcional: eliminar el borde si no es necesario */
+  border: none;
   resize: none;
-  /* Opcional: desactivar la capacidad de redimensionar el textarea */
 }
 .editar-agradecimiento textarea:focus {
   outline: 3px solid var(--colorPrincipalSalmon);

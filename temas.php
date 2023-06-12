@@ -1,9 +1,16 @@
 <?php
-$titulo = "KeepZen - Activar Tema";
+$titulo = "KeepZen - Mis temas";
 include("./Controller/seguridad.php");
 include("./Controller/seguridad_admin.php");
 include("./Controller/conectar_db.php");
 include("nav.php");
+
+
+if (verificar_compra_temas($_SESSION['id_usuario']) == false) {
+    header("Location: comprar_tema.php");
+    exit;
+}
+
 ?>
 
 <div class="theme-selection container">
