@@ -1,4 +1,5 @@
 <?php
+//Página de registro.
 $titulo = "KeepZen - Registro";
 include("./Controller/registroController.php");
 include("./Controller/seguridad.php");
@@ -44,6 +45,7 @@ include("nav.php");
             <p class="error-msg"><?php if(isset($err_pass2)){echo $err_pass2; }?></p>
             <p class="error-msg"><?php if(isset($err_pass3)){echo $err_pass3; }?></p>
             <p class="error-msg"><?php if(isset($err_pass4)){echo $err_pass4; }?></p>
+            <p class="error-msg"><?php if(isset($err_pass5)){echo $err_pass5; }?></p>
         </div>
         <label><input type="checkbox" id="policy" value="policy" name="policy" /> Acepto la
             política de privacidad y términos de uso</label><br />

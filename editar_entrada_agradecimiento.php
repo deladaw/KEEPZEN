@@ -1,4 +1,5 @@
 <?php
+//Página para editar la entrada (una) de agradecimiento del usuario.
 $titulo = "KeepZen - Editar agradecimiento";
 include("./Controller/seguridad.php");
 include("./Controller/seguridad_admin.php");
@@ -6,25 +7,23 @@ include("./Controller/conectar_db.php");
 include("./Controller/editar_entrada.php");
 include("nav.php");
 
-verificar_permisos_sesion();
+verificar_permisos();
 ?>
 
 <?php
-// Obtener los parámetros de la URL (ID y ID de usuario)
-$id = $_GET['id'];
-$id_usuario = $_SESSION['id_usuario']; // Asumiendo que tienes una sesión iniciada con el ID de usuario
 
-// Realizar la consulta SQL
+$id = $_GET['id'];
+$id_usuario = $_SESSION['id_usuario']; 
+
 $query = "SELECT * FROM agradecimientos WHERE id = ? AND id_usuario = ?";
 $stmt = $conexion->prepare($query);
 $stmt->execute([$id, $id_usuario]);
 
-// Obtener los datos de la entrada de agradecimiento
 $entrada = $stmt->fetch(PDO::FETCH_ASSOC);
 
-// Verificar si se encontró la entrada
+
 if ($entrada) {
-    // Mostrar los datos de la entrada en los elementos HTML correspondientes
+    
     ?>
 <div class="editar-agradecimiento container">
     <h2 class="heading-secondary">Editar agradecimiento</h2>
@@ -54,20 +53,17 @@ if ($entrada) {
 </div>
 <?php
 } else {
-    // Mostrar un mensaje de error o redireccionar a una página de error
     ?>
-<div class="editar-agradecimiento container">
-
-    <h4 class="heading-secondary">La entrada de agradecimiento no existe.</h4>
-
+<div class="editar-agradecimiento container" <h4 class="heading-secondary">La entrada de agradecimiento no existe.</h4>
 </div>
-
 
 <?php
 }
 ?>
 <!--JAVASCRIPT-->
 <script type="text/javascript">
+//He agregado este script en el HTML porque es poquito.
+//Este script hace que el textbox se expanda conforme escribe el usuario.
 function setHeight(fieldId) {
     document.getElementById(fieldId).style.height = document.getElementById(fieldId).scrollHeight + 'px';
 }

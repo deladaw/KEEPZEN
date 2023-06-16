@@ -1,17 +1,17 @@
 .theme-purchase {
-  min-height: 75vh;
+  padding-bottom: 6.25rem;
 
   .error-msg {
     padding: 0;
   }
 
   h1 {
-    margin: 20px;
+    margin: 1.25rem;
     text-align: center;
   }
   .subtitulo {
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
 
   .theme__images {
@@ -21,7 +21,7 @@
 
     h4 {
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 0.625rem;
     }
 
     &__img {
@@ -40,17 +40,11 @@
   .payment-container {
     margin: $center;
     display: flex;
-    // border: $bordeLinea;
-    margin-top: 60px;
-
+    margin-top: 3.75rem;
     border: $bordeLinea;
     width: 100%;
-    max-width: 800px;
-    // display: flex;
-    // justify-content: center;
-    // flex-direction: column;
-    // padding: $paddingMD;
-    // background-color: var(--colorBlancoRoto);
+    max-width: 50rem;
+    margin-bottom: 200px;
 
     .sub-heading {
       text-align: center;
@@ -59,7 +53,7 @@
     .payment-discount {
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 1.25rem;
       background-color: var(--colorBlancoRoto);
       padding: $paddingMD;
       width: 100%;
@@ -67,7 +61,7 @@
       form {
         display: flex;
         flex-direction: column;
-        gap: 20px;
+        gap: 1.25rem;
         width: 100%;
       }
     }
@@ -76,13 +70,12 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      // gap: 20px;
       background-color: var(--colorBlancoRoto);
       padding: $paddingMD;
       width: 100%;
 
       img {
-        max-width: 140px;
+        max-width: 8.75rem;
         align-self: center;
       }
 
@@ -90,13 +83,11 @@
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        // gap: 20px;
         width: 100%;
       }
-      // display: flex;
 
       .sub-heading {
-        margin-right: 10px;
+        margin-right: 0.625rem;
       }
     }
   }
@@ -118,6 +109,28 @@
       background-image: none !important;
       background: none !important;
       box-shadow: none !important;
+    }
+  }
+}
+
+@include mv(670px) {
+  html {
+    .theme-purchase {
+      padding-bottom: 60px;
+    }
+
+    .payment-container {
+      flex-direction: column;
+      background-color: var(--colorBlancoRoto);
+      gap: 20px;
+
+      .payment-discount {
+        border-bottom: $bordeLinea;
+      }
+
+      .stripe {
+        gap: 20px;
+      }
     }
   }
 }

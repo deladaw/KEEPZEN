@@ -5,36 +5,33 @@ include("./Controller/seguridad_admin.php");
 include("./Controller/conectar_db.php");
 include("nav.php");
 
-verificar_permisos_sesion();
+verificar_permisos();
 ?>
 
 
 <?php
 $id_usuario = $_SESSION['id_usuario'];
 
-// Obtener el número total de agradecimientos del usuario
 $sql = "SELECT COUNT(*) AS total FROM agradecimientos WHERE id_usuario = ?";
 $stmt = $conexion->prepare($sql);
 $stmt->execute([$id_usuario]);
 $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
 $totalAgradecimientos = $resultado['total'];
 
-// Calcular el número de páginas necesarias para la paginación normal
+//Paginación
 $entradasPorPagina = 5;
 $totalPaginas = ceil($totalAgradecimientos / $entradasPorPagina);
 
-// Obtener el número de página actual para la paginación normal
+
 $paginaActual = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
 $paginaActual = max(1, min($paginaActual, $totalPaginas));
 
-// Calcular el índice de inicio y fin para la consulta SQL de la paginación normal
 $indiceInicio = ($paginaActual - 1) * $entradasPorPagina;
 $indiceFin = $indiceInicio + $entradasPorPagina;
 
-// Ordenamiento por fecha
 $ordenamiento = isset($_GET['orden']) && $_GET['orden'] == 'asc' ? 'ASC' : 'DESC';
 
-// Obtener las entradas de agradecimiento para la página actual de la paginación normal
+//Consulta de agradecimientos del usuario
 $sql = "SELECT * FROM agradecimientos WHERE id_usuario = ? ORDER BY fecha_creacion $ordenamiento LIMIT ?, ?";
 $stmt = $conexion->prepare($sql);
 $stmt->bindParam(1, $id_usuario, PDO::PARAM_INT);
@@ -66,7 +63,7 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
     <div class="diario-agradecimiento__cards">
         <?php if (count($res) > 0 && !isset($_GET['buscar'])): ?>
         <?php foreach($res as $dato): ?>
-        <!-- Código para mostrar cada entrada -->
+        <!-- ENTRADAS -->
         <div class="card-greet">
             <div class="card-greet__title">
                 <h5 class="heading-quinary">Fecha:</h5>
@@ -81,11 +78,10 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
             <?php if (strlen($dato->agradecimiento) > 250): ?>
             <span class="card-greet__text-expand">Ver más</span>
             <?php endif; ?>
-            <!-- Agrega el botón de eliminar con un data-atributo que contenga el id de la entrada -->
         </div>
         <?php endforeach; ?>
 
-        <!-- Paginación de las entradas -->
+        <!-- Paginación de las ENTRADAS -->
         <div class="pagination">
             <?php if ($totalPaginas > 1): ?>
             <?php if ($paginaActual > 1): ?>
@@ -119,7 +115,6 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
         <?php
             $query = $_GET['q'];
 
-            // Ejecutar la consulta SQL para obtener los resultados de búsqueda
             $sql = "SELECT COUNT(*) AS total FROM agradecimientos WHERE id_usuario = :id_usuario AND agradecimiento LIKE :query";
             $stmt = $conexion->prepare($sql);
             $stmt->bindValue(':id_usuario', $id_usuario, PDO::PARAM_INT);
@@ -127,19 +122,15 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
             $stmt->execute();
             $resultado = $stmt->fetch(PDO::FETCH_ASSOC);
             $totalResultados = $resultado['total'];
-            
-            // Calcular el número de páginas necesarias para la paginación de resultados de búsqueda
+
             $totalPaginasBusqueda = ceil($totalResultados / $entradasPorPagina);
             
-            // Obtener el número de página actual para la paginación de resultados de búsqueda
             $paginaActualBusqueda = isset($_GET['pagina']) ? $_GET['pagina'] : 1;
             $paginaActualBusqueda = max(1, min($paginaActualBusqueda, $totalPaginasBusqueda));
             
-            // Calcular el índice de inicio y fin para la consulta SQL de la paginación de resultados de búsqueda
             $indiceInicioBusqueda = ($paginaActualBusqueda - 1) * $entradasPorPagina;
             $indiceFinBusqueda = $indiceInicioBusqueda + $entradasPorPagina;
             
-            // Obtener los resultados de búsqueda para la página actual de la paginación de resultados de búsqueda
             $sql = "SELECT * FROM agradecimientos WHERE id_usuario = :id_usuario AND agradecimiento LIKE :query ORDER BY fecha_creacion $ordenamiento LIMIT :inicio, :fin";
             $stmt = $conexion->prepare($sql);
             $stmt->bindValue(':id_usuario', $id_usuario, PDO::PARAM_INT);
@@ -152,7 +143,7 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
 
         <?php if (count($resultadosBusqueda) > 0): ?>
         <?php foreach ($resultadosBusqueda as $dato): ?>
-        <!-- Código para mostrar cada resultado -->
+
         <div class="card-greet">
             <div class="card-greet__title">
                 <h5 class="heading-quinary">Fecha:</h5>
@@ -167,7 +158,6 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
             <?php if (strlen($dato->agradecimiento) > 250): ?>
             <span class="card-greet__text-expand">Ver más</span>
             <?php endif; ?>
-            <!-- Agrega el botón de eliminar con un data-atributo que contenga el id de la entrada -->
         </div>
         <?php endforeach; ?>
 

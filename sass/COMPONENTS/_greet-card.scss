@@ -1,9 +1,9 @@
 .card-greet {
   background-color: var(--colorBlancoRoto);
   padding: $paddingMD;
-  padding-bottom: 30px;
-  max-width: 650px;
-  min-width: 280px;
+  padding-bottom: 1.875rem;
+  max-width: 40.625rem;
+  min-width: 17.5rem;
   border: $bordeLinea;
   //   height: 180px;
   //   overflow: hidden;
@@ -16,7 +16,7 @@
   }
 
   &__text {
-    padding-top: 15px;
+    padding-top: 0.9375rem;
     position: relative;
     display: -webkit-box;
     -webkit-line-clamp: 4; /* Número máximo de líneas a mostrar */

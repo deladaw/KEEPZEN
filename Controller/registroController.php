@@ -1,10 +1,11 @@
 <?php
+//Código para el resgistro de un usuario. Te inicia sesión automáticamente al terminar.
 include("conectar_db.php");
 
 function limpiarEntrada($dato) {
-    $dato = trim($dato); // Eliminar espacios en blanco antes y después de los datos
-    $dato = stripslashes($dato); // Eliminar barras invertidas escapadas
-    $dato = htmlspecialchars($dato); // Convertir caracteres especiales en entidades HTML
+    $dato = trim($dato); 
+    $dato = stripslashes($dato); 
+    $dato = htmlspecialchars($dato); 
     return $dato;
 }
 
@@ -24,36 +25,40 @@ if (isset($_REQUEST['crear'])) {
     $resultado->execute();
     $datos = $resultado->fetchAll(PDO::FETCH_OBJ);
 
-    // Validación de la política de privacidad
     if (!isset($_POST['policy']) || $_POST['policy'] == "") {
         $err_pol = "* Debes aceptar la política de privacidad";
         $errores = 1;
     }
 
-    // Validación de la contraseña
     if (empty($contrasena_nueva)) {
         $err_pass = "* Contraseña no introducida";
         $errores = 1;
     } elseif (strlen($contrasena_nueva) > 255) {
         $err_pass2 = "* Contraseña demasiado larga (máx. 255 caracteres)";
         $errores = 1;
+    } elseif (!preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/", $contrasena_nueva)) {
+        $err_pass2 = "* La contraseña debe tener al menos 6 caracteres y contener al menos un número";
+        $errores = 1;
     }
 
-    // Validación de la contraseña introducida nuevamente
+
     if (empty($contrasena_nueva2)) {
         $err_pass = "* Contraseña no introducida";
         $errores = 1;
     } elseif (strlen($contrasena_nueva) > 255) {
         $err_pass3 = "* Contraseña demasiado larga (máx. 255 caracteres)";
         $errores = 1;
-    }
-
-    if ($contrasena_nueva != $contrasena_nueva2) {
-        $err_pass4 = "* Las contraseñas no coinciden.";
+    } elseif (!preg_match("/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{6,}$/", $contrasena_nueva2)) {
+        $err_pass4 = "* La contraseña debe tener al menos 6 caracteres y contener al menos un número";
         $errores = 1;
     }
 
-    // Validación del nombre
+    if ($contrasena_nueva != $contrasena_nueva2) {
+        $err_pass5 = "* Las contraseñas no coinciden.";
+        $errores = 1;
+    }
+
+
     if (empty($nombre)) {
         $err_nom = "* Nombre no introducido";
         $errores = 1;
@@ -62,7 +67,7 @@ if (isset($_REQUEST['crear'])) {
         $errores = 1;
     }
 
-    // Validación del email
+
     if (empty($email)) {
         $err_email = "* Email no introducido";
         $errores = 1;
@@ -74,7 +79,7 @@ if (isset($_REQUEST['crear'])) {
         $errores = 1;
     }
 
-    // Verificar si el email ya está en uso
+
     foreach ($datos as $res) {
         if ($email == $res->email) {
             $err_email4 = "* El e-mail ya se encuentra en uso.";
@@ -83,7 +88,7 @@ if (isset($_REQUEST['crear'])) {
     }
 
     if (isset($_POST["rol"])) {
-        // Selección del ROL
+        
         switch ($rol) {
             case '1':
                 $rol = 1;
@@ -94,12 +99,12 @@ if (isset($_REQUEST['crear'])) {
         }
     }
 
-    // Cifrado de contraseña con método HASH
+
     $passHash = password_hash($contrasena_nueva, PASSWORD_DEFAULT);
 
-    // Si no hay errores, se insertan los datos y se redirige al login
+
     if ($errores != 1) {
-        // Si el usuario es admin (rol = 2), se añade y selecciona el rol del cliente
+        
         if (isset($_SESSION['rol']) && $_SESSION['rol'] == 2) {
             $sql = $conexion->prepare("INSERT INTO usuarios(email, nombre, clave, id_rol)  VALUES(?,?,?)");
             $res = $sql->execute([$email, $nombre, $passHash, $rol]);
@@ -108,7 +113,7 @@ if (isset($_REQUEST['crear'])) {
             $res = $sql->execute([$email, $nombre, $passHash]);
         }
 
-        // Redirigir a la página de cuenta creada
+        
         if ($res) {
             $resultado = $conexion->prepare("SELECT * FROM usuarios WHERE email = ? ");
             $resultado->execute([$email]);

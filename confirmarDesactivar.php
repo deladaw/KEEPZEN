@@ -1,4 +1,5 @@
 <?php
+//Página para confirmar la desactivación de la cuenta del usuario.
 $titulo = "KeepZen - Confirmar desactivar";
 include("./Controller/conectar_db.php");
 include("nav.php");

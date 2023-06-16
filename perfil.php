@@ -1,4 +1,5 @@
 <?php
+//Perfil personal del usuario.
 $titulo = "KeepZen - Perfil";
 include("./Controller/seguridad.php");
 include("./Controller/seguridad_admin.php");
@@ -7,16 +8,15 @@ include("nav.php");
 
 verificar_permisos_sesion();
 
-if(isset($_SESSION['nombre_usuario'])){
-    $nombreusuario = $_SESSION['nombre_usuario'];
-    $id = $_SESSION['id_usuario'];
-}
+$id_usuario = $_SESSION['id_usuario'];
+
+$usuario = getUsuario($conexion, $id_usuario)[0];
+    $nombreUsuario = $usuario->nombre;
 ?>
 
 <section class="profile container">
-    <!-- <img src="img/generales/sloth_profile.svg" alt="animal perezoso durmiendo" class="sloth"> -->
     <h2 class="profile__title heading-secondary">
-        Bienvenido/a <?php echo $nombreusuario ?>, estás en tu perfil personal
+        Bienvenido/a <?php echo $nombreUsuario ?>, estás en tu perfil personal
     </h2>
     <div class="profile__header">
         <div class="profile__options">
@@ -24,16 +24,25 @@ if(isset($_SESSION['nombre_usuario'])){
                 <i class="fas fa-book"></i>
                 <p>Tu diario de gratitud</p>
             </a>
-            <!-- <a href="working_on.php" class="option-card">
+            <a href="gestionar_perfil.php" class="option-card">
                 <i class="fas fa-user-edit"></i>
-                <p>Editar datos personales</p>
-            </a> -->
-            <a href="confirmarDesactivar.php?id=<?=$id?>" class="option-card">
-                <i class="fas fa-user-times"></i>
-                <p>Desactivar cuenta</p>
+                <p>Datos de mi cuenta</p>
             </a>
 
-            <a href="comprar_tema.php" class="option-card">
+            <?php
+
+$id_usuario = $_SESSION['id_usuario'];
+$tema_comprado = verificar_compra_temas($id_usuario);
+
+
+if ($tema_comprado) {
+    $enlace = "temas.php";
+} else {
+    $enlace = "comprar_tema.php";
+}
+?>
+
+            <a href="<?php echo $enlace; ?>" class="option-card">
                 <i class="fas fa-palette"></i>
                 <p>Cambiar tema interfaz</p>
             </a>

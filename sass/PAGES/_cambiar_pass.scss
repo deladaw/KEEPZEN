@@ -1,0 +1,22 @@
+.pass {
+  a {
+    max-width: 15.625rem;
+    min-width: 12.5rem;
+    background-color: var(--colorPrincipalSalmon);
+    margin: $center;
+
+    &:hover {
+      background-color: var(--colorTerciarioVerde);
+      color: var(--colorTipoCuerpo);
+    }
+  }
+
+  .submit {
+    color: var(--colorTipoCuerpo) !important;
+    background-color: var(--colorPrincipalSalmon);
+    &:hover {
+      background-color: var(--colorTerciarioVerde);
+      color: var(--colorTipoCuerpo);
+    }
+  }
+}

@@ -7,7 +7,7 @@ document
   .getElementById("tarea_manana")
   .addEventListener("keydown", function (event) {
     if (event.key === "Enter") {
-      event.preventDefault(); // Evita que se inserte un salto de línea en el textarea
-      document.getElementById("add-task-form-manana").submit(); // Envía el formulario
+      event.preventDefault();
+      document.getElementById("add-task-form-manana").submit();
     }
   });

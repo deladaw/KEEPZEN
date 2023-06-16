@@ -1,4 +1,9 @@
 .theme-selection {
+  .factura-container {
+    display: flex;
+    justify-content: center;
+    margin: 8px;
+  }
   padding: $paddingXL;
   min-height: 75vh;
   h2 {
@@ -8,6 +13,7 @@
     margin-top: 40px;
     padding: $paddingLG;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 3.5rem;
   }

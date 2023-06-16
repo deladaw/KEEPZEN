@@ -1,4 +1,5 @@
 <?php
+//Página para practicar ejercicios de respiración y estiramientos.
 $titulo = "KeepZen - Relájate";
 include("./Controller/seguridad.php");
 include("./Controller/conectar_db.php");

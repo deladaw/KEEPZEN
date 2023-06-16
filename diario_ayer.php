@@ -1,11 +1,12 @@
 <?php
-$titulo = "KeepZen - Diario - Ayer";
+//Página que te muestra en tu agenda el día de ayer con las tareas que has completado o no.
+//Puedes mover las tareas que no has completado al día siguiente (día actual).
+$titulo = "KeepZen - Agenda - Ayer";
 include("./Controller/seguridad.php");
 include("./Controller/guardar_tarea.php");
 include("./Controller/conectar_db.php");
 include("nav.php");
 ?>
-
 
 <!-- DIARIO -->
 <section class="diary container" id="diario_ayer">
@@ -26,13 +27,14 @@ include("nav.php");
         </ul>
     </nav>
     <?php
-setlocale(LC_ALL, 'es_ES.UTF-8');
-$fecha_actual = new DateTime();
-$fecha_ayer = $fecha_actual->sub(new DateInterval('P1D')); // restar un día a la fecha actual
-$formato_fecha = new IntlDateFormatter('es_ES', IntlDateFormatter::FULL, IntlDateFormatter::NONE);
-$fecha_formateada = $formato_fecha->format($fecha_ayer);
+    //Obtengo la fecha de ayer local y la formateo
+    setlocale(LC_ALL, 'es_ES.UTF-8');
+    $fecha_actual = new DateTime();
+    $fecha_ayer = $fecha_actual->sub(new DateInterval('P1D')); 
+    $formato_fecha = new IntlDateFormatter('es_ES', IntlDateFormatter::FULL, IntlDateFormatter::NONE);
+    $fecha_formateada = $formato_fecha->format($fecha_ayer);
 
-?>
+    ?>
 
     <!-- DIARIO TITLE -->
     <div class="diary__title">
@@ -55,7 +57,8 @@ $fecha_formateada = $formato_fecha->format($fecha_ayer);
 
         <?php
 $id_usuario = $_SESSION['id_usuario'];
-
+//Esta consulta selecciona solamente las tareas del día anterior que han sido o no completadas
+//Si la tarea no ha sido completada, se puede mover al día siguiente (día actual).
 $sql = "SELECT * FROM tareas WHERE id_usuario = ? AND (fecha_completada IS NULL OR fecha_completada >= DATE_SUB(CURDATE(), INTERVAL 1 DAY)) AND fecha_creacion >= DATE_SUB(CURDATE(), INTERVAL 1 DAY) AND fecha_creacion < CURDATE()";
 $stmt = $conexion->prepare($sql);
 $stmt->execute([$id_usuario]);

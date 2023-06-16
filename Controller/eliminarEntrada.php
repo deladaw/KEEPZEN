@@ -1,4 +1,5 @@
 <?php
+//Página para eliminar una entrada del diario de agradecimiento.
 include("conectar_db.php");
 include("seguridad.php");
 

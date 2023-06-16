@@ -304,7 +304,7 @@ h6 {
 .diary__nav .diary__icon {
   display: flex;
   align-content: center;
-  gap: 12px;
+  gap: 0.75rem;
 }
 .diary__nav li {
   list-style: none;
@@ -312,11 +312,11 @@ h6 {
 .diary__nav a {
   font-family: "Abril Fatface", cursive;
   color: var(--colorTipoHeadings);
-  font-size: 18px;
+  font-size: 1.125rem;
   text-decoration: none;
 }
 .diary__nav .fas {
-  font-size: 20px;
+  font-size: 1.25rem;
   color: var(--colorTipoCuerpo);
 }
 
@@ -344,7 +344,7 @@ h6 {
   font-weight: 700;
   transition: all 0.1s ease-in-out;
   font-size: 0.85rem;
-  min-height: 60px;
+  min-height: 3.75rem;
   align-content: center;
   min-width: 8.5rem;
 }
@@ -372,9 +372,9 @@ h6 {
 .card-greet {
   background-color: var(--colorBlancoRoto);
   padding: 1.5rem;
-  padding-bottom: 30px;
-  max-width: 650px;
-  min-width: 280px;
+  padding-bottom: 1.875rem;
+  max-width: 40.625rem;
+  min-width: 17.5rem;
   border: 2.5px solid var(--colorTipoHeadings);
   position: relative;
 }
@@ -384,7 +384,7 @@ h6 {
   border-bottom: 2.5px solid var(--colorTipoHeadings);
 }
 .card-greet__text {
-  padding-top: 15px;
+  padding-top: 0.9375rem;
   position: relative;
   display: -webkit-box;
   -webkit-line-clamp: 4; /* Número máximo de líneas a mostrar */
@@ -437,7 +437,7 @@ h6 {
 .modal__content {
   border-radius: 4px;
   position: relative;
-  width: 500px;
+  width: 31.25rem;
   max-width: 90%;
   background: #fff;
   padding: 1em 2em;
@@ -720,7 +720,7 @@ h6 {
 }
 .registro h4 {
   text-align: center;
-  margin-top: -30px;
+  margin-top: -1.875rem;
 }
 .registro h4 a {
   color: var(--colorTipoCuerpo);
@@ -733,7 +733,6 @@ h6 {
 }
 .registro .btn {
   width: 100%;
-  display: flex;
   border-style: none;
   background-color: var(--colorSecundarioRosa);
   padding: 5px 0;
@@ -743,6 +742,7 @@ h6 {
 }
 
 .created {
+  min-height: 75vh;
   padding-top: 6.25rem;
   padding-bottom: 6.25rem;
   width: 100%;
@@ -755,6 +755,9 @@ h6 {
   color: var(--colorPrincipalSalmon);
   font-size: 2.1875rem;
   margin: 0 auto;
+}
+.created .sub-heading {
+  text-align: center;
 }
 .created .heading-secondary {
   text-align: center;
@@ -1023,14 +1026,14 @@ h6 {
 
 .relax .heading-secondary {
   text-align: center;
-  margin-bottom: 20px;
-  margin-top: 40px;
+  margin-bottom: 1.25rem;
+  margin-top: 2.5rem;
 }
 .relax__headline {
   text-align: center;
-  max-width: 600px;
+  max-width: 37.5rem;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 .relax .play-container {
   display: flex;
@@ -1038,8 +1041,8 @@ h6 {
 }
 .relax .sphere {
   margin: auto;
-  height: 320px;
-  width: 320px;
+  height: 20rem;
+  width: 20rem;
   border-radius: 50%;
   background: radial-gradient(rgba(255, 198, 199, 0.262745098), var(--colorSecundarioRosa));
   opacity: 1;
@@ -1049,8 +1052,8 @@ h6 {
 }
 .relax .sphere-inner {
   border-radius: 50%;
-  height: 100px;
-  width: 100px;
+  height: 6.25rem;
+  width: 6.25rem;
   background: radial-gradient(var(--colorPrincipalSalmon), var(--colorSecundarioRosa));
   position: absolute;
 }
@@ -1069,13 +1072,13 @@ h6 {
   cursor: pointer;
   color: var(--colorTipoCuerpo);
   background-color: var(--colorTerciarioVerde);
-  margin-top: 40px;
+  margin-top: 2.5rem;
 }
 .relax .play:hover {
   background-color: var(--colorPrincipalSalmon);
 }
 .relax .fa-solid {
-  font-size: 30px;
+  font-size: 1.875rem;
 }
 .relax .animate {
   animation: breath 5s ease-in-out infinite alternate;
@@ -1090,15 +1093,15 @@ h6 {
 }
 
 .stretch .heading-secondary {
-  margin-top: 80px;
-  margin-bottom: 20px;
+  margin-top: 5rem;
+  margin-bottom: 1.25rem;
   text-align: center;
 }
 .stretch__headline {
   text-align: center;
-  max-width: 600px;
+  max-width: 37.5rem;
   margin: 0 auto;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 .stretch .video-container {
   display: flex;
@@ -1106,7 +1109,7 @@ h6 {
 }
 .stretch__video {
   margin: 0 auto;
-  margin-bottom: 80px;
+  margin-bottom: 5rem;
 }
 
 @keyframes breath {
@@ -1167,11 +1170,11 @@ h6 {
 }
 .login h4 {
   text-align: center;
-  margin-top: -30px;
+  margin-top: -1.875rem;
 }
 .login .form {
   margin: 0 auto;
-  max-width: 380px;
+  max-width: 23.75rem;
 }
 .login .form .sun {
   position: absolute;
@@ -1181,18 +1184,17 @@ h6 {
 }
 .login .btn {
   width: 100%;
-  display: flex;
   border-style: none;
   background-color: var(--colorSecundarioRosa);
   padding: 5px 0;
-  margin-top: 15px;
+  margin-top: 0.9375rem;
 }
 .login .btn:hover {
   background-color: var(--colorPrincipalSalmon);
 }
 .login .forgot-pass {
   text-align: center;
-  margin: 20px 0;
+  margin: 1.25rem 0;
 }
 .login .forgot-pass a {
   color: var(--colorTipoCuerpo);
@@ -1202,6 +1204,7 @@ h6 {
 }
 
 .profile {
+  min-height: 75vh;
   padding-top: 4.0625rem;
 }
 .profile .cerrar-sesion {
@@ -1229,10 +1232,10 @@ h6 {
 .profile .sloth {
   max-width: 140px;
   width: 100%;
-  min-width: 100px;
+  min-width: 6.25rem;
   margin: 0 auto;
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.875rem;
 }
 .profile .greet {
   margin-top: 3.75rem;
@@ -1272,7 +1275,7 @@ h6 {
 }
 .working-on img {
   width: 100%;
-  max-width: 550px;
+  max-width: 34.375rem;
 }
 
 .eliminar {
@@ -1294,6 +1297,11 @@ h6 {
   padding: 2.625rem;
   min-height: 75vh;
 }
+.theme-selection .factura-container {
+  display: flex;
+  justify-content: center;
+  margin: 8px;
+}
 .theme-selection h2 {
   text-align: center;
 }
@@ -1301,23 +1309,43 @@ h6 {
   margin-top: 40px;
   padding: 1.875rem;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 3.5rem;
 }
 
+.pass a {
+  max-width: 15.625rem;
+  min-width: 12.5rem;
+  background-color: var(--colorPrincipalSalmon);
+  margin: 0 auto;
+}
+.pass a:hover {
+  background-color: var(--colorTerciarioVerde);
+  color: var(--colorTipoCuerpo);
+}
+.pass .submit {
+  color: var(--colorTipoCuerpo) !important;
+  background-color: var(--colorPrincipalSalmon);
+}
+.pass .submit:hover {
+  background-color: var(--colorTerciarioVerde);
+  color: var(--colorTipoCuerpo);
+}
+
 .theme-purchase {
-  min-height: 75vh;
+  padding-bottom: 6.25rem;
 }
 .theme-purchase .error-msg {
   padding: 0;
 }
 .theme-purchase h1 {
-  margin: 20px;
+  margin: 1.25rem;
   text-align: center;
 }
 .theme-purchase .subtitulo {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
 }
 .theme-purchase .theme__images {
   display: flex;
@@ -1326,7 +1354,7 @@ h6 {
 }
 .theme-purchase .theme__images h4 {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 .theme-purchase .theme__images__img {
   width: 100%;
@@ -1341,10 +1369,11 @@ h6 {
 .theme-purchase .payment-container {
   margin: 0 auto;
   display: flex;
-  margin-top: 60px;
+  margin-top: 3.75rem;
   border: 2.5px solid var(--colorTipoHeadings);
   width: 100%;
-  max-width: 800px;
+  max-width: 50rem;
+  margin-bottom: 200px;
 }
 .theme-purchase .payment-container .sub-heading {
   text-align: center;
@@ -1352,7 +1381,7 @@ h6 {
 .theme-purchase .payment-container .payment-discount {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
   background-color: var(--colorBlancoRoto);
   padding: 1.5rem;
   width: 100%;
@@ -1360,7 +1389,7 @@ h6 {
 .theme-purchase .payment-container .payment-discount form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 1.25rem;
   width: 100%;
 }
 .theme-purchase .payment-container .stripe {
@@ -1372,7 +1401,7 @@ h6 {
   width: 100%;
 }
 .theme-purchase .payment-container .stripe img {
-  max-width: 140px;
+  max-width: 8.75rem;
   align-self: center;
 }
 .theme-purchase .payment-container .stripe form {
@@ -1382,7 +1411,7 @@ h6 {
   width: 100%;
 }
 .theme-purchase .payment-container .stripe .sub-heading {
-  margin-right: 10px;
+  margin-right: 0.625rem;
 }
 .theme-purchase input {
   padding: 8px;
@@ -1402,8 +1431,24 @@ h6 {
   box-shadow: none !important;
 }
 
+@media screen and (max-width: 670px) {
+  html .theme-purchase {
+    padding-bottom: 60px;
+  }
+  html .payment-container {
+    flex-direction: column;
+    background-color: var(--colorBlancoRoto);
+    gap: 20px;
+  }
+  html .payment-container .payment-discount {
+    border-bottom: 2.5px solid var(--colorTipoHeadings);
+  }
+  html .payment-container .stripe {
+    gap: 20px;
+  }
+}
 .editar-agradecimiento {
-  padding: 40px;
+  padding: 2.5rem;
   min-height: 75vh;
 }
 .editar-agradecimiento h2 {
@@ -1418,7 +1463,7 @@ h6 {
   position: relative;
   overflow: hidden;
   text-overflow: ellipsis;
-  max-height: none; /* Eliminar la restricción de altura */
+  max-height: none;
 }
 .editar-agradecimiento textarea {
   background-color: var(--colorBlancoRoto);
@@ -1433,11 +1478,155 @@ h6 {
 }
 .editar-agradecimiento .error-msg {
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 .editar-agradecimiento .btn {
-  margin-top: 20px;
+  margin-top: 1.25rem;
   width: 100%;
+}
+
+.gestion-usuarios {
+  min-height: 75vh;
+}
+.gestion-usuarios .disabled-row {
+  background-color: #f5f5f5; /* Color de fondo gris */
+}
+.gestion-usuarios .form-container {
+  display: flex;
+  justify-content: end;
+}
+.gestion-usuarios .form-container .search-form {
+  margin-left: auto;
+  margin-right: auto;
+  margin: 0.9375rem 0;
+}
+.gestion-usuarios .form-container .search-form input {
+  background-color: var(--colorBlancoRoto);
+}
+.gestion-usuarios .form-container .search-form input:focus {
+  outline: none;
+  border: 2px solid var(--colorPrincipalSalmon);
+}
+.gestion-usuarios .form-container .search-form input::-moz-placeholder {
+  color: var(--colorTipoCuerpo);
+}
+.gestion-usuarios .form-container .search-form input::placeholder {
+  color: var(--colorTipoCuerpo);
+}
+.gestion-usuarios select {
+  background-color: var(--colorBlancoRoto);
+  border: 1px solid var(--colorTipoCuerpo);
+  cursor: pointer;
+  color: var(--colorTipoCuerpo);
+}
+.gestion-usuarios .disabled-field {
+  background-color: #f5f5f5; /* Color de fondo gris */
+  color: #999999; /* Color de texto gris claro */
+}
+.gestion-usuarios button {
+  cursor: pointer;
+  background-color: var(--colorTerciarioVerde);
+  color: var(--colorTipoHeadings);
+}
+.gestion-usuarios h2 {
+  text-align: center;
+  margin: 2.375rem;
+}
+.gestion-usuarios .usuarios-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+  border: 2.5px solid var(--colorTipoHeadings);
+}
+.gestion-usuarios .usuarios-table th,
+.gestion-usuarios .usuarios-table td {
+  padding: 0.625rem;
+  border: 1px solid #cad0d6;
+}
+.gestion-usuarios .usuarios-table th {
+  background-color: var(--colorSecundarioRosa);
+  color: var(--colorTipoCuerpo);
+  text-align: left;
+}
+.gestion-usuarios .usuarios-table tr:nth-child(even) {
+  background-color: var(--colorBlancoRoto);
+}
+.gestion-usuarios .usuarios-table .editable {
+  cursor: pointer;
+}
+.gestion-usuarios .usuarios-table .editable:focus {
+  outline: none;
+  background-color: #fffacd;
+}
+.gestion-usuarios .success-icon {
+  display: none; /* Oculta el icono de forma predeterminada */
+  width: 100%;
+  height: 100%;
+  background: none;
+  position: relative;
+}
+.gestion-usuarios .animate-success:before {
+  content: "✔"; /* Código Unicode del tic verde */
+  font-size: 1.25rem;
+  -webkit-text-stroke: 2px var(--colorTipoCuerpo);
+  color: var(--colorTerciarioVerde);
+  position: absolute;
+  text-align: center;
+  margin-top: 0.625rem;
+  margin-bottom: 0.625rem;
+  bottom: -1%;
+  left: 50%;
+  transform: translate(-5%, 5%);
+  animation: successAnimation 0.6s ease-in-out;
+}
+@keyframes successAnimation {
+  0% {
+    transform: translate(-5%, 5%) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translate(-5%, 5%) rotate(360deg) scale(1.5);
+  }
+}
+@media (max-width: 834px) {
+  .gestion-usuarios .usuarios-table {
+    display: block;
+    overflow-x: auto;
+  }
+  .gestion-usuarios .usuarios-table th,
+  .gestion-usuarios .usuarios-table td {
+    min-width: 6.25rem;
+    white-space: nowrap;
+  }
+  .gestion-usuarios .usuarios-table tr {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .gestion-usuarios .usuarios-table td {
+    width: 100%;
+    padding: 0.625rem 0.3125rem;
+    text-align: center;
+  }
+}
+
+.politica-privacidad {
+  min-height: 75vh;
+}
+.politica-privacidad h1 {
+  margin-top: 3.75rem;
+  margin-bottom: 1.875rem;
+}
+.politica-privacidad h2 {
+  margin-bottom: 0.625rem;
+}
+.politica-privacidad ul {
+  margin-top: 1.25rem;
+  margin-bottom: 2.5rem;
+}
+.politica-privacidad p {
+  margin-bottom: 2.5rem;
 }
 
 .fade-in {
@@ -1475,6 +1664,7 @@ a,
 input,
 button {
   border: none;
+  color: var(--colorTipoCuerpo);
 }
 
 .task-text {

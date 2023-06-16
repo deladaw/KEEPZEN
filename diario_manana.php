@@ -1,10 +1,14 @@
 <?php
-$titulo = "KeepZen - Diario - Mañana";
+//Página que te muestra la agenda en el día de mañana.
+//Las tareas que apuntes en el día de mañana, te aparecerán al día siguiente en el día actual.
+$titulo = "KeepZen - Agenda - Mañana";
 include("./Controller/conectar_db.php");
 include("./Controller/seguridad.php");
+include("./Controller/seguridad_admin.php");
 include("nav.php");
-?>
 
+verificar_permisos();
+?>
 
 <!-- DIARIO -->
 <section class="diary container">
@@ -25,12 +29,13 @@ include("nav.php");
         </ul>
     </nav>
     <?php
-setlocale(LC_ALL, 'es_ES.UTF-8');
-$fecha_actual = new DateTime();
-$fecha_actual->modify('+1 day'); // sumar un día a la fecha actual
-$formato_fecha = new IntlDateFormatter('es_ES', IntlDateFormatter::FULL, IntlDateFormatter::NONE);
-$fecha_formateada = $formato_fecha->format($fecha_actual);
-?>
+    //Obtengo la fecha de mañana local y la formateo
+    setlocale(LC_ALL, 'es_ES.UTF-8');
+    $fecha_actual = new DateTime();
+    $fecha_actual->modify('+1 day'); 
+    $formato_fecha = new IntlDateFormatter('es_ES', IntlDateFormatter::FULL, IntlDateFormatter::NONE);
+    $fecha_formateada = $formato_fecha->format($fecha_actual);
+    ?>
 
     <!-- DIARIO TITLE -->
     <div class="diary__title">

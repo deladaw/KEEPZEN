@@ -1,5 +1,7 @@
 <?php
-$titulo = "KeepZen - Diario";
+//Página donde te enseña cómo es el uso de la Agenda.
+//Abajo del todo hay una serie de instrucciones.
+$titulo = "KeepZen - Agenda Ejemplo";
 include("./Controller/seguridad.php");
 include("nav.php");
 ?>
@@ -32,16 +34,13 @@ setlocale(LC_ALL, 'es_ES.UTF-8');
 $fecha_actual = new DateTime();
 $formato_fecha = new IntlDateFormatter('es_ES', IntlDateFormatter::FULL, IntlDateFormatter::NONE);
 $fecha_formateada = $formato_fecha->format($fecha_actual);
-
 ?>
     <!-- DIARIO TITLE -->
     <div class="diary__title">
         <h2 class="heading-secondary">Tareas para hoy</h2>
         <h5 class="heading-quinary"><?php echo ucfirst($fecha_formateada); ?></h5>
     </div>
-
     <div class="to-do-list list-muestra">
-        <!-- <img src="img/generales/arrow_3.svg" class="flecha3" alt=""> -->
         <div class="task-muestra">
             <div class="muestra-container">
                 <i class="fas fa-heart"></i>
@@ -74,7 +73,6 @@ $fecha_formateada = $formato_fecha->format($fecha_actual);
             </div>
             <p class="delete-muestra">X</p>
         </div>
-        <!-- <p class="muestra-explicacion">Aquí puedes marcar las tareas como completadas</p> -->
     </div>
 
     <!-- AÑADIR REGISTROS LIST -->

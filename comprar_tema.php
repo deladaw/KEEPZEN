@@ -1,4 +1,7 @@
 <?php
+//Página para comprar los temas disponibles, se puede pagar con Stripe o con un código de descuento canjeable.
+//El pago se administra mediante el "checkout" de Stripe. Lo maneja por detrás el propio Stripe con el JS adjuntado
+//Y el composer/Stripe instalados.
 $titulo = "KeepZen - Activar Tema";
 include("./Controller/seguridad.php");
 include("./Controller/seguridad_admin.php");
@@ -6,6 +9,8 @@ include("./Controller/conectar_db.php");
 include("./Controller/canjear_cupon.php");
 require_once('config.php');
 include("nav.php");
+
+verificar_permisos();
 
 if (verificar_compra_temas($_SESSION['id_usuario'])) {
     header("Location: temas.php");

@@ -13,12 +13,15 @@
         integrity="sha512-xFjL7q46UDkY68eF6X4oVDwguOJ35VCrBIbPHfpb05sddq5qrruc5FyX3qMwxmX3ajg9dEViJIyTgId+6OypRQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link id="theme-stylesheet" rel="stylesheet" href="main.css">
+    <link rel="icon" type="image/jpg" href="img/generales/favicon.png" />
     <title><?php echo $titulo; ?></title>
 </head>
 <?php
 include("./Controller/seguridad.php");
 include("./Controller/getUsuario.php");
 include("./Controller/conectar_db.php");
+//En el NAV se configuran los themes según tengas activo uno u otro.
+//La clase del body cambia dependiendo del que tengas, por defecto es el "theme" (Coral).
 
 $bodyClass = 'theme';
 
@@ -40,7 +43,7 @@ if(isset($_SESSION['id_usuario'])){
             $bodyClass = "theme--dracula";
         }
     } else {
-        $bodyClass = "theme"; // Valor por defecto si no se encuentra un usuario o tema específico
+        $bodyClass = "theme"; 
     }
 
 }
@@ -63,8 +66,12 @@ if(isset($_SESSION['id_usuario'])){
                 </li>
                 <li class="nav__list-item"><a href="relajate.php">Relájate</a></li>
                 <li class="nav__list-item">
-                    <?php if(!isset($_SESSION['autentificado'])){ ?>
+                    <?php if (!isset($_SESSION['autentificado'])) { ?>
                     <a href="login.php">
+                        <i class="fas fa-user-circle"></i>
+                    </a>
+                    <?php } elseif (isset($_SESSION['rol']) && $_SESSION['rol'] == 2) { ?>
+                    <a href="perfil_admin.php">
                         <i class="fas fa-user-circle"></i>
                     </a>
                     <?php } else { ?>

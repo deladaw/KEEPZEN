@@ -1,4 +1,5 @@
 <?php
+//Página para confirmar que la cuenta ha sido creada correctamente.
 $titulo = "KeepZen - Cuenta creada";
 include("./Controller/seguridad.php");
 include("./Controller/seguridad_admin.php");
@@ -12,8 +13,8 @@ verificar_permisos_sesion();
     <i class="fas fa-check-circle"></i>
     <h2 class="heading-secondary">¡Cuenta creada!</h2>
     <p class="sub-heading">
-        Puedes empezar desde ya a escribir tus notas, tu diario de
-        agradecimiento o bien realizar algunos ejercicios de relajación. ¡No
+        Puedes empezar desde ya a escribir tus tareas en la agenda, tu diario de
+        agradecimiento, o bien realizar algunos ejercicios de relajación. ¡No
         tiene un orden establecido!<strong>
             Pero si prefieres seguir un orden, te recomendamos probar con esta
             rutina:</strong>
@@ -40,7 +41,7 @@ verificar_permisos_sesion();
         </li>
     </ol>
     <div class="btn-container">
-        <a class="btn" href="diario.php">DIARIO</a>
+        <a class="btn" href="diario.php">AGENDA</a>
         <a class="btn--secondary" href="relajate.php">RELÁJATE</a>
     </div>
 </section>

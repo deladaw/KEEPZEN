@@ -1,4 +1,5 @@
 <?php
+//Código para obtener los datos de un usuario.
 include 'seguridad.php';
 include("conectar_db.php");
 

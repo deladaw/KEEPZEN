@@ -1,5 +1,5 @@
 .editar-agradecimiento {
-  padding: 40px;
+  padding: 2.5rem;
   min-height: 75vh;
 
   h2 {
@@ -16,7 +16,7 @@
     position: relative;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-height: none; /* Eliminar la restricción de altura */
+    max-height: none;
   }
 
   textarea {
@@ -33,10 +33,10 @@
 
   .error-msg {
     text-align: center;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
   }
   .btn {
-    margin-top: 20px;
+    margin-top: 1.25rem;
     width: 100%;
   }
 }

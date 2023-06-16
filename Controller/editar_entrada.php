@@ -1,16 +1,15 @@
 <?php
-include("conectar_db.php"); // Asegúrate de incluir el archivo de conexión a la base de datos
-include("seguridad.php"); // Asegúrate de incluir el archivo de conexión a la base de datos
-
+//Código para la edición de una entrada de agradecimiento.
+include("conectar_db.php"); 
+include("seguridad.php"); 
 
 if(isset($_REQUEST['editar'])){
 
 
-    $id_entrada = $_POST['id_entrada']; // Obtén el ID de la entrada del formulario
-    $nuevo_contenido = htmlspecialchars($_POST['content'], ENT_QUOTES, 'UTF-8'); // Obtén el nuevo contenido del formulario
-    $id_usuario = $_SESSION['id_usuario']; // Obtén el ID del usuario de la sesión actual
+    $id_entrada = $_POST['id_entrada']; 
+    $nuevo_contenido = htmlspecialchars($_POST['content'], ENT_QUOTES, 'UTF-8'); 
+    $id_usuario = $_SESSION['id_usuario'];
     
-    // Validar los datos
     $errores = 0;
     
     if (empty($nuevo_contenido)) {
@@ -30,7 +29,7 @@ if(isset($_REQUEST['editar'])){
     $stmt_verificacion->execute([$id_entrada, $id_usuario]);
     
     if ($stmt_verificacion->rowCount() > 0 && $errores != 1) {
-        // La entrada pertenece al usuario actual y no hay errores, proceder a actualizarla
+        
         $sql_actualizacion = "UPDATE agradecimientos SET agradecimiento = ? WHERE id = ?";
         $stmt_actualizacion = $conexion->prepare($sql_actualizacion);
         $stmt_actualizacion->execute([$nuevo_contenido, $id_entrada]);

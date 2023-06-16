@@ -1,14 +1,15 @@
 <?php
-$titulo = "KeepZen - Diario";
+//Página de la agenda (to do list) del día actual.
+//Aquí puedes añadir tareas para hoy, completarlas, agregarlas a favoritas, borrarlas...
+$titulo = "KeepZen - Agenda";
 include("./Controller/seguridad.php");
 include("./Controller/seguridad_admin.php");
 include("./Controller/guardar_tarea.php");
 include("./Controller/conectar_db.php");
 include("nav.php");
 
-verificar_permisos_sesion();
-?>
 
+?>
 
 <!-- DIARIO -->
 <section class="diary container">
@@ -74,8 +75,6 @@ $res = $stmt->fetchAll(PDO::FETCH_OBJ);
         $completada = $dato->fecha_completada != NULL;
         ?>
         <div class="task-item">
-            <!-- <img src="img/generales/washi_tape_choco2.svg" alt="" class="tape-diary"> -->
-
             <a href="./Controller/tarea_favorita.php?id=<?= $dato->id ?>" class="favorite-task">
                 <i class="fas fa-heart <?= isset($dato->favorita) && $dato->favorita ? 'favorite' : '' ?>"
                     style="cursor: pointer; margin-right: 5px;"></i>
